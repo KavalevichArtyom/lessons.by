@@ -1,0 +1,836 @@
+body
+{
+background:white;
+height:100%;
+margin:0px;
+}
+
+a
+{
+text-decoration:none;
+}
+/*_____________________________________________________________________________________________________________________________________________*/
+
+
+/*@media screen and (max-width:1024px) { 
+.image_text 
+{
+
+}
+}
+*/
+
+/* Проба.Толька для первой страницы сайта */
+.goal_index
+{
+position:absolute;
+width:100%;
+height:50%;
+left:0%;
+top:34.5%;
+background:#212121;
+}
+
+.footer_index
+{
+position:absolute;
+float:left;
+width:100%;
+height:15.5%;
+left:0%;
+top:84.5%;
+background:#121212;
+border-top:1px solid #414243;
+}
+
+
+
+.image_text p
+{
+font-size:5vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff !important;
+}
+
+.goal_head p
+{
+font-size:5vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff !important;
+}
+
+
+
+.goal_text p
+{
+font-size:2.5vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:rgb(140, 140, 140);
+}
+
+.footer_text p
+{
+font-size:1.25vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+}
+
+.footer_link p 
+{
+margin:0px;
+}
+
+.footer_link p a
+{
+font-size:1.25vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+}
+
+.menu_forums_left_heads p
+{
+font-size:2vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff !important;
+text-align:center;
+padding: 1.5em 0;
+}
+
+.menu_forums_left_text p
+{
+font-size:2vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff !important;
+text-align:center;
+padding: 1.5em 0;
+}
+
+
+.menu_forums_left_page_1  a p
+{
+font-size:1.25vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+color:#fff;
+text-align:center;
+padding: 1.5em 0;
+margin:0px;
+}
+
+.menu_capcion_text p
+{
+font-size:2.5vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#000;
+float:left;
+}
+
+.menu_capcion_head_text p
+{
+font-size:5vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#000;
+}
+
+.menu_forums_left_edit_text input
+{
+font-size:2vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:2.5vw 0 2.5vw 0;
+padding:0px;
+width:100%;
+text-align:center;
+background:#121212;
+border-color:#414243;
+color:#fff;
+
+}
+	
+.menu_capcion_img a	img
+{
+width:100%;
+height:100%;
+}
+
+.menu_forums_right_news_img  a img
+{
+width:100%;
+height:100%;
+}
+
+.menu_capcion_href a p
+{
+font-size:2vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#000;
+text-align:center;
+}
+
+.menu_capcion_time p
+{
+font-size:1vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:rgb(140,140,140);
+text-align:center;
+}
+
+.menu_forums_right_head p
+{
+font-size:1.75vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+text-align: center;
+padding: 1.5em 0;
+}
+
+.menu_forums_right_news_text_href a p
+{
+font-size:1vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+padding: 0px;
+text-align:center;
+}
+
+.menu_forums_right_news_text  p
+{
+font-size:1vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+padding: 0px;
+float:left;
+padding:1.5em 0;
+}
+
+.menu_forums_right_news_text_time p
+{
+font-size:0.75vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:rgb(140, 140, 140);
+padding:0px;
+text-align:center;
+}
+
+.menu_capcion_head p
+{
+font-size:1.75vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+text-align: center;
+padding: 1.5em 0;
+}
+
+.active_tema_page_1_section_head p
+{
+font-size:2vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+text-align: center;
+padding: 1.5em 0;
+}
+
+.active_tema_page_1_section_text p
+{
+font-size:1vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:rgb(140,140,140);
+float:left;
+padding:3em 1em;
+}
+
+.active_tema_page_1_section_href a p
+{
+font-size:2vw;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0px;
+color:#fff;
+text-align: center;
+}
+/*___________________________________________________________________panel_button__________________________________________________________________________*/
+
+
+/*Слои*/
+.panel_button
+{
+position:absolute;
+width:100%;
+height:14%;
+background:#fff;
+left:0%;
+top:0%;
+margin:0 auto;
+/*border-bottom:0.5vw solid #0d0d0d;*/
+}
+
+.button_menu
+{
+position:absolute;
+width:60%;
+height:100%;
+left:20%;
+right:20%;
+}
+
+.strip /*полоска*/
+{
+position:absolute;
+width:100%;
+height:0.5%;
+background:white;
+left:0%;
+top:14%;
+background:black;
+}
+
+.active_button_menu
+{
+position:absolute;
+width:60%;
+height:100%;
+left:20%;
+right:20%;
+}
+
+.About_the_site_active
+{
+position:absolute;
+left:0%;
+height:100%;
+width:25%;
+background:#b81515;
+}
+
+.Tema_active
+{
+position:absolute;
+left:25%;
+height:100%;
+width:25%;
+background:#b81515;
+}
+
+.Presentation_active
+{
+position:absolute;
+left:50%;
+height:100%;
+width:25%;
+background:#b81515;
+}
+
+.Control_know_active
+{
+position:absolute;
+left:75%;
+height:100%;
+width:25%;
+background:#b81515;
+}
+
+.image
+{
+position:absolute;
+width:100%;
+height:20%;
+left:0%;
+top:14.5%;
+}
+
+.image_text 
+{
+position:absolute;
+width:50%;
+height:20%;
+left:10%;
+top:30%;
+}
+
+/*__________________________________________________________________goal___________________________________________________________________________*/
+
+
+.goal
+{
+position:absolute;
+width:100%;
+height:155.5%;
+left:0%;
+top:34.5%;
+background:#212121;
+overflow: hidden;
+}
+
+.goal_head
+{
+position:absolute;
+width:30%;
+height:20%;
+top:20%;
+left:10%;
+}
+
+.goal_text
+{
+position:absolute;
+width:60%;
+height:60%;
+top:40%;
+left:30%;
+}
+
+.goal_child
+{
+position:absolute;
+width:100%;
+height:100%;
+background:white;
+}
+
+/*_________________________________________________________________footer____________________________________________________________________________*/
+
+
+/*.clear-fix:before, .clear-fix:after {
+    content: " ";
+    display: table;
+}
+
+.clear-fix:after {
+    clear: both;
+}
+
+/* Костыли для ослика (Internet Explorer 6 и 7) */
+/*.clear-fix {
+    *zoom: 1;
+}
+*/
+
+
+.footer
+{
+position:absolute;
+float:left;
+width:100%;
+height:15.5%;
+left:0%;
+top:190%;
+background:#121212;
+border-top:1px solid #414243;
+}
+
+.footer_text
+{
+position:absolute;
+float:left;
+width:60%;
+height:60%;
+top:40%;
+left:30%;
+}
+
+.footer_link
+{
+position:absolute;
+float:left;
+width:10%;
+height:60%;
+top:40%;
+left:15%;
+}
+
+/*_________________________________________________________________menu_forums_left____________________________________________________________________________*/
+
+
+
+.menu_forums_left
+{
+position:absolute;
+top:5%;
+left:5%;
+width:20%;
+height:90%;
+background:#212121;
+}
+
+.menu_forums_left_heads
+{
+position:absolute;
+width:100%;
+height:10%;
+background:#121212;
+}
+
+.menu_forums_left_edit
+{
+position:absolute;
+top:10%;
+width:100%;
+height:20%;
+background:#212121;
+border-bottom:1px solid #121212;
+}
+
+.menu_forums_left_edit_text
+{
+position:absolute;
+width:100%;
+height:40%;
+left:0%;
+}
+
+.menu_forums_left_text
+{
+position:absolute;
+width:100%;
+height:60%;
+top:40%;
+left:0%;
+}
+
+.menu_forums_left_page
+{
+position:absolute;
+width:100%;
+height:70%;
+top:30%;
+left:0%;
+}
+
+.menu_forums_left_page_1
+{
+position:absolute;
+width:100%;
+height:10%;
+border-bottom:1px solid #414243;
+}
+
+.menu_forums_left_page_1:hover
+{
+background:#b81515;
+}
+/*________________________________________________________________menu_forums_right_____________________________________________________________________________*/
+
+
+.menu_forums_right
+{
+position:absolute;
+top:5%;
+left:75%;
+width:20%;
+height:90%;
+background:#212121;
+}
+
+.menu_forums_right_head
+{
+position:absolute;
+width:100%;
+height:10%;
+background:#121212;
+}
+
+
+.menu_forums_right_news
+{
+position:absolute;
+width:100%;
+height:20%;
+border-bottom:1px solid #414243;
+}
+
+.menu_forums_right_news_img
+{
+position:absolute;
+top:10%;
+width:50%;
+height:50%;
+}
+
+
+
+.menu_forums_right_news_text
+{
+position:absolute;
+width:100%;
+top:60%;
+height:40%;
+}
+
+.menu_forums_right_news_text_href
+{
+position:absolute;
+width:50%;
+left:50%;
+top:10%;	
+height:50%;
+}
+
+.menu_forums_right_news_text_time
+{
+position:absolute;
+width:50%;
+left:50%;	
+height:10%;
+}
+/*___________________________________________________________________menu_capcion__________________________________________________________________________*/
+
+
+.menu_capcion
+{
+position:absolute;
+top:5%;
+left:30%;
+width:40%;
+height:90%;
+background:#fff;
+}	
+
+.menu_capcion_head	
+{
+position:absolute;
+width:100%;
+height:10%;
+background:#121212;
+}
+
+.menu_capcion_img	
+{
+position:absolute;
+top:20%;
+left:0%;
+width:50%;
+height:20%;
+}
+
+
+
+
+.menu_capcion_href
+{
+position:absolute;
+width:45%;
+height:20%;
+top:20%;
+left:55%;
+}
+
+.menu_capcion_text
+{
+position:absolute;
+width:100%;
+height:20%;
+top:45%;
+left:0%;
+}
+
+.menu_capcion_time
+{
+position:absolute;
+width:45%;
+height:2.5%;
+top:15%;
+left:55%;
+}
+
+.image img
+{
+width:100%;
+height:100%;
+}
+/*___________________________________________________________________active_tema_page_1__________________________________________________________________________*/
+.active_tema_page_1
+{
+position:absolute;
+top:10%;
+height:90%;
+width:100%;
+background:#212121;
+}
+
+.active_tema_page_1_section
+{
+position:absolute;
+height:20%;
+width:100%;
+}
+
+.active_tema_page_1_section_head
+{
+position:absolute;
+height:20%;
+width:100%;
+}
+
+.active_tema_page_1_section_text
+{
+position:absolute;
+top:30%;
+height:50%;
+width:100%;
+}
+
+.active_tema_page_1_section_href
+{
+position:absolute;
+top:85%;
+height:20%;
+width:100%;
+border-bottom:1px solid #121212;
+}
+
+.active_tema_page_1_section_href:hover a p
+{
+color:#b81515;
+/*transition:3s;*/
+}
+
+/*___________________________________________________________________button_menu input__________________________________________________________________________*/
+
+
+/*Кнопки*/
+.button_menu input
+{
+position:absolute;
+width:25%;
+height:100%;
+border:0px;
+border-left:0.25vw solid #e8e8e8;
+background:white;
+padding:0%;
+font-size:1.5vw;
+font-family:'Open Sans Condensed', sans-serif;
+
+}
+
+.button_menu input:hover
+{
+position:absolute;
+width:25%;
+height:100%;
+background:#333;
+transition:3s;
+color:rgb(243, 243, 243);
+-webkit-font-smoothing:antialiased;
+}
+
+.button_menu input:not(:hover)
+{
+transition:3s;
+
+}
+/*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
+
+
+
+#About_the_site
+{
+left:0%;
+}
+
+#Tema
+{
+left:25%;
+}
+
+#Presentation
+{
+left:50%;
+}
+
+#Control_know
+{
+border-right:0.25vw solid #e8e8e8;
+left:75%;
+}
+/*_____________________________________________________________________________________________________________________________________________*/
+
+
+#one
+{
+
+top:0%;
+}
+
+#two
+{
+top:10%;
+}
+
+#three
+{
+top:20%;
+}
+
+#four
+{
+top:30%;
+}
+
+#five
+{
+top:40%;
+}
+
+#sixe
+{
+top:50%;
+}
+/*_____________________________________________________________________________________________________________________________________________*/
+
+
+#menu_forums_right_news_1
+{
+top:12.5%;
+}
+
+#menu_forums_right_news_2
+{
+top:35%;
+}
+
+#menu_forums_right_news_3
+{
+top:57.5%;	
+}
+
+#menu_forums_right_news_4
+{
+top:80%;
+}
+
+/*_____________________________________________________________________________________________________________________________________________*/
+
+#active_tema_page_1_section_1
+{
+top:0%;
+}
+
+#active_tema_page_1_section_2
+{
+top:25%;
+}
+
+#active_tema_page_1_section_3
+{
+top:50%;
+}
+
+#active_tema_page_1_section_4
+{
+top:75%;
+}
