@@ -121,7 +121,7 @@ include_once 'core/news.php';
 
 <div class="menu_forums_left_heads" >
 
-<p>ПОИСК</p>	
+<p></p>	
 
 </div class="menu_forums_left_heads" >
 
