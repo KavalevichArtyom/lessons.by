@@ -149,7 +149,7 @@ include_once 'core/news.php';
 
 <div class="menu_forums_left_page_1" id="one" >
 
-<a href="active_tema_page_1.php"><p>Наименование темы/раздела</p></a>
+<a href="active_tema_page_1.php"><p>Тема №1	</p></a>
 
 </div class="menu_forums_left_page_1" id="one" >
 
@@ -226,6 +226,7 @@ echo сonclusion_news();//Вывод новостей
 
 </div class="menu_capcion_news">
 
+</div class="menu_capcion">
 
 </div class="goal_child" >
 
@@ -251,6 +252,8 @@ echo сonclusion_news();//Вывод новостей
 
 
 </div class="footer">
+
+
 
 </body>
 

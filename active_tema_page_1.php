@@ -62,6 +62,7 @@ include_once 'core/news.php';
 //echo сonclusion_news();
 ?>
 
+
 <div class="panel_button"><!--Панель управления -->
 
 
@@ -151,7 +152,7 @@ include_once 'core/news.php';
 
 <div class="menu_forums_left_page_1" id="one" >
 
-<a href="active_tema_page_1.php"><p>Наименование темы/раздела</p></a>
+<a href="active_tema_page_1.php"><p>Тема №1</p></a>
 
 </div class="menu_forums_left_page_1" id="one" >
 
@@ -203,134 +204,9 @@ include_once 'core/news.php';
 </div class="menu_forums_right_head">
 
 
-
-<div class="menu_forums_right_news" id="menu_forums_right_news_1">
-
-<div class="menu_forums_right_news_img">
-
-<a href="#"><img src="http://cdn.wccftech.com/wp-content/uploads/2016/03/NVIDIA-GeForce-GTX-1080-8-Pin-Connector-125x125.jpg"></a>
-
-</div class="menu_forums_right_news_img">
-
-
-<div class="menu_forums_right_news_text_href">
-
-<a href="http://wccftech.com/rumor-nvidia-pascal-gtx-1080-gddr5x-gtx-1070-f-gddr5/"><p>Nvidia Pascal GTX 1080 Features 8GB GDDR5X & 384-320GB/s Of Bandwidth, GTX 1070 Fea…</p></a>
-
-</div class="menu_forums_right_news_text_href">
-
-
-<div class="menu_forums_right_news_text_time">
-
-<p>April 11, 2016 2:27 pm</p>
-
-</div class="menu_forums_right_news_text_time">
-
-
-<div class="menu_forums_right_news_text">
-
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
-
-</div class="menu_forums_right_news_text">
-
-</div class="menu_forums_right_news" id="menu_forums_right_news_1">
-
-
-
-<div class="menu_forums_right_news" id="menu_forums_right_news_2">
-
-<div class="menu_forums_right_news_img">
-
-<a href="http://wccftech.com/nvidia-evga-gtx-960-ssc-amd-xfx-r9-380-oc/"><img src="http://cdn.wccftech.com/wp-content/uploads/2016/04/IMG_3150-125x125.jpg"></a>
-
-</div class="menu_forums_right_news_img">
-
-
-<div class="menu_forums_right_news_text_href">
-
-<a href="http://wccftech.com/nvidia-evga-gtx-960-ssc-amd-xfx-r9-380-oc/"><p>AMD Radeon R9 380 vs Nvidia GeForce GTX 960 – Finding The 1080p Bang For Buck Champ</p></a>
-
-</div class="menu_forums_right_news_text_href">
-
-
-<div class="menu_forums_right_news_text_time">
-
-<p>April 9, 2016 3:35 pm</p>
-
-</div class="menu_forums_right_news_text_time">
-
-
-<div class="menu_forums_right_news_text">
-
-<p>With us being on the cusp of the Pascal and Polaris launch it may be hard to understand why we would be looking at how t…</p>
-
-</div class="menu_forums_right_news_text">
-
-</div class="menu_forums_right_news" id="menu_forums_right_news_2">
-
-
-<div class="menu_forums_right_news" id="menu_forums_right_news_3">
-
-<div class="menu_forums_right_news_img">
-
-<a href="http://wccftech.com/nvidia-pascal-gp104-gpu-leaked/"><img src="http://cdn.wccftech.com/wp-content/uploads/2014/09/NVIDIA-GeForce-Maxwell-GM204-Die-Shot-125x125.jpg"></a>
-
-</div class="menu_forums_right_news_img">
-
-
-<div class="menu_forums_right_news_text_href">
-
-<a href="http://wccftech.com/nvidia-pascal-gp104-gpu-leaked/"><p>NVIDIA Pascal GP104 GPU Pictures Leaked – Built To Power 8 GB GeForce Cards, GP106 Also Shot Up Close</p></a>
-
-</div class="menu_forums_right_news_text_href">
-
-
-<div class="menu_forums_right_news_text_time">
-
-<p>April 8, 2016 6:44 pm</p>
-
-</div class="menu_forums_right_news_text_time">
-
-
-<div class="menu_forums_right_news_text">
-
-<p>A few hours ago, we reported that NVIDIA is expected to launch their consumer grade GeForce graphics cards at Computex. …</p>
-
-</div class="menu_forums_right_news_text">
-
-</div class="menu_forums_right_news" id="menu_forums_right_news_3">
-
-
-<div class="menu_forums_right_news" id="menu_forums_right_news_4">
-
-<div class="menu_forums_right_news_img">
-
-<a href="http://wccftech.com/nvidia-geforce-gtx-1080-1070-computex/"><img src="http://cdn.wccftech.com/wp-content/uploads/2016/04/5124c8b218f88-125x125.jpg"></a>
-
-</div class="menu_forums_right_news_img">
-
-
-<div class="menu_forums_right_news_text_href">
-
-<a href="http://wccftech.com/nvidia-geforce-gtx-1080-1070-computex/"><p>NVIDIA GeForce GTX 1080 and GeForce GTX 1070 With Pascal GPUs Under Full Production – Rumors Point to Computex Reveal</p></a>
-
-</div class="menu_forums_right_news_text_href">
-
-
-<div class="menu_forums_right_news_text_time">
-
-<p>April 8, 2016 7:58 am</p>
-
-</div class="menu_forums_right_news_text_time">
-
-
-<div class="menu_forums_right_news_text">
-
-<p>Reports from APAC based sources suggest that NVIDIA already has production of their Pascal based gaming GPUs in full sw…</p>
-
-</div class="menu_forums_right_news_text">
-
-</div class="menu_forums_right_news" id="menu_forums_right_news_4">
+<?php
+echo сonclusion_news();//Вывод новостей
+?>
 
 
 </div class="menu_forums_right" >
@@ -339,11 +215,11 @@ include_once 'core/news.php';
 
 <div class="menu_capcion">
 
-<div class="menu_capcion_head">
+<div class="menu_capcion_head_active_page">
 
-<p>Наименование Темы</p>
+<p>Тема №1</p>
 
-</div class="menu_capcion_head">
+</div class="menu_capcion_head_active_page">
 
 <div class="active_tema_page_1">
 
@@ -353,13 +229,25 @@ include_once 'core/news.php';
 
 <div class="active_tema_page_1_section_head">
 
-<p>Наименование Раздела</p>
+<p>ТЕМА: "Изучение особенностей выполнения команды пересылки кодов (MOV), особенностей выполнения команды сравнения кодов (CMP) и ее влияния на флаги состояния регистра флагов".</p>
 
 </div class="active_tema_page_1_section_head">
 
 <div class="active_tema_page_1_section_text">
 
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility fAccording to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
+<p> 
+
+<?php 
+
+for($i=0;$i<7;$i++)
+{
+echo "&nbsp;";
+}
+?>
+
+"Команда MOV замещает операнд-приемник операндом-источником. При этом исходное значение операнда-приемника теряется. Операнд-источник не изменяется. В зависимости от описания операндов, пересылается..." 
+
+</p>
 
 </div class="active_tema_page_1_section_text">
 
@@ -373,17 +261,17 @@ include_once 'core/news.php';
 </div class="active_tema_page_1_section" id="active_tema_page_1_section_1">
 
 
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_2">
+<!--<div class="active_tema_page_1_section" id="active_tema_page_1_section_2">
 
 <div class="active_tema_page_1_section_head">
 
-<p>Наименование Раздела</p>
+<p>Практическая работа № 5</p>
 
 </div class="active_tema_page_1_section_head">
 
 <div class="active_tema_page_1_section_text">
 
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility fAccording to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
+<p>Тема: "Разработка программ линейной структуры с использованием арифметических команд CPU i8086".</p>
 
 </div class="active_tema_page_1_section_text">
 
@@ -443,7 +331,8 @@ include_once 'core/news.php';
 
 </div class="active_tema_page_1_section" id="active_tema_page_1_section_4">
 
-
+-->
+</div class="active_tema_page_1">
 
 </div class="menu_capcion">
 
@@ -474,5 +363,6 @@ include_once 'core/news.php';
 </div class="footer">
 
 </body>
+
 
 </html>
