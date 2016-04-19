@@ -193,160 +193,41 @@ include_once 'parsing_doc/doc.php'
 
 </div class="menu_forums_left" >
 
-<!--________________________________________________________________NEWS_TOPIC_____________________________________________________________________________-->
 
-<div class="menu_forums_right" >
-
-<div class="menu_forums_right_head">
-
-<p>Темы / Оборудование</p>
-
-</div class="menu_forums_right_head">
-
-
-<?php
-echo сonclusion_news();//Вывод новостей
-?>
-
-
-</div class="menu_forums_right" >
 <!--________________________________________________________________END_NEWS_TOPIC_____________________________________________________________________________-->
 <!-- Центральная полоса новостей -->
-
-<div class="menu_capcion">
-
-<div class="menu_capcion_head_active_page">
-
-<p>Тема №1</p>
-
-</div class="menu_capcion_head_active_page">
-
-<div class="active_tema_page_1">
-
-
-
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_1">
-
-<div class="active_tema_page_1_section_head">
-
-<p>ТЕМА: "Изучение особенностей выполнения команды пересылки кодов (MOV), особенностей выполнения команды сравнения кодов (CMP) и ее влияния на флаги состояния регистра флагов".</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p> 
-
-<?php 
-
-for($i=0;$i<7;$i++)
-{
-echo "&nbsp;";
-}
-?>
-
-"Команда MOV замещает операнд-приемник операндом-источником. При этом исходное значение операнда-приемника теряется. Операнд-источник не изменяется. В зависимости от описания операндов, пересылается..." 
-
-</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="read_document.php"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_1">
-
-
-<!--<div class="active_tema_page_1_section" id="active_tema_page_1_section_2">
-
-<div class="active_tema_page_1_section_head">
-
-<p>Практическая работа № 5</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p>Тема: "Разработка программ линейной структуры с использованием арифметических команд CPU i8086".</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="#"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_2">
-
-
-
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_3">
-
-<div class="active_tema_page_1_section_head">
-
-<p>Наименование Раздела</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility fAccording to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="#"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_3">
-
-
-
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_4">
-
-<div class="active_tema_page_1_section_head">
-
-<p>Наименование Раздела</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility fAccording to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="#"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_4">
-
--->
-</div class="active_tema_page_1">
-
-</div class="menu_capcion">
 
 
 </div class="goal_child" >
 
 </div class="goal" >
 
+<div class="read_document">
+
+<div class="read_document_text">
+
+<?php
+
+$filename="document/practical/4/4.doc";
+
+echo doc2text($filename);
+?>
+
+<a href="document/practical/4/4.doc"><p>Скачать файл</p></a>
+
+</div class="read_document_text">
+
+
+</div class="read_document">
+
+
+
 
 
 <div class="footer">
 
-
-<!--<div class="footer_link" >
+<!--
+<div class="footer_link" >
 
 <p><a href="Tema_page.php">Темы</a></p>
 

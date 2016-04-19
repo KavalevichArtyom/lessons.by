@@ -1,7 +1,6 @@
 body
 {
 background:white;
-height:100%;
 margin:0px;
 }
 
@@ -744,6 +743,25 @@ border-bottom:1px solid #121212;
 {
 color:#b81515;
 /*transition:3s;*/
+}
+
+/*___________________________________________________________________read_document__________________________________________________________________________*/
+
+.read_document
+{
+position:absolute;
+top:42.5%;
+left:30%;
+width:65%;
+background:#fff;
+}
+
+
+.read_document_text
+{
+width:100%;
+height:100%;
+background:#fff;
 }
 
 /*___________________________________________________________________button_menu input__________________________________________________________________________*/
