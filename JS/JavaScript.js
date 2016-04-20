@@ -1,4 +1,8 @@
-﻿function About_the_site_page()
+﻿/* window.onload=function(){
+alert("Размер элемента:" + this.offsetWidth +"x"+ this.offsetHeight)
+}  */
+
+function About_the_site_page()
 {
 window.location= "index.php";
 }
