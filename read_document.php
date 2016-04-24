@@ -1,10 +1,11 @@
-﻿<html>
+<?php
+header("Content-Type: text/html;charset=utf-8");
+?>
+<html>
 <head>
-  
-    <meta http-equiv="content-language" content="ru"/>
+
     <meta name="author" content="Ковалевич Артём Юрьевич" />
-    <meta charset ="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/Style.css">
+	<link rel="stylesheet" type="text/css" href="css/Style.css"/>
 	<script src="JS/JavaScript.js"></script>
 	
 	<script>
@@ -204,14 +205,23 @@ include_once 'parsing_doc/doc.php'
 </div class="read_goal" >
 
 <div class="read_document" >
-
+	
 <div class="read_document_text"> <!--onload='alert("Размер элемента:" + this.offsetWidth +"x"+ this.offsetHeight)'-->
+
+
 
 <?php
 
-$filename="document/practical/5/5.doc";
+//$filename="document/practical/5/5.doc";
 
-echo "<p>".doc2text($filename)."</p>";
+//echo "<p>".doc2text($filename)."</p>";
+
+$filename="document/practical/5/5.htm";
+
+$homepage=file_get_contents($filename);
+
+echo $homepage;
+
 ?>
 
 
