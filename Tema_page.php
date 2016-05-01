@@ -144,7 +144,7 @@ include_once 'core/news.php';
 </div class="menu_forums_left_edit" >
 
 
-<div class="menu_forums_left_page" >
+ <div class="menu_forums_left_page" >
 
 
 <div class="menu_forums_left_page_1" id="one" >
@@ -183,12 +183,11 @@ include_once 'core/news.php';
 
 </div class="menu_forums_left_page_1" id="sixe">
 
-
 </div class="menu_forums_left_page" >
 
 
 
-</div class="menu_forums_left" >
+</div class="menu_forums_left" > 
 
 <!--________________________________________________________________NEWS_TOPIC_____________________________________________________________________________-->
 

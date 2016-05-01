@@ -53,7 +53,7 @@
     </script> 
 	
 </head>
-<body>
+<body class="id1">
 
 <div class="panel_button"><!--Панель управления -->
 

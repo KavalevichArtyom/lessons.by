@@ -211,22 +211,19 @@ include_once 'parsing_doc/doc.php'
 
 
 <?php
-
-//$filename="document/practical/5/5.doc";
-
-//echo "<p>".doc2text($filename)."</p>";
-
+//,NULL, NULL, 0, 250000
 $filename="document/practical/5/5.htm";
+
+//$homepage=file_get_contents($filename,NULL, NULL, 200000, 400000);
 
 $homepage=file_get_contents($filename);
 
 echo $homepage;
-
-?>
+	
+?>	
 
 
 </div class="read_document_text">
-
 
 
 </div class="read_document">
@@ -240,7 +237,7 @@ echo $homepage;
 
 <div class="active_download_file">
 
-<a href="document/practical/4/4.doc"><p>Скачать документ</p></a>
+<a href="document/practical/5/5.doc"><p>Скачать документ</p></a>
 
 </div class="active_download_file">
 
@@ -252,7 +249,7 @@ echo $homepage;
 
 <div class="active_presentation">
 
-<a href="#"><p>Перейти к презентации</p></a>
+<a href="#"><p>Просмотр презентации</p></a>
 
 </div class="active_presentation">
 
@@ -278,13 +275,6 @@ echo $homepage;
 
 <div class="read_footer">
 
-<!--
-<div class="footer_link" >
-
-<p><a href="Tema_page.php">Темы</a></p>
-
-</div class="footer_link" id="it_image">
--->
 
 <div class="read_footer_text">
 
@@ -296,6 +286,8 @@ echo $homepage;
 </div class="read_footer">
 
 </div class="read_middle">
+
+
 
 </body>
 
