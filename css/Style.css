@@ -875,7 +875,7 @@ transition:3s;
 .read_document
 {
 position:relative;
-margin:5vw 0vw;
+margin:5vw 2vw;
 left:30%;
 width:65%;
 }
@@ -957,6 +957,7 @@ background:#b81515;
 .read_middle
 {
 position:absolute;
+min-height:50%;
 width:100%;
 top:14.25vw;
 }
@@ -1116,6 +1117,56 @@ margin-top:3vw;
 border:1vw solid rgba(255, 255, 255, 0.25);
 }
 
+/*_________________________________________________________________new_read_goal_child____________________________________________________________________________*/
+.new_read_goal_child
+{
+position:absolute;
+top:7vw;
+background-color:#212121;
+height:20vw;
+width:100%;
+}
+
+.up
+{
+position:absolute;
+left:0%;
+top:0%;
+height:100%;
+width:7%;
+cursor:pointer;
+}
+
+.up:hover
+{
+background-color:rgba(69, 104, 142, 0.15);
+}
+
+.now_scroll p
+{
+font-size:1vw;
+font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+font-weight:bold;
+text-align:center;
+margin:1vw 0vw;
+color:rgb(69, 104, 142) !important;
+}
+
+.now_scroll
+{
+width:100%;
+height:5vw;
+}
+
+
+.heads
+{
+position:absolute;
+width:23%;
+height:100%;
+left:7%;
+background-color:#000;
+}
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
 
 
