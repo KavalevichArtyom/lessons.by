@@ -85,7 +85,7 @@
 
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
-<div class="image"><!--Вывод изображения -->
+<!--<div class="image"><!--Вывод изображения 
 
 <img src="Image/3(2).jpg"></img>
 
@@ -96,7 +96,7 @@
 </div class="image_text">
 
 </div class="image">
-
+-->
 
 <div class="footer">
 

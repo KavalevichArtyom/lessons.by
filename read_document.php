@@ -33,6 +33,11 @@ $(document).ready(function(){
 		   $('.heads_buttom').slideToggle("slow");
     })
 })
+
+$(document).ready(function() {
+ $("#menu1 ul").hide();
+ $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
+});
 </script>
 	
 	<script>
@@ -131,9 +136,9 @@ include_once 'parsing_doc/doc.php'
 
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
+<!--
 
-
-<div class="image"><!--Вывод изображения -->
+<div class="image"><!--Вывод изображения 
 
 <img src="Image/4(2).jpg"></img>
 
@@ -177,8 +182,8 @@ include_once 'parsing_doc/doc.php'
 <div class="heads_search">
         <form>
                 
-				<input type="text" class="search rounded" placeholder="Искать...">
-				<input type="button" value="Искать">
+				<input type="text" class="search rounded" >
+				<input type="button" value="Искать...">
 				
         </form>
 </div class="heads_search">
@@ -201,7 +206,7 @@ include_once 'parsing_doc/doc.php'
 
 <div class="heads_table">
 
-<ul>
+<ul id="menu1">
  <li><span>Раздел№1</span>
     <ul>
      <li><a href="#">Лекция№1</a></li>
@@ -253,7 +258,7 @@ include_once 'parsing_doc/doc.php'
         <li><a href="#">Лекция№5</a></li>
     </ul>
  </li>
-</ul>
+</ul id="menu1">
 
 </div class="heads_table">
 
