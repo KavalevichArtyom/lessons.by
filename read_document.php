@@ -7,9 +7,15 @@ header("Content-Type: text/html;charset=utf-8");
     <meta name="author" content="Ковалевич Артём Юрьевич" />
 	<link rel="stylesheet" type="text/css" href="css/Style.css"/>
 	<script src="JS/JavaScript.js"></script>
+	<script src="JS/jquery.js"></script>
+	<script src="JS/sticky.js"></script>
 	
 	<script>
 
+	$(document).ready(function(){
+					$('#menu').stickyfloat({ duration: 400 });					
+				});
+	
     function showContent(link) {
 
         var cont = document.getElementById('contentBody');
@@ -112,97 +118,28 @@ include_once 'parsing_doc/doc.php'
 
 </div class="image">
 
-<div class="read_middle">
-
-
-<div class="read_goal" >
-
-<div class="read_goal_child" >
-
-
-<div class="read_forums_left" >
-
-<div class="read_forums_left_heads" >
-
-<p></p>	
-
-</div class="read_forums_left_heads" >
-
-
-<div class="read_forums_left_edit" >
-
-
-<div class="read_forums_left_edit_text" >
-
-<input type="text"  value="По Терминам">
-
-</div class="read_forums_left_edit_text" >
-
-
-<div class="read_forums_left_text" >
-
-<p>ТЕМЫ</p>
-
-</div class="read_forums_left_text" >
-
-
-</div class="read_forums_left_edit" >
-
-
-<div class="read_forums_left_page" >
-
-
-<div class="read_forums_left_page_1" id="one" >
-
-<a href="active_tema_page_1.php"><p>Тема №1</p></a>
-
-</div class="read_forums_left_page_1" id="one" >
-
-<div class="read_forums_left_page_1" id="two" >
-
-<a href="#"><p>Наименование темы/раздела</p></a>
-
-</div class="read_forums_left_page_1" id="two">
-
-<div class="read_forums_left_page_1" id="three">
-
-<a href="#"><p>Наименование темы/раздела</p></a>
-
-</div class="read_forums_left_page_1" id="three" >
-
-<div class="read_forums_left_page_1" id="four">
-
-<a href="#"><p>Наименование темы/раздела</p></a>
-
-</div class="read_forums_left_page_1" id="four">
-
-<div class="read_forums_left_page_1" id="five">
-
-<a href="#"><p>Наименование темы/раздела</p></a>
-
-</div class="read_forums_left_page_1" id="five">
-
-<div class="read_forums_left_page_1" id="sixe">
-
-<a href="#"><p>Наименование темы/раздела</p></a>
-
-</div class="read_forums_left_page_1" id="sixe">
-
-
-</div class="read_forums_left_page" >
-
-
-
-</div class="read_forums_left" >
-
 
 <!--________________________________________________________________END_NEWS_TOPIC_____________________________________________________________________________-->
-<!-- Центральная полоса новостей -->
+
+<div class="read_middle">
+
+<div class="up" onclick="return up()">
+
+<div class="now_scroll" id="menu" >
+
+<a href="#" ><p><img src="Image/scroll.png">Наверх</p></img></a>
+
+</div class="now_scroll" id="menu" >
 
 
-</div class="read_goal_child" >
+</div  class="up" onclick="return up()">
 
-</div class="read_goal" >
+
+<div class="heads">
+
+
+
+</div class="heads">
 
 <div class="read_document" >
 	
@@ -219,7 +156,6 @@ $filename="document/practical/5/5.htm";
 $homepage=file_get_contents($filename);
 
 echo $homepage;
-	
 ?>	
 
 
