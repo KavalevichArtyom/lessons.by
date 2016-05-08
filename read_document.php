@@ -97,8 +97,8 @@ $(document).ready(function() {
 
 <?php
 //Подключение к базе данных
-include_once 'core/connect.php';
-include_once 'core/news.php';
+include_once 'core/class.connect.php';
+include_once 'core/class.siction.php';
 include_once 'parsing_doc/doc.php'
 
 ?>
@@ -157,6 +157,8 @@ include_once 'parsing_doc/doc.php'
 
 <div class="read_middle">
 
+
+
 <div class="up" onclick="return up()" id="blfix">
 
 <div class="now_scroll" id="menu" >
@@ -207,57 +209,12 @@ include_once 'parsing_doc/doc.php'
 <div class="heads_table">
 
 <ul id="menu1">
- <li><span>Раздел№1</span>
-    <ul>
-     <li><a href="#">Лекция№1</a></li>
-     <li><a href="#">Лекция№2</a></li>
-     <li><a href="#">Лекция№3</a></li>
-     <li><a href="#">Лекция№4</a></li>
-    </ul>
- </li>
- <li><span>Раздел№2</span>
-    <ul>
-        <li><a href="#">Лекция№1</a></li>
-        <li><a href="#">Лекция№2</a></li>
-        <li><a href="#">Лекция№3</a></li>
-        <li><a href="#">Лекция№4</a></li>
-        <li><a href="#">Лекция№5</a></li>
-    </ul>
- </li>
-  <li><span>Раздел№3</span>
-    <ul>
-     <li><a href="#">Лекция№1</a></li>
-     <li><a href="#">Лекция№2</a></li>
-     <li><a href="#">Лекция№3</a></li>
-     <li><a href="#">Лекция№4</a></li>
-    </ul>
- </li>
- <li><span>Раздел№4</span>
-    <ul>
-        <li><a href="#">Лекция№1</a></li>
-        <li><a href="#">Лекция№2</a></li>
-        <li><a href="#">Лекция№3</a></li>
-        <li><a href="#">Лекция№4</a></li>
-        <li><a href="#">Лекция№5</a></li>
-    </ul>
- </li>
-  <li><span>Раздел№5</span>
-    <ul>
-     <li><a href="#">Лекция№1</a></li>
-     <li><a href="#">Лекция№2</a></li>
-     <li><a href="#">Лекция№3</a></li>
-     <li><a href="#">Лекция№4</a></li>
-    </ul>
- </li>
- <li><span>Раздел№6</span>
-    <ul>
-        <li><a href="#">Лекция№1</a></li>
-        <li><a href="#">Лекция№2</a></li>
-        <li><a href="#">Лекция№3</a></li>
-        <li><a href="#">Лекция№4</a></li>
-        <li><a href="#">Лекция№5</a></li>
-    </ul>
- </li>
+<?php
+
+$obj=new siction();
+$obj->сonclusion_siction();
+
+?>
 </ul id="menu1">
 
 </div class="heads_table">

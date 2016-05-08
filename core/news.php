@@ -1,7 +1,11 @@
 <?php
 //Подключение к базе данных
-include_once 'core/connect.php';
+include_once 'core/class.connect.php';
 
+$obj=new connect_db();
+$obj->connect();
+
+//"Hardware"
 function сonclusion_news($a=2)
 {
 
@@ -100,8 +104,6 @@ echo '<div class="menu_forums_right_news_text">';
 echo '<p>'.$db_description.'</p>';
 echo '</div class="menu_forums_right_news_text">';
 echo '</div class="menu_forums_right_news" id="menu_forums_right_news_'.$news.'">'; 
-
-
 }	
 }
 }	
