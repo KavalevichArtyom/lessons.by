@@ -1348,9 +1348,31 @@ position:absolute;
 height:25vw;
 width:100%;
 background-color:#212121;
-border:1px  solid #414243;
+border-top:0.1vw solid #414243;
 overflow-y:scroll;
 overflow-x:hidden;
+}	
+
+ ::-webkit-scrollbar{
+    width:1vw;
+}
+
+ ::-webkit-scrollbar-thumb{
+    border-width:0.1vw 0.1vw 0.1vw 0.5vw;
+    border-color: #777;
+    background-color: #aaa;
+}
+
+ ::-webkit-scrollbar-thumb:hover{
+    border-width:0.1vw 0.1vw 0.1vw 0.5vw;
+    border-color: #555;
+    background-color: #777;
+}
+
+ ul#menu1
+{
+ position:absolute;
+ cursor:pointer;
 }
 
  ul#menu1, ul#menu1 ul {
@@ -1365,7 +1387,7 @@ ul#menu1 a,ul#menu1 span
 { 
 display: block; 
 text-decoration: none;
-font-size:1vw;
+font-size:1.5vw;
 font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
 text-align:left;
 }
@@ -1382,14 +1404,17 @@ background-color: rgb(184,21,21);
 }
 
 ul#menu1 li ul li a {
+  font-size:1vw;
   background-color: #121212;
-  border:1px  solid #414243;
+  border:0.1vw  solid #414243;
   color:#fff;
   padding-left: 20px;
   padding: 1vw 1vw 1vw 4vw;
 }
 
 ul#menu1 li ul li a:hover {
+  font-family:'Open Sans Condensed', sans-serif;
+  font-size:1vw;
   background: #AAAAAA;
   background-color: rgb(184,21,21);
   color:#fff;

@@ -99,7 +99,7 @@
 
 <div class="image_text">
 
-<p>Добро пожаловать</p>
+<p></p>
 
 </div class="image_text">
 
