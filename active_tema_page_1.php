@@ -96,8 +96,8 @@ include_once 'parsing_doc/doc.php'
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
 
-
-<div class="image"><!--Вывод изображения -->
+<!--
+<div class="image"><!--Вывод изображения 
 
 <img src="Image/4(2).jpg"></img>
 
@@ -111,7 +111,7 @@ include_once 'parsing_doc/doc.php'
 
 </div class="image">
 
-
+-->
 
 <div class="goal" >
 

@@ -9,12 +9,54 @@ header("Content-Type: text/html;charset=utf-8");
 	<script src="JS/JavaScript.js"></script>
 	<script src="JS/jquery.js"></script>
 	<script src="JS/sticky.js"></script>
+<<<<<<< HEAD
+=======
+	
+	<script>
+jQuery(function(f){
+    var element = f('#blfix');
+    f(window).scroll(function(){
+       
+	element['fade'+ (f(this).scrollTop() > 400 ? 'In': 'Out')](1); 
+		
+    });
+}); 
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   $('.heads_table_and_heads_buttom_up').hide()
+    $('.heads_buttom').click(function(){
+        $('.heads_table_and_heads_buttom_up').slideToggle("slow");
+		$('.heads_buttom').hide()
+    })
+	$('.heads_buttom_up').click(function(){
+           $('.heads_table_and_heads_buttom_up').hide()
+		   $('.heads_buttom').slideToggle("slow");
+    })
+})
+
+$(document).ready(function() {
+ $("#menu1 ul").hide();
+ $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
+});
+</script>
+>>>>>>> bc41bc375c2db58c683f1febde7cf859d02f4867
 	
 	<script>
 
 	$(document).ready(function(){
+<<<<<<< HEAD
 					$('#menu').stickyfloat({ duration: 400 });					
 				});
+=======
+					$('#menu').stickyfloat({ duration: 400 });	
+                    $('#menu2').stickyfloat({ duration: 400 });
+					
+				});
+				
+				
+>>>>>>> bc41bc375c2db58c683f1febde7cf859d02f4867
 	
     function showContent(link) {
 
@@ -102,9 +144,9 @@ include_once 'parsing_doc/doc.php'
 
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
+<!--
 
-
-<div class="image"><!--Вывод изображения -->
+<div class="image"><!--Вывод изображения 
 
 <img src="Image/4(2).jpg"></img>
 
@@ -122,6 +164,7 @@ include_once 'parsing_doc/doc.php'
 <!--________________________________________________________________END_NEWS_TOPIC_____________________________________________________________________________-->
 
 <div class="read_middle">
+<<<<<<< HEAD
 
 <div class="up" onclick="return up()">
 
@@ -130,15 +173,141 @@ include_once 'parsing_doc/doc.php'
 <a href="#" ><p><img src="Image/scroll.png">Наверх</p></img></a>
 
 </div class="now_scroll" id="menu" >
+=======
+
+<div class="up" onclick="return up()" id="blfix">
+
+<div class="now_scroll" id="menu" >
+
+<a href="#" ><p><img src="Image/scroll.png">Наверх</p></img></a>
+
+</div class="now_scroll" id="menu" >
 
 
+</div  class="up" onclick="return up()" id="blfix">
+
+
+<div class="heads">
+
+<div class="heads_block" id="menu2">
+
+<div class="heads_name">
+
+<p>Занятия<p>
+
+</div class="heads_name">
+
+<div class="heads_search">
+        <form>
+                
+				<input type="text" class="search rounded" >
+				<input type="button" value="Искать...">
+				
+        </form>
+</div class="heads_search">
+
+
+
+<div class="heads_buttom">
+
+<div class="heads_buttom_size">
+
+<img src="Image/9.png"></img>
+
+<p>Развернуть</p>
+
+</div class="heads_buttom_size">
+
+</div class="heads_buttom">
+
+<div class="heads_table_and_heads_buttom_up">
+>>>>>>> bc41bc375c2db58c683f1febde7cf859d02f4867
+
+<div class="heads_table">
+
+<<<<<<< HEAD
 </div  class="up" onclick="return up()">
 
 
 <div class="heads">
 
+=======
+<ul id="menu1">
+ <li><span>Раздел№1</span>
+    <ul>
+     <li><a href="#">Лекция№1</a></li>
+     <li><a href="#">Лекция№2</a></li>
+     <li><a href="#">Лекция№3</a></li>
+     <li><a href="#">Лекция№4</a></li>
+    </ul>
+ </li>
+ <li><span>Раздел№2</span>
+    <ul>
+        <li><a href="#">Лекция№1</a></li>
+        <li><a href="#">Лекция№2</a></li>
+        <li><a href="#">Лекция№3</a></li>
+        <li><a href="#">Лекция№4</a></li>
+        <li><a href="#">Лекция№5</a></li>
+    </ul>
+ </li>
+  <li><span>Раздел№3</span>
+    <ul>
+     <li><a href="#">Лекция№1</a></li>
+     <li><a href="#">Лекция№2</a></li>
+     <li><a href="#">Лекция№3</a></li>
+     <li><a href="#">Лекция№4</a></li>
+    </ul>
+ </li>
+ <li><span>Раздел№4</span>
+    <ul>
+        <li><a href="#">Лекция№1</a></li>
+        <li><a href="#">Лекция№2</a></li>
+        <li><a href="#">Лекция№3</a></li>
+        <li><a href="#">Лекция№4</a></li>
+        <li><a href="#">Лекция№5</a></li>
+    </ul>
+ </li>
+  <li><span>Раздел№5</span>
+    <ul>
+     <li><a href="#">Лекция№1</a></li>
+     <li><a href="#">Лекция№2</a></li>
+     <li><a href="#">Лекция№3</a></li>
+     <li><a href="#">Лекция№4</a></li>
+    </ul>
+ </li>
+ <li><span>Раздел№6</span>
+    <ul>
+        <li><a href="#">Лекция№1</a></li>
+        <li><a href="#">Лекция№2</a></li>
+        <li><a href="#">Лекция№3</a></li>
+        <li><a href="#">Лекция№4</a></li>
+        <li><a href="#">Лекция№5</a></li>
+    </ul>
+ </li>
+</ul id="menu1">
 
+</div class="heads_table">
 
+<div class="heads_buttom_up">
+
+<div class="heads_buttom_size">
+>>>>>>> bc41bc375c2db58c683f1febde7cf859d02f4867
+
+<img src="Image/8.png"></img>
+
+<<<<<<< HEAD
+=======
+<p>Свернуть</p>
+
+</div class="heads_buttom_size">
+
+</div class="heads_buttom_up">
+
+</div class="heads_table_and_heads_buttom_up">
+
+</div class="heads_block" id="menu2">
+
+>>>>>>> bc41bc375c2db58c683f1febde7cf859d02f4867
 </div class="heads">
 
 <div class="read_document" >
@@ -150,7 +319,7 @@ include_once 'parsing_doc/doc.php'
 <?php
 //,NULL, NULL, 0, 250000
 $filename="document/practical/5/5.htm";
-
+	
 //$homepage=file_get_contents($filename,NULL, NULL, 200000, 400000);
 
 $homepage=file_get_contents($filename);
