@@ -58,7 +58,7 @@ public function result_subsictions($sictions)
 /* 	 echo $db_subsections ."<br>";
 	 echo $db_href_subsections ."<br>"; */
 	
-	echo "<li><a href=".$db_href_subsections.">".$db_subsections."</a></li>";	
+	echo "<li><a href=".$db_href_subsections."><p>".$db_subsections."</p></a></li>";	
     }	
 	
 	}
@@ -90,7 +90,7 @@ for($i=1,$sections=1;$i<=$db_max_id_sictions;$i++,$sections++){
 	$this->result_subsictions($sections); */
 	
 	
-	echo "<li><span>".$db_name."</span>";
+	echo '<li><span><div class="span_table"><div class="text_table"><p>'.$db_name.'</p></div><div class="href_table"><a href='.$db_href_siction.'></a></div></div></span>';
     echo "<ul>";
     $this->result_subsictions("№".$i);
     echo "</ul>";

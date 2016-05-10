@@ -23,7 +23,7 @@ jQuery(function(f){
 
 <script type="text/javascript">
 $(document).ready(function(){
-   $('.heads_table_and_heads_buttom_up').hide()
+   $('.heads_buttom').hide()
     $('.heads_buttom').click(function(){
         $('.heads_table_and_heads_buttom_up').slideToggle("slow");
 		$('.heads_buttom').hide()
@@ -38,7 +38,7 @@ $(document).ready(function() {
  $("#menu1 ul").hide();
  $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
 });
-</script>
+</script>     
 	
 	<script>
 

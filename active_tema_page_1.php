@@ -56,9 +56,7 @@
 
 <?php
 //Подключение к базе данных
-include_once 'core/connect.php';
 include_once 'core/news.php';
-include_once 'parsing_doc/doc.php'
 
 ?>
 
