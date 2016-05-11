@@ -97,12 +97,13 @@ $(document).ready(function() {
 
 <?php
 //Подключение к базе данных
-include_once 'core/class.connect.php';
+
+include_once 'class.read_doc.php';
 include_once 'core/class.siction.php';
-include_once 'parsing_doc/doc.php'
+
+$doc=$_GET['page'];
 
 ?>
-
 
 <div class="panel_button"><!--Панель управления -->
 
@@ -239,21 +240,12 @@ $obj->сonclusion_siction();
 
 <div class="read_document" >
 	
-<div class="read_document_text"> <!--onload='alert("Размер элемента:" + this.offsetWidth +"x"+ this.offsetHeight)'-->
-
-
+<div class="read_document_text"> 
 
 <?php
-//,NULL, NULL, 0, 250000
-$filename="document/practical/5/5.htm";
-	
-//$homepage=file_get_contents($filename,NULL, NULL, 200000, 400000);
-
-$homepage=file_get_contents($filename);
-
-echo $homepage;
+$obj=new doc();
+$obj->read_doc($doc);
 ?>	
-
 
 </div class="read_document_text">
 
@@ -269,7 +261,10 @@ echo $homepage;
 
 <div class="active_download_file">
 
-<a href="document/practical/5/5.doc"><p>Скачать документ</p></a>
+<?php
+$obj=new doc();
+$obj->download_doc($doc); 
+?>	
 
 </div class="active_download_file">
 
@@ -318,7 +313,6 @@ echo $homepage;
 </div class="read_footer">
 
 </div class="read_middle">
-
 
 
 </body>

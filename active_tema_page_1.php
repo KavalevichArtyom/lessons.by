@@ -251,85 +251,13 @@ echo "&nbsp;";
 
 <div class="active_tema_page_1_section_href">
 
-<a href="read_document.php"><p>Перейти</p></a>
+<a href="read_document.php?page=5"><p>Перейти</p></a>
 
 </div class="active_tema_page_1_section_href">
 
 
 </div class="active_tema_page_1_section" id="active_tema_page_1_section_1">
 
-
-<!--<div class="active_tema_page_1_section" id="active_tema_page_1_section_2">
-
-<div class="active_tema_page_1_section_head">
-
-<p>Практическая работа № 5</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p>Тема: "Разработка программ линейной структуры с использованием арифметических команд CPU i8086".</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="#"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_2">
-
-
-
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_3">
-
-<div class="active_tema_page_1_section_head">
-
-<p>Наименование Раздела</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility fAccording to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="#"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_3">
-
-
-
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_4">
-
-<div class="active_tema_page_1_section_head">
-
-<p>Наименование Раздела</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p>According to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility fAccording to the latest whispers Nvidia has allegedly designed two reference PCBs with GDDR5X and GDDR5 compatibility f…</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="#"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
-
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_4">
-
--->
 </div class="active_tema_page_1">
 
 </div class="menu_capcion">
@@ -342,14 +270,6 @@ echo "&nbsp;";
 
 
 <div class="footer">
-
-
-<!--<div class="footer_link" >
-
-<p><a href="Tema_page.php">Темы</a></p>
-
-</div class="footer_link" id="it_image">
--->
 
 <div class="footer_text">
 
