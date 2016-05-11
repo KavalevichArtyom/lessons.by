@@ -1388,7 +1388,6 @@ overflow-x:hidden;
   margin: 0vw;
   padding: 0vw;
   width: 100%; 
-
 }
 
 ul#menu1 a,ul#menu1 span 
@@ -1404,6 +1403,7 @@ text-align:left;
 ul#menu1 li a,ul#menu1 li span {
   background: #212121;
   height:4vw;
+  border:0.1vw  solid #414243;
   
 }
 
@@ -1428,6 +1428,7 @@ ul#menu1 li a,ul#menu1 li span .href_table a
   padding:0vw;
   margin:0vw;
   background:url('/Image/href_page.png') no-repeat  0.5vw ; 
+  border:0vw;  
 }
 
 .href_table 
@@ -1459,10 +1460,12 @@ ul#menu1 li ul li a {
   font-size:1vw;
   background:none;
   background-color: #121212;
-  border:0.1vw  solid #414243;
+
   color:#fff;
   padding-left: 20px;
   padding: 0vw 1vw 0vw 4vw;
+  font-size:1.25vw;
+  font-family:'Open Sans Condensed', sans-serif;
 }
 
 ul#menu1 li ul li a  p 
@@ -1471,12 +1474,12 @@ ul#menu1 li ul li a  p
   text-align:left;
   padding:0vw;
   margin:0vw;
-  padding: 1.5vw 1vw 1.5vw 2vw;
+  padding: 1.5vw 1vw 1.25vw 2vw;
 }
 
 ul#menu1 li ul li a:hover {
   font-family:'Open Sans Condensed', sans-serif;
-  font-size:1vw;
+  font-size:1.25vw;
   background: #AAAAAA;
   background-color: rgb(184,21,21);
   color:#fff;
@@ -1485,8 +1488,201 @@ ul#menu1 li ul li a:hover {
 } 
 
 
+/*_________________________________________________________________heads_left____________________________________________________________________________*/
+
+.heads_left
+{
+position:absolute;
+width:20%;
+top:5%;
+height:80%;
+left:5%;
+}
+
+.heads_left_block
+{
+position:absolute;
+width:100%;
+height:50vw;
+}
+
+.heads_left_name
+{
+position:absolute;
+width:100%;
+height:5vw;
+background-color:#121212;
+}
+
+.heads_left_name p
+{
+font-size:2vw;
+font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+font-weight:bold;
+text-align:center;
+margin:1vw 0vw;
+color:#fff!important;
+}
+
+.heads_left_search
+{
+position:absolute;
+width:100%;
+top:5vw;
+height:5vw;
+background-color:#121212;
+}
+
+
+.heads_left_search form{
+position:absolute;
+width:100%;
+height:100%;
+margin:0vw;
+
+}
+.search_left
+{ 
+padding:0.75vw 3vw;
+background: url('/Image/search.png') no-repeat 1vw 1vw; 
+}
+
+.heads_left_search input[type=text]{
+position:absolute;
+width:70%;
+left:0vw;
+top:10%;
+font-size:1vw;
+color:#505358;
+border:0.1vw solid #2a2e31;
+background-color:#2d3035;
+}
+ 
+.heads_left_search input[type=button], .heads_left_search input[type=button]:hover {
+position:absolute; 
+font-size:1vw;
+top:10%;
+left:71%;
+height:2.7vw;
+width:28%;
+border:0vw;
+background-color: #2d3035;
+color:#fff;
+cursor: pointer;
+}
+
+
+.heads_left_table_and_heads_left_buttom_up
+{
+position:absolute;
+width:100%;
+height:35vw;
+top:10vw;
+z-index:0;
+}
+
+
+
+.heads_left_buttom
+{
+position:absolute;
+top:10vw;
+height:5vw;
+width:100%;
+background-color:#121212;
+border-top:1px solid #414243;
+cursor: pointer;
+z-index:1;
+}
+
+.heads_left_buttom:hover
+{
+background-color:rgb(184,21,21);
+}
+
+.heads_left_buttom img
+{
+position:absolute;
+height:100%;
+width:40%;
+}
+
+/*rgb(184,21,21)*/
+.heads_left_buttom p
+{
+position:absolute;
+height:40%;
+width:60%;
+left:40%;
+font-size:1.5vw;
+font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+text-align:center;
+color:#fff!important;
+}
+
+.heads_left_buttom_up
+{
+position:absolute;
+top:35vw;
+height:5vw;
+width:100%;
+background-color:#121212;
+cursor: pointer;
+
+}
+
+.heads_left_buttom_up:hover
+{
+background-color:rgb(184,21,21);
+}
+
+.heads_left_buttom_size 
+{
+position:absolute;
+height:100%;
+width:60%;
+left:20%;
+
+}
+
+.heads_left_buttom_up img
+{
+position:absolute;
+height:100%;
+width:40%;
+}
+
+/*rgb(184,21,21)*/
+.heads_left_buttom_up p
+{
+position:absolute;
+height:40%;
+width:60%;
+left:40%;
+font-size:1.5vw;
+font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+text-align:center;
+color:#fff!important;
+}
+
+/*_________________________________________________________________table____________________________________________________________________________*/
+
+.heads_left_table
+{
+position:absolute;
+height:35vw;
+width:100%;
+background-color:#212121;
+border-top:0.1vw solid #414243;
+overflow-y:scroll;
+overflow-x:hidden;
+}	
 
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
+
+
+
+
 
 
 
