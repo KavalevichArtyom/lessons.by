@@ -43,12 +43,9 @@ $(document).ready(function() {
 	<script>
 
 	$(document).ready(function(){
-					$('#menu').stickyfloat({ duration: 400 });	
-                    $('#menu2').stickyfloat({ duration: 400 });
-					
-				});
-				
-				
+					$('#menu2').stickyfloat({ duration: 400 });	
+                    $('#menu').stickyfloat({ duration: 400 });				
+				});			
 	
     function showContent(link) {
 

@@ -11,8 +11,7 @@
 	<script src="JS/jquery.js"></script>
 	<script src="JS/sticky.js"></script>
 	
-	<script>
-
+	<script>	
     function showContent(link) {
 
         var cont = document.getElementById('contentBody');
@@ -60,11 +59,11 @@
 $(document).ready(function(){
    $('.heads_left_buttom').hide()
     $('.heads_left_buttom').click(function(){
-        $('.heads_left_table_and_heads_buttom_up').slideToggle("slow");
+        $('.heads_left_table_and_heads_left_buttom_up').slideToggle("slow");
 		$('.heads_left_buttom').hide()
     })
 	$('.heads_left_buttom_up').click(function(){
-           $('.heads_left_table_and_heads_buttom_up').hide()
+           $('.heads_left_table_and_heads_left_buttom_up').hide()
 		   $('.heads_left_buttom').slideToggle("slow");
     })
 })
@@ -73,6 +72,11 @@ $(document).ready(function() {
  $("#menu1 ul").hide();
  $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
 });
+
+$(document).ready(function(){
+/* 					$('#menu2').stickyfloat({ duration: 400 });	 */
+                    $('#menu_left').stickyfloat({ duration: 400 });				
+				});		
 </script>  
 	
 </head>
@@ -82,6 +86,7 @@ $(document).ready(function() {
 //Подключение к базе данных
 include_once 'core/news.php';
 include_once 'core/class.siction.php';
+include_once 'class.read_db_theme.php';
 
 ?>
 
@@ -143,7 +148,7 @@ include_once 'core/class.siction.php';
 
 <div class="heads_left">
 
-<div class="heads_left_block">
+<div class="heads_left_block" id="menu_left">
 
 <div class="heads_left_name">
 
@@ -203,7 +208,7 @@ $obj->сonclusion_siction();
 
 </div class="heads_left_table_and_heads_left_buttom_up">
 
-</div class="heads_left_block">
+</div class="heads_left_block" id="menu_left">
 
 </div class="headsleft_">
 
@@ -213,7 +218,7 @@ $obj->сonclusion_siction();
 
 <div class="menu_forums_right_head">
 
-<p>Темы / Оборудование</p>
+<p>Новостная лента</p>
 
 </div class="menu_forums_right_head">
 
@@ -237,44 +242,22 @@ echo сonclusion_news();//Вывод новостей
 
 <div class="active_tema_page_1">
 
+<ul class="theme">
+<?php
 
+$obj=new theme();
+$obj->read_db_theme();
 
-<div class="active_tema_page_1_section" id="active_tema_page_1_section_1">
-
-<div class="active_tema_page_1_section_head">
-
-<p>ТЕМА: "Изучение особенностей выполнения команды пересылки кодов (MOV), особенностей выполнения команды сравнения кодов (CMP) и ее влияния на флаги состояния регистра флагов".</p>
-
-</div class="active_tema_page_1_section_head">
-
-<div class="active_tema_page_1_section_text">
-
-<p> 
-
-<?php 
-
-for($i=0;$i<7;$i++)
-{
-echo "&nbsp;";
-}
 ?>
-
-"Команда MOV замещает операнд-приемник операндом-источником. При этом исходное значение операнда-приемника теряется. Операнд-источник не изменяется. В зависимости от описания операндов, пересылается..." 
-
-</p>
-
-</div class="active_tema_page_1_section_text">
-
-<div class="active_tema_page_1_section_href">
-
-<a href="read_document.php?page=5"><p>Перейти</p></a>
-
-</div class="active_tema_page_1_section_href">
+</ul class="theme">
 
 
-</div class="active_tema_page_1_section" id="active_tema_page_1_section_1">
+
 
 </div class="active_tema_page_1">
+
+
+
 
 </div class="menu_capcion">
 

@@ -98,6 +98,8 @@
 </div class="image">
 -->
 
+<iframe src="http://www.slideshare.net/artem_killer2/slideshelf" width="760px" height="570px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" ></iframe>
+
 <div class="footer">
 
 
