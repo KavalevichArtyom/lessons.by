@@ -98,8 +98,9 @@ $(document).ready(function() {
 include_once 'class.read_doc.php';
 include_once 'core/class.siction.php';
 
-$doc=$_GET['page'];
-
+$page=$_GET['page'];
+$section=$_GET['section'];
+$practice=$_GET['practice'];
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -241,7 +242,7 @@ $obj->сonclusion_siction();
 
 <?php
 $obj=new doc();
-$obj->read_doc($doc);
+$obj->read_doc($page,$section,$practice);
 ?>	
 
 </div class="read_document_text">
@@ -260,7 +261,7 @@ $obj->read_doc($doc);
 
 <?php
 $obj=new doc();
-$obj->download_doc($doc); 
+$obj->download_doc($page,$section,$practice); 
 ?>	
 
 </div class="active_download_file">

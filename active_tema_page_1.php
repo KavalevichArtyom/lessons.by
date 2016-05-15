@@ -210,7 +210,7 @@ $obj->сonclusion_siction();
 
 </div class="heads_left_block" id="menu_left">
 
-</div class="headsleft_">
+</div class="headsleft_left">
 
 <!--________________________________________________________________NEWS_TOPIC_____________________________________________________________________________-->
 

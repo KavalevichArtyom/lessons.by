@@ -12,10 +12,10 @@ private $query;
 private $result;
 private $rows;
 
-public function read_doc($name)
+public function read_doc($name,$section,$practice)
 {
 
-$this->query  = 'SELECT practical_work, name, theme, target, progress, text, path_to_file, href_doc_file, download_file FROM read_doc where name='.$name.'';
+$this->query  = 'SELECT practical_work, name, theme, target, progress, text, path_to_file, href_doc_file, download_file FROM read_doc where (name='.$name.' and sections='.$section.') or practice='.$practice.'';
 $this->result = mysql_query($this->query) or die ("Не верный запрос.");
 
     $this->rows   = mysql_fetch_array($this->result);
@@ -29,10 +29,10 @@ $this->result = mysql_query($this->query) or die ("Не верный запро�
 	
 }
 
-public function download_doc($name)
+public function download_doc($name,$section,$practice)
 {
 
-$this->query  = 'SELECT practical_work, name, theme, target, progress, text, path_to_file, href_doc_file, download_file FROM read_doc where name='.$name.'';
+$this->query  = 'SELECT practical_work, name, theme, target, progress, text, path_to_file, href_doc_file, download_file FROM read_doc where (name='.$name.' and sections='.$section.') or practice='.$practice.'';
 $this->result = mysql_query($this->query) or die ("Не верный запрос.");
 
     $this->rows   = mysql_fetch_array($this->result);
