@@ -299,7 +299,6 @@ font-size:1vw;
 font-family:'Open Sans Condensed', sans-serif !important;
 margin:0px;
 color:rgb(140,140,140);
-float:left;
 padding:0.5em 1em;
 }
 
@@ -327,7 +326,6 @@ font-size: 1vw;
 font-family: 'Open Sans Condensed', sans-serif !important;
 margin: 0px;
 color: rgb(140,140,140);
-float: left;
 padding: 0em 1em;
 }
 
@@ -337,7 +335,6 @@ font-size: 1vw;
 font-family: 'Open Sans Condensed', sans-serif !important;
 margin: 0px;
 color: rgb(140,140,140);
-float: left;
 padding: 1em 1em;
 }
 /*___________________________________________________________________read_document_tags__________________________________________________________________________*/
@@ -835,58 +832,40 @@ width:100%;
 background:#212121;
 overflow-y:scroll;
 }
-
+	
 .active_tema_page_1_section
 {	
-position:absolute;
-height:46vw;
 width:100%;
 }
 
 .active_tema_page_1_section_theme
 {
-position:absolute;
-height:5vw;
 width:100%;
 }
 
 .active_tema_page_1_section_head
 {
-position:absolute;
-top:5vw;
-height:5vw;
 width:100%;
 }
 
 .active_tema_page_1_section_target
 {
-position:absolute;
-top:10vw;
-height:15vw;
 width:100%;
 }
 
 .active_tema_page_1_section_progress
 {
-position:absolute;
-top:25vw;
-height:10vw;
 width:100%;
 }
 
 .active_tema_page_1_section_text
 {
-position:absolute;
-top:35vw;
-height:6vw;
 width:100%;
 }
 
 .active_tema_page_1_section_href
 {
-position:absolute;
-bottom:0vw;
-height:5vw;
+height:4vw;
 width:100%;
 border-bottom:1px solid #121212;
 }
@@ -1738,12 +1717,6 @@ overflow-x:hidden;
 padding-left:0vw;
 margin:0vw;
 }
-
-.theme li
-{
-height:46vw;
-}
-
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
 
 

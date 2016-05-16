@@ -250,7 +250,9 @@ echo сonclusion_news();//Вывод новостей
 $obj=new theme();
 $obj->read_db_theme($section);
 
-?>
+?> 	
+
+
 </ul class="theme">
 
 

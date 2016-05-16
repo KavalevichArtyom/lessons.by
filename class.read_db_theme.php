@@ -24,7 +24,7 @@ public function read_db_theme($section)
 	$this->db_sum = $this->rows['sum'];
 
 
-    $this->query  = 'SELECT name, practical_work, theme, target, progress, text, href_theme FROM read_doc where sections='.$section.' order by name';
+    $this->query  = 'SELECT name, practical_work, theme, target, progress, text, href_theme FROM read_doc where sections='.$section.' order by practice ';
     $this->result = mysql_query($this->query) or die ("Не верный запрос.");
 	
     for($i=0;$i<$this->db_sum;$i++){
