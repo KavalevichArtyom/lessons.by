@@ -14,21 +14,17 @@ private $result;
 private $rows;
 private $name;
 
-
-public function __construct()
-    {
-    $this->query  = 'SELECT count(name) as sum FROM read_doc';
+public function read_db_theme($section)
+{
+    $this->query  = 'SELECT count(name) as sum FROM read_doc where sections='.$section.'';
     $this->result = mysql_query($this->query) or die ("Не верный запрос.");
 
     $this->rows   = mysql_fetch_array($this->result);
 	
 	$this->db_sum = $this->rows['sum'];
-	}
 
-public function read_db_theme()
-{
 
-    $this->query  = 'SELECT name, practical_work, theme, target, progress, text, href_theme FROM read_doc order by name';
+    $this->query  = 'SELECT name, practical_work, theme, target, progress, text, href_theme FROM read_doc where sections='.$section.' order by name';
     $this->result = mysql_query($this->query) or die ("Не верный запрос.");
 	
     for($i=0;$i<$this->db_sum;$i++){
@@ -81,7 +77,7 @@ public function read_db_theme()
 
     echo '<div class="active_tema_page_1_section_href">';
 	
-    echo '<a href="'.$db_href_theme.''.$db_name.'"><p>Перейти</p></a>';
+    echo '<a href="'.$db_href_theme.'"><p>Перейти</p></a>';
 
     echo '</div class="active_tema_page_1_section_href">';
 	

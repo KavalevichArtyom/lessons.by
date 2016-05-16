@@ -88,6 +88,8 @@ include_once 'core/news.php';
 include_once 'core/class.siction.php';
 include_once 'class.read_db_theme.php';
 
+$section=$_GET['section'];
+
 ?>
 
 
@@ -246,7 +248,7 @@ echo сonclusion_news();//Вывод новостей
 <?php
 
 $obj=new theme();
-$obj->read_db_theme();
+$obj->read_db_theme($section);
 
 ?>
 </ul class="theme">

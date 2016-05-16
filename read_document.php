@@ -101,6 +101,7 @@ include_once 'core/class.siction.php';
 $page=$_GET['page'];
 $section=$_GET['section'];
 $practice=$_GET['practice'];
+$laboratory=$_GET['laboratory'];
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -242,7 +243,7 @@ $obj->сonclusion_siction();
 
 <?php
 $obj=new doc();
-$obj->read_doc($page,$section,$practice);
+$obj->read_doc($page,$section,$practice,$laboratory);
 ?>	
 
 </div class="read_document_text">
@@ -261,7 +262,7 @@ $obj->read_doc($page,$section,$practice);
 
 <?php
 $obj=new doc();
-$obj->download_doc($page,$section,$practice); 
+$obj->download_doc($page,$section,$practice,$laboratory); 
 ?>	
 
 </div class="active_download_file">
