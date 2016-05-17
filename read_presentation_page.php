@@ -55,6 +55,12 @@
 </head>
 
 <body>
+<?php
+include_once 'read_presentations/class.read_presentations.php';
+
+$number=$_GET['presentation'];
+
+?>
 
 <div class="panel_button"><!--Панель управления -->
 
@@ -86,59 +92,10 @@
 
 </div class="strip">
 
-
-<div class="goal_read_presentation">
-
-<div class="presentation">
-
-<iframe src="https://onedrive.live.com/embed?cid=970EC56FE5EBEAC5&resid=970EC56FE5EBEAC5%21107702&authkey=AFn2JS_JQdwgJ0U&em=2" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-
-</div class="presentation">
-
-</div class="goal_read_presentation">
-
-
-<div class="goal_read_presentation_panel">
-
-
-<div class="goal_read_download_file">
-
-<div class="goal_read_active_download_file">
-
-<a href="#"><p>Скачать документ<p></a>
-
-</div class="goal_read_active_download_file">
-
-</div class="goal_read_download_file">
-
-
-<div class="goal_read_href_presentation">
-
-<div class="goal_read_active_presentation">
-
-<a href="read_presentation_page.php"><p>Просмотр документа по теме</p></a>
-
-</div class="goal_read_active_presentation">
-
-
-</div class="goal_read_href_presentation">
-
-<div class="goal_read_href_knowledge">
-
-
-
-<div class="goal_read_active_knowledge">
-
-<a href="#"><p>Перейти к контролю знаний</p></a>
-
-</div class="goal_read_active_knowledge">
-
-
-</div class="goal_read_href_knowledge">
-
-
-</div class="goal_read_presentation_panel">
-
+<?php
+$obj=new contents();
+$obj->read_presentation($number);
+?>
 
 <div class="footer_read_presentation">
 

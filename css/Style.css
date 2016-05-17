@@ -1817,6 +1817,7 @@ left:5%;
 .goal_presentation_sections
 {
 width:100%;	
+border-bottom:1px solid #414243;
 }
 
 .goal_presentation_center_img
@@ -1843,13 +1844,13 @@ background-color:#121212;
  ul#menu2
 {
  position:absolute;
+ width:100%;
  cursor:pointer;
  padding:0vw;
  margin:0vw;
  z-index:0;
  
 }
-
 /*_________________________________________________________________goal_active____________________________________________________________________________*/
 
 .goal_active_download_file
@@ -1871,7 +1872,7 @@ background:#1C61B9;
 position:absolute;
 width:20%;
 height:3vw;
-left:10%;
+left:5%;
 margin:1.5vw 0vw ;
 border:1vw solid rgba(255, 255, 255, 0.25);
 }
@@ -1895,7 +1896,7 @@ background:#08c;
 position:absolute;
 width:20%;
 height:3vw;
-left:40%;
+left:37.5%;
 background:#121212;
 margin:1.5vw 0vw ;
 border:1vw solid rgba(255, 255, 255, 0.25);

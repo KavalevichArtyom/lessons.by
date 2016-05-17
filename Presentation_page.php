@@ -92,13 +92,13 @@ $(document).ready(function() {
 <body>
 
 <?php
-include_once 'class.read_doc.php';
-include_once 'parsing_doc/parser.php';
+
 include_once 'core/class.siction.php';
 include_once 'core/news.php';
+include_once 'read_presentations/class.read_presentations.php';
 
-/* $obj=new parsing();
-$obj->read_content('http://wccftech.com'); */
+
+
 
 ?>
 
@@ -132,24 +132,6 @@ $obj->read_content('http://wccftech.com'); */
 
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
-<!--<div class="image"><!--Вывод изображения 
-
-<img src="Image/3(2).jpg"></img>
-
-<div class="image_text">
-
-<p>Презентации</p>
-
-</div class="image_text">
-
-</div class="image">
-
-<div class="presentation">
-
-<iframe src="https://onedrive.live.com/embed?cid=970EC56FE5EBEAC5&resid=970EC56FE5EBEAC5%21107702&authkey=AFn2JS_JQdwgJ0U&em=2" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-
-</div class="presentation">
--->
 
 <div class="goal_presentation">
 
@@ -227,64 +209,14 @@ $obj->сonclusion_siction();
 
 <ul id="menu2">
 
-<li>
+<?php
 
-<div class="goal_presentation_sections">
+$obj=new contents();
+$obj->read_presentations();
 
-<div class="goal_presentation_center_img">
+?>
 
-
-<img src="document/presentations/1/img/1.png"></img>
-
-
-</div class="goal_presentation_center_img">
-
-<div class="goal_presentation_center_panel">
-
-
-<div class="goal_download_file">
-
-<div class="goal_active_download_file">
-
-<a href="#"><p>Скачать<p></a>
-
-</div class="goal_active_download_file">
-
-</div class="goal_download_file">
-
-
-<div class="goal_href_presentation">
-
-<div class="goal_active_presentation">
-
-<a href="read_presentation_page.php"><p>Просмотр</p></a>
-
-</div class="goal_active_presentation">
-
-
-</div class="goal_href_presentation">
-
-<div class="goal_href_knowledge">
-
-
-
-<div class="goal_active_knowledge">
-
-<a href="#"><p>Контроль знаний</p></a>
-
-</div class="goal_active_knowledge">
-
-
-</div class="goal_href_knowledge">
-
-
-</div class="goal_presentation_center_panel">
-
-</div class="goal_presentation_sections">
-
-</li>
-
-</ul id="menu1">
+</ul id="menu2">
 
 </div class="goal_presentation_center">
 
