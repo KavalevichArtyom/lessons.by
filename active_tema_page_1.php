@@ -220,7 +220,7 @@ $obj->сonclusion_siction();
 
 <div class="menu_forums_right_head">
 
-<p>Новостная лента</p>
+<p>Библиотека</p>
 
 </div class="menu_forums_right_head">
 

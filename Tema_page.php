@@ -84,6 +84,7 @@ include_once 'core/news.php';
 include_once 'core/class.siction.php';
 include_once 'class.read_db_theme.php';
 
+
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -212,7 +213,7 @@ $obj->сonclusion_siction();
 
 <div class="menu_forums_right_head">
 
-<p>Темы / Оборудование</p>
+<p>Библиотека</p>
 
 </div class="menu_forums_right_head">
 
@@ -228,7 +229,7 @@ echo сonclusion_news();//Вывод новостей
 
 <div class="menu_capcion_head">
 
-<p>Наименование блока</p>
+<p>Новостная лета</p>
 
 </div class="menu_capcion_head">
 

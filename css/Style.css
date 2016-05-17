@@ -425,6 +425,61 @@ margin:2vw 0 2vw 0;
 color:#fff;
 }
 
+.goal_active_download_file  a p
+{
+font-size:1vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0.75vw 0 0.5vw 0;
+color:#fff;
+}
+
+.goal_active_presentation  a p
+{
+font-size:1vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0.75vw 0 0.5vw 0;
+color:#fff;
+}
+
+
+.goal_active_knowledge  a p
+{
+font-size:1vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0.5vw 0 0.5vw 0;
+color:#fff;
+}
+
+.goal_read_active_download_file  a p
+{
+font-size:1.25vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0.5vw 0 0.5vw 0;
+color:#fff;
+}
+
+.goal_read_active_presentation  a p
+{
+font-size:1.25vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0.5vw 0 0.5vw 0;
+color:#fff;
+}
+
+
+.goal_read_active_knowledge  a p
+{
+font-size:1.25vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:0.5vw 0 0.5vw 0;
+color:#fff;
+}
 
 /*___________________________________________________________________panel_button__________________________________________________________________________*/
 
@@ -1716,6 +1771,280 @@ overflow-x:hidden;
 {
 padding-left:0vw;
 margin:0vw;
+}
+
+/*_________________________________________________________________presentation____________________________________________________________________________*/
+.goal_presentation
+{
+position:absolute;
+top:5.3%;
+width:100%;
+height:100vw;
+}
+
+.footer_presentation
+{
+position:absolute;
+width:100%;
+height:6.2vw;
+left:0%;
+bottom:-6.2vw;
+background:#121212;
+border-top:1px solid #414243;
+}
+
+.goal_presentation_center
+{
+position:absolute;
+margin:2vw 0vw;
+width:40%;
+height:90%;
+left:30%;
+background:#212121;
+overflow-y:scroll;
+}
+
+
+.goal_presentation_left
+{
+position:absolute;
+margin:2vw 0vw;
+width:20%;
+height:90%;
+left:5%;
+}
+
+.goal_presentation_sections
+{
+width:100%;	
+}
+
+.goal_presentation_center_img
+{
+margin:2em 0em 0em 0em;
+width:100%;
+height:25vw;
+}
+
+.goal_presentation_center_img img
+{
+width:100%;
+height:100%;
+}
+
+.goal_presentation_center_panel
+{
+margin:0em 0em 2em 0em ;
+width:100%;
+height:8vw;
+background-color:#121212;
+}
+
+ ul#menu2
+{
+ position:absolute;
+ cursor:pointer;
+ padding:0vw;
+ margin:0vw;
+ z-index:0;
+ 
+}
+
+/*_________________________________________________________________goal_active____________________________________________________________________________*/
+
+.goal_active_download_file
+{
+position:absolute;
+width:100%;
+height:100%;
+background:#121212;
+}
+
+.goal_active_download_file:hover
+{
+background:#1C61B9;
+}
+
+
+.goal_download_file
+{
+position:absolute;
+width:20%;
+height:3vw;
+left:10%;
+margin:1.5vw 0vw ;
+border:1vw solid rgba(255, 255, 255, 0.25);
+}
+
+.goal_active_presentation
+{
+position:absolute;
+width:100%;
+height:100%;
+background:#121212;
+}
+
+.goal_active_presentation:hover
+{
+background:#08c;
+}
+
+
+.goal_href_presentation
+{
+position:absolute;
+width:20%;
+height:3vw;
+left:40%;
+background:#121212;
+margin:1.5vw 0vw ;
+border:1vw solid rgba(255, 255, 255, 0.25);
+}
+
+.goal_active_knowledge
+{
+position:absolute;
+width:100%;
+height:100%;
+background:#121212;
+}
+
+.goal_active_knowledge:hover
+{
+background:#087975;
+}
+
+
+.goal_href_knowledge
+{
+position:absolute;
+width:20%;
+height:3vw;
+left:70%;
+background:#121212;
+margin:1.5vw 0vw ;
+border:1vw solid rgba(255, 255, 255, 0.25);
+}
+
+
+
+
+
+.goal_read_presentation
+{
+position:absolute;
+top:5.3%;
+width:100%;
+height:70%;
+}
+
+.presentation
+{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+iframe.presentation
+{
+width:100%;
+height:100%;
+}
+
+.goal_read_presentation_panel
+{
+position:absolute;
+width:100%;
+height:15%;
+bottom:10%;
+background-color:#121212;
+}
+
+.goal_read_active_download_file
+{
+position:absolute;
+width:100%;
+height:100%;
+background:#121212;
+}
+
+.goal_read_active_download_file:hover
+{
+background:#1C61B9;
+}
+
+
+.goal_read_download_file
+{
+position:absolute;
+width:20%;
+height:3vw;
+left:10%;
+background:#121212;
+margin:1.5vw 0vw ;
+border:1vw solid rgba(255, 255, 255, 0.25);
+}
+
+.goal_read_active_presentation
+{
+position:absolute;
+width:100%;
+height:100%;
+background:#121212;
+}
+
+.goal_read_active_presentation:hover
+{
+background:#08c;
+}
+
+
+.goal_read_href_presentation
+{
+position:absolute;
+width:20%;
+height:3vw;
+left:40%;
+background:#121212;
+margin:1.5vw 0vw ;
+border:1vw solid rgba(255, 255, 255, 0.25);
+}
+
+.goal_read_active_knowledge
+{
+position:absolute;
+width:100%;
+height:100%;
+background:#121212;
+}
+
+.goal_read_active_knowledge:hover
+{
+background:#087975;
+}
+
+
+.goal_read_href_knowledge
+{
+position:absolute;
+width:20%;
+height:3vw;
+left:70%;
+background:#121212;
+margin:1.5vw 0vw ;
+border:1vw solid rgba(255, 255, 255, 0.25);
+}
+
+
+.footer_read_presentation
+{
+position:absolute;
+width:100%;
+height:10%;
+bottom:0vw;
+color:#000;
+background:#fff;
+border-top:1px solid #414243;
 }
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
 
