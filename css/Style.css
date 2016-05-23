@@ -481,6 +481,35 @@ margin:0.5vw 0 0.5vw 0;
 color:#fff;
 }
 
+.test_number p
+{
+font-size:2vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:2vw 0 2vw 0;
+color:#fff;
+}
+
+.test_text p
+{
+font-size:1.25vw;
+text-align:left;
+font-family:'Open Sans Condensed', sans-serif !important;
+margin:3vw 0 2vw 2vw;
+color:#fff;
+}
+
+.head_test p
+{
+font-weight:bold;
+font-size:2vw;
+text-align:center;
+font-family:'Open Sans Condensed', sans-serif !important;
+padding:0.65em 0.6em;
+margin:0;
+color:#fff;
+}
+
 /*___________________________________________________________________panel_button__________________________________________________________________________*/
 
 
@@ -2047,13 +2076,110 @@ color:#000;
 background:#fff;
 border-top:1px solid #414243;
 }
+
+/*_________________________________________________________________Control_know____________________________________________________________________________*/
+
+.goal_test_center
+{
+position:absolute;
+margin:2vw 0vw;
+width:40%;
+height:90%;
+left:30%;
+background:#212121;
+}
+
+
+.head_test
+{
+position:absolute;
+height:5%;
+width:100%;
+background-color:#121212;
+
+}
+
+.read_tests
+{
+position:absolute;
+top:5%;
+height:95%;
+width:100%;
+overflow-y:scroll;
+}
+
+.test
+{
+width:100%;
+}
+
+.test_number
+{
+width:100%;
+}
+
+
+
+/*_________________________________________________________________know____________________________________________________________________________*/
+
+
+.footer_know
+{
+position:absolute;
+width:100%;
+height:10%;
+left:0%;
+bottom:0%;
+background:#121212;
+border-top:1px solid #414243;
+}
+
+.goal_know
+{
+position:absolute;
+width:100%;
+top:5.3%;
+height:84.7%;
+}
+
+.number_test
+{
+position:absolute;
+top:5%;
+left:5%;
+width:70%;
+height:15%;
+background:#121212;
+}
+
+.query_know
+{
+position:absolute;
+top:25%;
+left:5%;
+width:40%;
+height:50%;
+background:#121212;
+}
+
+.response_options
+{
+
+}
+
+.image_know
+{
+position:absolute;
+top:25%;
+left:50%;
+width:25%;
+height:50%;
+background:#121212;
+}
+
+
+
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
-
-
-
-
-
-
 
 #About_the_site
 {
