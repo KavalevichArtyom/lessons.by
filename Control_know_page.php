@@ -227,11 +227,46 @@ $obj->сonclusion_siction();
 
 </div class="test_number">
 
+<div class="test_image">
+
+<img src="/Image/know.png"></img>
+
+</div class="test_image">
+
+<div class="test_head_text">
+
+<p>Перечень практических/лабораторных работ вошедшие в тест:</p>
+
+</div class="test_head_text">
+
 <div class="test_text">
 
-<p>Перечень практических/лабораторных вошедших в тест.</p>
+<p>
+-  Лабораторная работа №1;<br />
+-  Лабораторная работа №2;<br />
+-  Лабораторная работа №3;<br />
+-  Практическая работа №1.<br />
+-  Практическая работа №2.<br />
+</p>
 
 </div class="test_text">
+
+
+<div class="circs_test">
+
+<p>
+Данный тест преднозначен для проверки знаний, 
+с последующим выставлением оценки.<br />Время прохождения теста
+ограничена 30 минутами.<br /> Количество вопросов в тесте: 20.
+</p>
+
+</div class="circs_test">
+
+<div class="href_test">
+
+<a href="know_page.php?test=1&task=1"><p>Пройти тест</p></a>
+
+</div class="href_test">
 
 </div class="test">
 

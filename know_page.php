@@ -85,22 +85,71 @@
 
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
-
 <div class="goal_know">
 
+<div class="goal_know_center">
+
 <div class="number_test">
+
+<p>Задание №1</p>
 
 </div class="number_test">
 
 
 <div class="query_know">
 
+
+<div class="query_know_head">
+
+<p>
+Вопрос:
+</p>
+
+</div class="query_know_head">
+
+<div class="query_know_body">
+
+<p>
+Чему равно состояние флага CF после выполнения команды вычитания?
+</p>
+
+</div class="query_know_body">
+
+<div class="query_know_response">
+
+<p>
+Выберите один из 2 вариантов ответа:
+</p>
+
+</div class="query_know_response">
+
+<div class="query_know_options">
+
+<p>
+1) 0<br />
+2) 1
+</p>
+
+</div class="query_know_options">
+
+<form method="POST" class="form_return">
+
+<input type="text" class="text_write">
+
+<a href="#" class="text_add">Отправить</a>
+
+</form>
+
 </div class="query_know">
 
 <div class="image_know">
 
+<img src="/Image/gg.png"></img>
+
 </div class="image_know">
 
+
+</div class="goal_know_center">
 
 </div class="goal_know">
 
