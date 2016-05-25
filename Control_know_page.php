@@ -97,9 +97,6 @@ include_once 'core/class.siction.php';
 include_once 'core/news.php';
 include_once 'read_tests/class.read_tests.php';
 
-
-
-
 ?>
 
 <div class="panel_button"><!--Панель управления -->
