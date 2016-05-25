@@ -1,0 +1,76 @@
+/* @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic); */
+
+#minute
+{
+position:absolute;
+top:0vw;
+padding-left:1.6vw;
+padding-top:1vw;
+letter-spacing:1.5vw;
+font-size:3vw;
+color:#fff;
+font-family:'Open Sans Condensed', sans-serif !important;
+}
+
+#second
+{
+position:absolute;
+top:0vw;
+padding-left:1.6vw;
+padding-top:1vw;
+letter-spacing:1.5vw;
+font-size:3vw;
+color:#fff;
+font-family:'Open Sans Condensed', sans-serif !important;
+}
+
+#countdown #week,#countdown #day,#countdown #hour,#countdown #minute,#countdown #second {
+	display:none;
+}
+.timer
+{
+position:absolute;
+top:3vw;
+left:80%;
+height:5vw;
+width:19.5%;
+font-size:1vw;
+}
+
+.timer_left img
+{
+padding:0.2vw 1vw;	
+height:5vw;
+max-width:6vw;
+}
+
+.timer_left
+{
+position:absolute;
+top:0vw;
+left:0vw;
+height:100%;
+width:50%;
+}
+
+.timer_right
+{
+position:absolute;
+top:0vw;
+left:50%;
+height:100%;
+width:50%;
+}
+
+.timer_right img
+{
+padding:0.2vw 1vw;
+height:5vw;
+max-width:6vw;
+}
+
+.clear 
+{
+	clear:both;
+	float:none !important;
+}
