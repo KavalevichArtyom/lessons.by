@@ -97,6 +97,7 @@ include_once 'core/class.siction.php';
 include_once 'core/news.php';
 include_once 'read_tests/class.read_tests.php';
 
+setcookie("time",$time_new,time()-18000);
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -232,7 +233,7 @@ $obj->сonclusion_siction();
 
 <div class="test_head_text">
 
-<p>Перечень практических/лабораторных работ вошедшие в тест:</p>
+<p>Тестирование знаний по следующим работам</p>
 
 </div class="test_head_text">
 
@@ -252,9 +253,7 @@ $obj->сonclusion_siction();
 <div class="circs_test">
 
 <p>
-Данный тест преднозначен для проверки знаний, 
-с последующим выставлением оценки.<br />Время прохождения теста
-ограничена 30 минутами.<br /> Количество вопросов в тесте: 20.
+Время прохождения теста ограничена 30 минутами.<br /> Количество вопросов в тесте - 20.
 </p>
 
 </div class="circs_test">

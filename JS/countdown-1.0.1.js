@@ -1,3 +1,7 @@
+function sleep() {
+window.location.href="http://lessons.by/window_load/window_load.php";
+}
+
 function countdown_go() {
 	timeleft_func = timeleft;
 /* 	if(countdown_week=='block') {
@@ -31,5 +35,12 @@ function countdown_go() {
 		$("#second span").html(timevalue);
 	}
 	timeleft-=1;
+	
+	if(timeleft===0)
+	{
+	alert("Время истекло.");
+	window.location.href="http://lessons.by/window_load/window_load.php";
+	/* setInterval(sleep,5000); */
+	}
 	return false;
 }

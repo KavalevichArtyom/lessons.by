@@ -126,23 +126,6 @@ $section=$_GET['section'];
 </div class="strip"><!--Закрытие полосы активной страницы -->
 
 
-<!--
-<div class="image"><!--Вывод изображения 
-
-<img src="Image/4(2).jpg"></img>
-
-
-<div class="image_text">
-
-<p>Темы</p>
-
-</div class="image_text">
-
-
-</div class="image">
-
--->
-
 <div class="goal" >
 
 <div class="goal_child" >

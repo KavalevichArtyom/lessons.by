@@ -15,8 +15,8 @@ $countdown_setting = array(
 		"week"	    => 0,
 		"day"		=> 0,
 		"hour"		=>0, 
-		"minute"	=> 0,
-		"second"	=> 30
+		"minute"	=> 30,
+		"second"	=> 0
 	), /* указывается время, для режима time */
 	"visible"		=> array(
 /* 		"week"	    => array("none","недель:"),
@@ -28,15 +28,15 @@ $countdown_setting = array(
 );
 	$time = time();
 	
-	
-	
 	$script='';
 	$countdown_txt = '';
 	$block_count = 0;
 	/* Генерация html кода таймера */
-	foreach($countdown_setting['visible'] AS $i => $v) {
+	foreach($countdown_setting['visible'] AS $i => $v) 
+	{
 	if ($i=="minute")
 	{
+			
 	$countdown_txt.='<div class="timer_left"><img src="/Image/timer-bg.png"></img><div id="'.$i.'"><span>00</span></div></div class="timer_left">';
 	}	
 	else
@@ -58,16 +58,20 @@ $countdown_setting = array(
 		
 		
 		$time_new = $time+$time_value;
-		
+
 		
 		
 		/* обработка кукисов */
-		if($countdown_setting['cookie']) {
-			$time_cookie = (int) $_COOKIE['time'];
-			if($time_cookie==0) {
-			echo "ноль<br>";
-				setcookie("time",$time_new);
-			} else {
+		if($countdown_setting['cookie']) 
+		{
+		$time_cookie = (int) $_COOKIE['time'];
+		
+			if($time_cookie==0)
+			{
+				setcookie("time",$time_new,time()+$time_new);
+			} 
+			else 
+			{
 				$time_value = $time_cookie-$time;
 			}
 		}
@@ -193,15 +197,6 @@ $test=$_GET['test'];
 
 <div class="goal_know_center">
 
-<div class="timer">
-
-
-<?php echo $countdown_txt; ?>
-
-	
-<div class="clear"></div>
-	
-</div class="timer"> 
 
  <?php
 $obj=new contents();
@@ -211,6 +206,16 @@ $obj->read_task_one($task,$test);
 </div class="goal_know_center">
 
 </div class="goal_know">
+
+<div class="timer">
+
+
+<?php echo $countdown_txt; ?>
+
+	
+<div class="clear"></div>
+	
+</div class="timer"> 
 
 <div class="footer_know">
 

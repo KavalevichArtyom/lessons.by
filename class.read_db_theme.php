@@ -77,7 +77,7 @@ public function read_db_theme($section)
 
     echo '<div class="active_tema_page_1_section_href">';
 	
-    echo '<a href="'.$db_href_theme.'"><p>Перейти</p></a>';
+    echo '<a href="'.$db_href_theme.'"><p>Далее</p></a>';
 
     echo '</div class="active_tema_page_1_section_href">';
 	

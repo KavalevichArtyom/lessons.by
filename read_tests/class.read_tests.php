@@ -17,12 +17,7 @@ private $count_id;
 public function __construct()
     {
 	
-	$this->count_id_query = "SELECT COUNT(id) as count_id FROM presentation";
-	$this->count_id       =  mysql_query($this->count_id_query) or die ("Не верный запрос.") ;
-	
-	$rows   = mysql_fetch_array($this->count_id);	
-	
-	$this->db_count_id_subsictions = $rows['count_id']; 
+
 	}
 
 public function read_tests()
