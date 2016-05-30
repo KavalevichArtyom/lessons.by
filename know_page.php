@@ -65,10 +65,12 @@ $countdown_setting = array(
 		if($countdown_setting['cookie']) 
 		{
 		$time_cookie = (int) $_COOKIE['time'];
+		$i_cookie = (int) $_COOKIE['i'];
 		
 			if($time_cookie==0)
 			{
 				setcookie("time",$time_new,time()+$time_new);
+				setcookie("i",0,time()+$time_new);
 			} 
 			else 
 			{
@@ -159,8 +161,12 @@ $(document).ready(function() {
 
 <?php
 include_once 'read_task/class.read_task.php';
+include_once 'inspection/class.inspection.php';
+
 $task=$_GET['task'];
 $test=$_GET['test'];
+$name="radio_check";
+
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -201,6 +207,10 @@ $test=$_GET['test'];
  <?php
 $obj=new contents();
 $obj->read_task_one($task,$test);
+
+$obj=new inspection();
+$obj->inspection_tests($name,$task,$test);
+
 ?>
 
 </div class="goal_know_center">

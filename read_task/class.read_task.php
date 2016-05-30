@@ -54,7 +54,23 @@ echo '</div class="query_know_body">';
 echo '<div class="query_know_response">';
 echo '<p>'.$db_know_response.'</p>';
 echo '</div class="query_know_response">';
-echo '<form method="POST" class="form_return">';
+
+    $task_1=$task;
+	$task_1+=1;
+	
+	$query  = "SELECT id, number_test,query,href_image,response_options,href_query,number_task,know_response FROM test_query where number_test=".$test." and number_task=".$task_1."";
+    $result = mysql_query($query) or die ("Не верный запрос."); 
+
+    $rows   = mysql_fetch_array($result);
+	$db_href_query_next         = $rows['href_query'];
+	
+	if(empty($db_href_query_next)==true)
+	{
+	$db_href_query_next="http://lessons.by/window_load/window_load.php";
+	}
+
+
+echo '<form method="post" class="form_return" >';
 
 echo '<div class="query_know_options">';
 
@@ -87,14 +103,9 @@ if ($db_block_read=="1")
 	$db_number_options         = $rows['number_options'];
 	$db_response_options       = $rows['response_options'];
 	
-	if($i==0)
-	{
-	echo '<label><input type="radio" name="radio" id="number_radio_'.$db_number_options.'" class="radio" checked="checked"/>'.$db_response_options.'<br></label>';
-	}
-	else
-	{
-	echo '<label><input type="radio" name="radio" id="number_radio_'.$db_number_options.'" class="radio" />'.$db_response_options.'<br></label>';
-	}
+
+	echo '<label><input type="radio" name="radio_check" value="'.$db_number_options.'" 	/>'.$db_response_options.'<br></label>';
+	
 	
 	}	
 
@@ -121,7 +132,7 @@ if ($db_block_read=="2")
 	$db_number_options         = $rows['number_options'];
 	$db_response_options       = $rows['response_options'];
 	
-	echo '<label><input type="checkbox" name="radio" id="number_checkbox_'.$db_number_options.'" class="radio" />'.$db_response_options.'<br></label>';
+	echo '<label><input type="checkbox" name="checkbox_check" value="'.$db_number_options.'" />'.$db_response_options.'<br></label>';
 	
 	}	
 
@@ -158,22 +169,11 @@ if ($db_block_read=="3")
 
 echo '</div class="query_know_options">';	
 
-	$task+=1;
-	
-	$query  = "SELECT id, number_test,query,href_image,response_options,href_query,number_task,know_response FROM test_query where number_test=".$test." and number_task=".$task."";
-    $result = mysql_query($query) or die ("Не верный запрос."); 
-
-    $rows   = mysql_fetch_array($result);
-	$db_href_query_next         = $rows['href_query'];
-	
-	if(empty($db_href_query_next)==true)
-	{
-	$db_href_query_next="http://lessons.by/window_load/window_load.php";
-	}
 
 
 
-echo '<a href='.$db_href_query_next.' class="text_add">Далее</a>';
+echo '<input type="submit" class="text_add"  value="Далее" ></input>';
+/* echo '<a href='.$db_href_query_next.' class="text_add">Далее</a>'; */
 echo '</form>';
 echo '</div class="query_know">';
 
