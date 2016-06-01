@@ -10,6 +10,7 @@ window.location= "index.php";
 function href_query_next(href)
 {
 window.location= href;
+/* alert(href); */
 }
 
 function Tema_page()

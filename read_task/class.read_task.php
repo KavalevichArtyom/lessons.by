@@ -1,4 +1,5 @@
 <?
+session_start();
 
 include_once 'core/class.connect.php';
 
@@ -57,20 +58,23 @@ echo '<p>'.$db_know_response.'</p>';
 echo '</div class="query_know_response">';
 
     $task_1=$task;
-	$task_1+=1;
+	++$task_1;
 	
 	$query  = "SELECT id, number_test,query,href_image,response_options,href_query,number_task,know_response FROM test_query where number_test=".$test." and number_task=".$task_1."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
 
     $rows   = mysql_fetch_array($result);
+
 	$db_href_query_next         = $rows['href_query'];
 	
 	if(empty($db_href_query_next)==true)
 	{
 	$db_href_query_next="http://lessons.by/window_load/window_load.php";
-	}
+	}	
+	
 /* action="'.$db_href_query_next.'" */
-
+/* action="load_test.php" */
+  
 
 echo '<form method="post" class="form_return" >';
 
@@ -81,7 +85,9 @@ if(isset($db_block_read)==true)
 
 if ($db_block_read=="0")
 {
-echo '<input type="text" class="text_write">';
+$_GET['text']="text";
+
+echo '<input type="text" name="text" class="text_write">';
 }
 
 if ($db_block_read=="1")
@@ -145,6 +151,7 @@ if ($db_block_read=="2")
 if ($db_block_read=="3")
 
 {
+    $_GET['conformity']="conformity";
 
 	$query  = "SELECT count(number_options) as numbers_options  FROM test_options where number_test=".$test." and number_task=".$task."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
@@ -156,6 +163,7 @@ if ($db_block_read=="3")
 	$query  = "SELECT number_options, response_options  FROM test_options where number_test=".$test." and number_task=".$task."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
 
+	echo '<div class="options_left_value">';
 	
 	for($i=0;$i<$db_numbers_options;$i++){
 	
@@ -164,20 +172,58 @@ if ($db_block_read=="3")
 	$db_number_options         = $rows['number_options'];
 	$db_response_options       = $rows['response_options'];
 	
-	echo '<label><input type="checkbox" name="radio" id="number_checkbox_'.$db_number_options.'" class="radio" />'.$db_response_options.'<br></label>';
 	
-	}	
+	
+	if((isset($db_number_options))&&(isset($db_response_options)))
+	{
+	if($db_number_options>0)
+	{
 
-}
+	echo '<label>'.$db_response_options.'<br></label>';
+	
+	}
+	}
+	
+	
+	}
+	
+echo '</div class="options_left_value">';	
+
+echo '<div class="options_right_value">';
+
+    $query  = "SELECT number_options, response_options  FROM test_options where number_test=".$test." and number_task=".$task."";
+    $result = mysql_query($query) or die ("Не верный запрос."); 
+
+    for($j=0,$i=0;$j<$db_numbers_options;$j++){
+	
+    $rows   = mysql_fetch_array($result);
+	
+	$db_number_options         = $rows['number_options'];
+	$db_response_options       = $rows['response_options'];
+	
+	if((isset($db_number_options))&&(isset($db_response_options)))
+	{
+	if($db_number_options==0)
+	{	
+	$i++;
+	echo '<label ><input type="text" name="text_'.$i.'"  />'.$db_response_options."<br></label>";
+	}
+	}
+	
+	}
+
+	echo '</div class="options_right_value">';
+
 }
 
 echo '</div class="query_know_options">';	
 
+/* onclick="href_query_next(\''.$db_href_query_next.'\')" */
+echo '<div class="text">';
+echo '<a href='.$db_href_query_next.' class="text_add_next">Далее</a>';
+echo '<input type="submit" class="text_add"   value="Проверить" ></input>';
+echo '</div class="text">';
 
-
-
-echo '<input type="submit" class="text_add"  value="Далее" ></input>';
-/* echo '<a href='.$db_href_query_next.' class="text_add">Далее</a>'; */
 echo '</form>';
 echo '</div class="query_know">';
 
@@ -191,5 +237,5 @@ echo '</div class="image_know">';
     }	
 }
 
-
+}
 ?>

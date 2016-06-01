@@ -1,4 +1,8 @@
-﻿
+﻿<?php 
+session_start();
+
+include_once 'read_result_users_test/class.read_result_users_test.php';
+?>
 
 <html>
 <head>
@@ -56,11 +60,6 @@
 	
 </head>
 <body>
-
-<?php
-include_once 'read_result_users_test/class.read_result_users_test.php';
-?>
-
 
 <div class="panel_button"><!--Панель управления -->
 

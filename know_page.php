@@ -1,6 +1,8 @@
 ﻿<?php
 session_start();
 
+
+
 $countdown_setting = array(
 	"type" 			=> "time", /* date или time, date - отстет до указанной даты, time - отсчет указанного времени */
 	"cookie" 		=> true, /* true или false, запоминать время, только для режима time */
@@ -157,6 +159,7 @@ $(document).ready(function() {
 	setInterval(countdown_go,1000);
 	return false;
 });
+
     </script> 
 	
 	<?php echo $script; ?>
@@ -227,12 +230,23 @@ $name="radio_check";
 echo "radio_check";
 }
 
+if(isset($_GET['text']))
+{
+$name="text";
+echo "text";
+}
+
+if(isset($_GET['conformity']))
+{
+$name="conformity";
+echo "conformity";
+}
 
 $obj=new inspection();
 $obj->inspection_tests($name,$task,$test);
 
-
-
+echo $_SESSION['correct'];
+print_r($_SESSION);
 ?>
 
 
