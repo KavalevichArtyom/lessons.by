@@ -1,4 +1,6 @@
 ﻿<?php
+session_start();
+
 $countdown_setting = array(
 	"type" 			=> "time", /* date или time, date - отстет до указанной даты, time - отсчет указанного времени */
 	"cookie" 		=> true, /* true или false, запоминать время, только для режима time */
@@ -59,18 +61,19 @@ $countdown_setting = array(
 		
 		$time_new = $time+$time_value;
 
+		$not_correct_value=0;
 		
 		
 		/* обработка кукисов */
 		if($countdown_setting['cookie']) 
 		{
 		$time_cookie = (int) $_COOKIE['time'];
-		$i_cookie = (int) $_COOKIE['i'];
 		
 			if($time_cookie==0)
 			{
 				setcookie("time",$time_new,time()+$time_new);
-				setcookie("i",0,time()+$time_new);
+				
+				
 			} 
 			else 
 			{
@@ -85,7 +88,9 @@ $countdown_setting = array(
 		$time_value = mktime($countdown_setting['date']['hour'],$countdown_setting['date']['minute'],$countdown_setting['date']['second'],$countdown_setting['date']['month'],$countdown_setting['date']['day'],$countdown_setting['date']['year']);
 		$time_value = $time_value-$time;
 		$script .= '<script type="text/javascript">var timeleft='.$time_value.';</script>';
+		
 	}
+
 	
 ?>
 
@@ -163,10 +168,9 @@ $(document).ready(function() {
 include_once 'read_task/class.read_task.php';
 include_once 'inspection/class.inspection.php';
 
+
 $task=$_GET['task'];
 $test=$_GET['test'];
-$name="radio_check";
-
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -204,21 +208,40 @@ $name="radio_check";
 <div class="goal_know_center">
 
 
- <?php
+ <?php 
 $obj=new contents();
 $obj->read_task_one($task,$test);
+
+
+
+if(isset($_GET['checkbox']))
+{
+$name="checkbox_check";
+echo "checkbox_check";
+
+}
+
+if(isset($_GET['radio']))
+{
+$name="radio_check";
+echo "radio_check";
+}
+
 
 $obj=new inspection();
 $obj->inspection_tests($name,$task,$test);
 
+
+
 ?>
+
+
 
 </div class="goal_know_center">
 
 </div class="goal_know">
 
 <div class="timer">
-
 
 <?php echo $countdown_txt; ?>
 

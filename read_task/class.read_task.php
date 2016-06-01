@@ -1,4 +1,5 @@
 <?
+
 include_once 'core/class.connect.php';
 
 $obj=new connect_db();
@@ -68,6 +69,7 @@ echo '</div class="query_know_response">';
 	{
 	$db_href_query_next="http://lessons.by/window_load/window_load.php";
 	}
+/* action="'.$db_href_query_next.'" */
 
 
 echo '<form method="post" class="form_return" >';
@@ -84,6 +86,7 @@ echo '<input type="text" class="text_write">';
 
 if ($db_block_read=="1")
 {
+    $_GET['radio']="radio";
 
 	$query  = "SELECT count(number_options) as numbers_options  FROM test_options where number_test=".$test." and number_task=".$task."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
@@ -106,13 +109,13 @@ if ($db_block_read=="1")
 
 	echo '<label><input type="radio" name="radio_check" value="'.$db_number_options.'" 	/>'.$db_response_options.'<br></label>';
 	
-	
 	}	
 
 }
 if ($db_block_read=="2")
 
 {
+     $_GET['checkbox']="checkbox";
 
 	$query  = "SELECT count(number_options) as numbers_options  FROM test_options where number_test=".$test." and number_task=".$task."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
@@ -132,8 +135,9 @@ if ($db_block_read=="2")
 	$db_number_options         = $rows['number_options'];
 	$db_response_options       = $rows['response_options'];
 	
-	echo '<label><input type="checkbox" name="checkbox_check" value="'.$db_number_options.'" />'.$db_response_options.'<br></label>';
+	echo '<label><input type="checkbox" name="checkbox_'.$db_number_options.'" value="'.$db_number_options.'" />'.$db_response_options.'<br></label>';
 	
+
 	}	
 
 }

@@ -1,4 +1,6 @@
-﻿
+﻿<?php 
+session_start();
+?>
 <html>
 <head>
   
@@ -97,7 +99,11 @@ include_once 'core/class.siction.php';
 include_once 'core/news.php';
 include_once 'read_tests/class.read_tests.php';
 
-setcookie("time",$time_new,time()-18000);
+setcookie("time",null,time()-18000);
+setcookie("correct",null,time()-18000);
+unset($_SESSION['correct_true']);
+unset($_SESSION['correct']);
+
 ?>
 
 <div class="panel_button"><!--Панель управления -->
@@ -260,7 +266,7 @@ $obj->сonclusion_siction();
 
 <div class="href_test">
 
-<a href="know_page.php?test=1&task=1"><p>Пройти тест</p></a>
+<a href="know_page.php?test=1&task=1&correct=0"><p>Пройти тест</p></a>
 
 </div class="href_test">
 

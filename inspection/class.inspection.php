@@ -1,5 +1,6 @@
 <?
 include_once 'core/class.connect.php';
+include_once 'class.check_cookie.php';
 
 $obj=new connect_db();
 $obj->connect();
@@ -12,15 +13,15 @@ private $result_radio;
 
 private $query_checkbox;
 private $result_checkbox;
-private $i;
+public $correct_true;
 
 public function __construct()
     {
-
 	}
 
 public function inspection_tests($name,$task,$test)
 {
+
 if(isset($name,$task,$test)==true)
 {	
 
@@ -36,23 +37,33 @@ if ($name=="radio_check")
 	 
      if( isset( $_POST['radio_check'] ) )
      {
-	 
-        if($db_test_return==$_POST['radio_check'])
-	    {
-		$_COOKIE['i']+=1;
-          print_r($_COOKIE);
-	    }
-	 
-     } 
-     else
-    {
-     echo "нет"; 
-    }	 
 
+        if($db_test_return==$_POST['radio_check'])
+	    {	
+		$_SESSION['correct_true']=1;
+		
+		$obj=new check();
+        $obj->check_cookie();
+		echo $_SESSION['correct'];
+
+/*      $query_radio = "INSERT INTO read_result_users_test(number_test) VALUE ('".$test."')";
+	    mysql_query($query_radio) or die ("Не верный запрос."); */
+		
+		echo "Да ";
+       	
+     	}
+		
+     }
 	
 }
+
 if ($name=="checkbox_check")
 {
+	$query  = "SELECT count(number_options) as numbers_options  FROM test_options where number_test=".$test." and number_task=".$task."";
+    $result = mysql_query($query) or die ("Не верный запрос."); 
+
+    $rows   = mysql_fetch_array($result);
+	$db_numbers_options         = $rows['numbers_options'];
 
     $this->query_radio = "SELECT test_return FROM test_return where number_test=".$test." and number_task=".$task."";
     $this->result_radio = mysql_query($this->query_radio) or die ("Не верный запрос."); 
@@ -60,9 +71,38 @@ if ($name=="checkbox_check")
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	
-}	 
+	 echo $db_test_return."<br>";
+	 
+	 $text_options;
+	 
+	 for($i=1,$j=0;$i<=$db_numbers_options;$i++,$j++)
+	 
+	 {
+	 if (isset($_REQUEST['checkbox_'.$i.'']))
+     {  
+     echo " gut <br>";  
+	 $this->correct_true=1;
+	 
+	 	$obj=new check();
+        $obj->check_cookie();
+		
+		echo $_SESSION['correct'];
+	 
+	 $text_options=$text_options."$i";
+     }
+	 else
+	 {
+	 echo " gg <br>";
+	 }
+	 
+     }
+	if ($db_test_return==$text_options)
+	{
+	echo "ot";
+	}
+	 
 
+}
 }
 }
 }
