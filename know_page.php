@@ -1,8 +1,6 @@
 ﻿<?php
 session_start();
 
-
-
 $countdown_setting = array(
 	"type" 			=> "time", /* date или time, date - отстет до указанной даты, time - отсчет указанного времени */
 	"cookie" 		=> true, /* true или false, запоминать время, только для режима time */
@@ -19,8 +17,8 @@ $countdown_setting = array(
 		"week"	    => 0,
 		"day"		=> 0,
 		"hour"		=>0, 
-		"minute"	=> 30,
-		"second"	=> 0
+		"minute"	=> 0,
+		"second"	=> 5
 	), /* указывается время, для режима time */
 	"visible"		=> array(
 /* 		"week"	    => array("none","недель:"),
@@ -59,7 +57,7 @@ $countdown_setting = array(
 	/* обработка, когда указано время отсчета */
 	if($countdown_setting['type'] == 'time') {
 		$time_value = $countdown_setting['time']['week']*7*60*60*24+$countdown_setting['time']['day']*60*60*24+$countdown_setting['time']['hour']*60*60+$countdown_setting['time']['minute']*60+$countdown_setting['time']['second'];
-		
+		$_SESSION['time_value']=$time_value;
 		
 		$time_new = $time+$time_value;
 
@@ -80,9 +78,11 @@ $countdown_setting = array(
 			else 
 			{
 				$time_value = $time_cookie-$time;
+				
 			}
 		}
 		$script .= '<script type="text/javascript">var timeleft='.$time_value.';</script>';
+		$_SESSION['time']=$time_value;
 	} 
 	else 
 	
@@ -159,13 +159,23 @@ $(document).ready(function() {
 	setInterval(countdown_go,1000);
 	return false;
 });
-
+function href_next()
+{
+window.location.href="http://lessons.by/window_load/window_load.php";
+}
     </script> 
 	
 	<?php echo $script; ?>
 	
 </head>
 <body>
+
+ <div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+    <a href="javascript:href_next()"><p>Время истекло!</p></a>
+    </div>
+</div> 
+
 
 <?php
 include_once 'read_task/class.read_task.php';
@@ -174,7 +184,14 @@ include_once 'inspection/class.inspection.php';
 
 $task=$_GET['task'];
 $test=$_GET['test'];
+$fio="Ковалевич Артём Юрьевич";
+
+
+$_SESSION['number_test']=$test;	
+$_SESSION['fio']=$fio;
 ?>
+
+
 
 <div class="panel_button"><!--Панель управления -->
 
@@ -248,8 +265,6 @@ $obj->inspection_tests($name,$task,$test);
 echo $_SESSION['correct'];
 print_r($_SESSION);
 ?>
-
-
 
 </div class="goal_know_center">
 

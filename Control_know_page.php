@@ -102,8 +102,15 @@ include_once 'read_tests/class.read_tests.php';
 
 setcookie("time",null,time()-18000);
 setcookie("correct",null,time()-18000);
+
 unset($_SESSION['correct_true']);
 unset($_SESSION['correct']);
+unset($_SESSION['not_correct']);
+unset($_SESSION['fio']);
+unset($_SESSION['task']);
+unset($_SESSION['time']);
+unset($_SESSION['time_value']);
+unset($_SESSION['time_now']);
 unset($_SESSION['id']);
 
 ?>

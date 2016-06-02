@@ -2,6 +2,46 @@
 session_start();
 
 include_once 'read_result_users_test/class.read_result_users_test.php';
+ 
+    $correct=$_SESSION['correct'];
+    $task=$_SESSION['task'];
+	$number_test=$_SESSION['number_test'];
+    $time=$_SESSION['time'];
+	$time_value=$_SESSION['time_value'];
+	$fio=$_SESSION['fio'];
+	
+	$time_now=$time_value-$time;
+	
+	if($time_now>60)
+	{
+	$time_now=$time_now/60;
+	$time_now = number_format($time_now, 2, ':', '');
+	}
+else
+	{
+	$time_now=$time_now/100;
+	$time_now = number_format($time_now, 2, ':', '');
+	}
+
+	$value=6;
+	
+	
+	$_SESSION['time_now']=$time_now;
+ 
+    $not_correct=$task-$correct;
+    $_SESSION['not_correct']=$not_correct;
+
+ 	    $query_radio = "INSERT INTO read_result_users_test(number_test,fio_users,queryes,correct,not_correct,time,value) VALUE ('".$number_test."','".$fio."','".$task."','".$correct."','".$not_correct."','".$time_now."','".$value."')";
+	    mysql_query($query_radio) or die ("Не верный запрос."); 
+	
+	
+
+print_r($_SESSION);
+print_r($_COOKIE);
+
+
+
+
 ?>
 
 <html>
@@ -97,7 +137,7 @@ include_once 'read_result_users_test/class.read_result_users_test.php';
 
 <?php 
 $obj=new contents();
-$obj->read_result_users_test();
+$obj->read_result_users_test($time_now);
 ?>
 
 </div class="goal_result">

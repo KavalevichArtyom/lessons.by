@@ -36,10 +36,11 @@ function countdown_go() {
 	}
 	timeleft-=1;
 	
+	
 	if(timeleft===0)
 	{
-	alert("Время истекло.");
-	window.location.href="http://lessons.by/window_load/window_load.php";
+	var elems=document.getElementsByClassName('b-popup');
+    for(var i=0; i<elems.length; i++)elems[i].style.display='block';
 	/* setInterval(sleep,5000); */
 	}
 	return false;

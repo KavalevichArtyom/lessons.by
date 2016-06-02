@@ -26,7 +26,16 @@ if(isset($name,$task,$test)==true)
 {
    if ($name=="radio_check")	
    {
-
+    $this->query_radio = "SELECT count(number_test) as count_test FROM test_return where number_test=".$test."";
+    $this->result_radio = mysql_query($this->query_radio) or die ("Не верный запрос."); 
+	
+    $rows   = mysql_fetch_array($this->result_radio);
+    
+     $db_count_test        = $rows['count_test'];
+	
+	$_SESSION['task']=$db_count_test;
+   
+   
     $this->query_radio = "SELECT test_return FROM test_return where number_test=".$test." and number_task=".$task."";
     $this->result_radio = mysql_query($this->query_radio) or die ("Не верный запрос."); 
 	
@@ -34,6 +43,7 @@ if(isset($name,$task,$test)==true)
     
      $db_test_return        = $rows['test_return'];
 	 echo $db_test_return."<br>";
+	 
 	 
      if( isset( $_POST['radio_check'] ) )
      {
@@ -98,8 +108,6 @@ if(isset($name,$task,$test)==true)
 		
 		echo $_SESSION['correct'];
 		
-/* 		$query_radio = "INSERT INTO read_result_users_test(number_test) VALUE ('".$test."')";
-	    mysql_query($query_radio) or die ("Не верный запрос."); */
 	
 	}
 }

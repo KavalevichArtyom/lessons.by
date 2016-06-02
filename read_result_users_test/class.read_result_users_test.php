@@ -19,9 +19,9 @@ public function __construct()
 	 
 	}
 
-public function read_result_users_test()
+public function read_result_users_test($time)
 {
-    $query  = "SELECT id, number_test,fio_users,queryes, correct,not_correct,value ,time FROM read_result_users_test";
+    $query  = "SELECT id, number_test,fio_users,queryes, correct,not_correct,value,time FROM read_result_users_test where time='".$time."'";
     $result = mysql_query($query) or die ("Не верный запрос."); 
 
     $rows   = mysql_fetch_array($result);
@@ -59,7 +59,7 @@ echo '<div class="goal_result_not_correct">';
 echo '<p>Не верных: '.$db_not_correct.'</p>';
 echo '</div class="goal_result_not_correct">';
 echo '<div class="goal_result_time">';
-echo '<p>Время: '.$db_time.'</p>';
+echo '<p>Время:'.$db_time.'</p>';
 echo '</div class="goal_result_left">';
 echo '</div class="goal_result_panel">';
 echo '<div class="goal_result_grade_bottom">';
