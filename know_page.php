@@ -17,8 +17,8 @@ $countdown_setting = array(
 		"week"	    => 0,
 		"day"		=> 0,
 		"hour"		=>0, 
-		"minute"	=> 0,
-		"second"	=> 5
+		"minute"	=> 30,
+		"second"	=> 0
 	), /* указывается время, для режима time */
 	"visible"		=> array(
 /* 		"week"	    => array("none","недель:"),

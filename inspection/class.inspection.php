@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'core/class.connect.php';
 include_once 'class.check_cookie.php';
 

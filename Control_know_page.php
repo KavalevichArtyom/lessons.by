@@ -93,25 +93,39 @@ $(document).ready(function() {
 </head>
 <body>
 
+
+ <div class="write_password" id="popup1">
+    <div class="b-popup-content">	
+	<form method="post" class="form-4" action="check_test_password.php">
+	<label for="password">Введите пароль</label>
+	<input type="password" name="password" placeholder="Пароль">
+	<input type="submit" name="submit_password" value="Подтвердить">
+	</form>
+	<div class="password_close">
+	<a  accesskey="x" onclick="none('write_password')"><p>Назад[x]</p></a>
+	</div>
+    </div>
+</div> 
+
+
 <?php
 
-include_once 'core/class.siction.php';
-include_once 'core/news.php';
-include_once 'read_tests/class.read_tests.php';
+	include_once 'core/class.siction.php';
+	include_once 'core/news.php';
+	include_once 'read_tests/class.read_tests.php';	
 
+	setcookie("time",null,time()-18000);
+	setcookie("correct",null,time()-18000);
 
-setcookie("time",null,time()-18000);
-setcookie("correct",null,time()-18000);
-
-unset($_SESSION['correct_true']);
-unset($_SESSION['correct']);
-unset($_SESSION['not_correct']);
-unset($_SESSION['fio']);
-unset($_SESSION['task']);
-unset($_SESSION['time']);
-unset($_SESSION['time_value']);
-unset($_SESSION['time_now']);
-unset($_SESSION['id']);
+	unset($_SESSION['correct_true']);
+	unset($_SESSION['correct']);
+	unset($_SESSION['not_correct']);
+	unset($_SESSION['fio']);
+	unset($_SESSION['task']);
+	unset($_SESSION['time']);
+	unset($_SESSION['time_value']);
+	unset($_SESSION['time_now']);
+	unset($_SESSION['id']);
 
 ?>
 
@@ -229,60 +243,10 @@ $obj->сonclusion_siction();
 <div class="read_tests">
 
 <ul id="menu2">
-
-<li>
-
-<div class="test">
-
-<div class="test_number">
-
-<p>Тест №1</p>
-
-</div class="test_number">
-
-<div class="test_image">
-
-<img src="/Image/know.png"></img>
-
-</div class="test_image">
-
-<div class="test_head_text">
-
-<p>Тестирование знаний по следующим работам</p>
-
-</div class="test_head_text">
-
-<div class="test_text">
-
-<p>
--  Лабораторная работа №1;<br />
--  Лабораторная работа №2;<br />
--  Лабораторная работа №3;<br />
--  Практическая работа №1.<br />
--  Практическая работа №2.<br />
-</p>
-
-</div class="test_text">
-
-
-<div class="circs_test">
-
-<p>
-Время прохождения теста ограничена 30 минутами.<br /> Количество вопросов в тесте - 20.
-</p>
-
-</div class="circs_test">
-
-<div class="href_test">
-
-<a href="know_page.php?test=1&task=1"><p>Пройти тест</p></a>
-
-</div class="href_test">
-
-</div class="test">
-
-</li>
-
+<?php
+	$obj=new contents();
+	$obj->read_tests();
+?>
 </ul id="menu2">
 
 </div class="read_tests">

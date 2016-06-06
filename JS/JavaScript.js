@@ -1,6 +1,15 @@
 ﻿/* window.onload=function(){
 alert("Размер элемента:" + this.offsetWidth +"x"+ this.offsetHeight)
 }  */
+function block(check){
+ 	var elems=document.getElementsByClassName(check);
+    for(var i=0; i<elems.length; i++)elems[i].style.display='block'; 
+}
+
+function none(check){
+ 	var elems=document.getElementsByClassName(check);
+    for(var i=0; i<elems.length; i++)elems[i].style.display='none'; 
+}
 
 function About_the_site_page()
 {

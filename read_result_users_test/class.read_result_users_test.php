@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'core/class.connect.php';
 
 $obj=new connect_db();

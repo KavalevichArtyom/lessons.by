@@ -43,19 +43,19 @@ public function read_task_one($task,$test)
 	$db_block_read         = $rows['block_read'];
 	 
 	 
-echo '<div class="number_test">';
-echo '<p>Задание '.$db_number_task.'</p>';
-echo '</div class="number_test">';
-echo '<div class="query_know">';
-echo '<div class="query_know_head">';
-echo '<p>Вопрос:</p>';
-echo '</div class="query_know_head">';
-echo '<div class="query_know_body">';
-echo '<p>'.$db_query.'</p>';
-echo '</div class="query_know_body">';
-echo '<div class="query_know_response">';
-echo '<p>'.$db_know_response.'</p>';
-echo '</div class="query_know_response">';
+	echo '<div class="number_test">';
+	echo '<p>Задание '.$db_number_task.'</p>';
+	echo '</div class="number_test">';
+	echo '<div class="query_know">';
+	echo '<div class="query_know_head">';
+	echo '<p>Вопрос:</p>';
+	echo '</div class="query_know_head">';
+	echo '<div class="query_know_body">';
+	echo '<p>'.$db_query.'</p>';
+	echo '</div class="query_know_body">';
+	echo '<div class="query_know_response">';
+	echo '<p>'.$db_know_response.'</p>';
+	echo '</div class="query_know_response">';
 
     $task_1=$task;
 	++$task_1;
@@ -72,13 +72,13 @@ echo '</div class="query_know_response">';
 	$db_href_query_next="http://lessons.by/window_load/window_load.php";
 	}	
 	
-/* action="'.$db_href_query_next.'" */
-/* action="load_test.php" */
-  
+	/* action="'.$db_href_query_next.'" */
+	/* action="load_test.php" */
+	  
 
-echo '<form method="post" class="form_return" >';
+	echo '<form method="post" class="form_return" >';
 
-echo '<div class="query_know_options">';
+	echo '<div class="query_know_options">';
 
 if(isset($db_block_read)==true)
 {
@@ -87,7 +87,7 @@ if ($db_block_read=="0")
 {
 $_GET['text']="text";
 
-echo '<input type="text" name="text" class="text_write">';
+echo '<input type="text" name="text" onclick="block(\'text_add\')" class="text_write">';
 }
 
 if ($db_block_read=="1")
@@ -113,7 +113,7 @@ if ($db_block_read=="1")
 	$db_response_options       = $rows['response_options'];
 	
 
-	echo '<label><input type="radio" name="radio_check" value="'.$db_number_options.'" 	/>'.$db_response_options.'<br></label>';
+	echo '<label><input type="radio" name="radio_check" onclick="block(\'text_add\')" value="'.$db_number_options.'" 	/>'.$db_response_options.'<br></label>';
 	
 	}	
 
@@ -141,7 +141,7 @@ if ($db_block_read=="2")
 	$db_number_options         = $rows['number_options'];
 	$db_response_options       = $rows['response_options'];
 	
-	echo '<label><input type="checkbox" name="checkbox_'.$db_number_options.'" value="'.$db_number_options.'" />'.$db_response_options.'<br></label>';
+	echo '<label><input type="checkbox" onclick="block(\'text_add\')" name="checkbox_'.$db_number_options.'" value="'.$db_number_options.'" />'.$db_response_options.'<br></label>';
 	
 
 	}	
@@ -179,7 +179,7 @@ if ($db_block_read=="3")
 	if($db_number_options>0)
 	{
 
-	echo '<label>'.$db_response_options.'<br></label>';
+	echo '<label >'.$db_response_options.' <br></label>';
 	
 	}
 	}
@@ -206,7 +206,7 @@ echo '<div class="options_right_value">';
 	if($db_number_options==0)
 	{	
 	$i++;
-	echo '<label ><input type="text" name="text_'.$i.'"  />'.$db_response_options."<br></label>";
+	echo '<label ><input type="text" onclick="block(\'text_add\')" name="text_'.$i.'"  />'.$db_response_options."<br></label>";
 	}
 	}
 	
@@ -216,22 +216,22 @@ echo '<div class="options_right_value">';
 
 }
 
-echo '</div class="query_know_options">';	
+	echo '</div class="query_know_options">';	
+	/* onclick="block(\'text_add_next')" */
+	/* onclick="href_query_next(\''.$db_href_query_next.'\')" */
+	echo '<div class="text">';
+	echo '<a href='.$db_href_query_next.' class="text_add_next">Далее</a>';
+	echo '<input type="submit" class="text_add"   value="Проверить" ></input>';
+	echo '</div class="text">';
 
-/* onclick="href_query_next(\''.$db_href_query_next.'\')" */
-echo '<div class="text">';
-echo '<a href='.$db_href_query_next.' class="text_add_next">Далее</a>';
-echo '<input type="submit" class="text_add"   value="Проверить" ></input>';
-echo '</div class="text">';
+	echo '</form>';
+	echo '</div class="query_know">';
 
-echo '</form>';
-echo '</div class="query_know">';
-
-if(empty($db_href_image)!==true)
-{
-echo '<div class="image_know">';
-echo '<img src="'.$db_href_image.'"></img>';
-echo '</div class="image_know">';
+	if(empty($db_href_image)!==true)
+	{
+	echo '<div class="image_know">';
+	echo '<img src="'.$db_href_image.'"></img>';
+	echo '</div class="image_know">';
 }	 
 	 
     }	
