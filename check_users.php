@@ -44,6 +44,7 @@
   </div>
   <h1>Обработка...</h1>
 </div>
+
 <script>	
     function showContent(link) {
 
@@ -53,7 +54,7 @@
         cont.innerHTML = loading.innerHTML;
 
         var http = createRequestObject();
-        if( http )
+			if( http )
         {
             http.open('get', link);
             http.onreadystatechange = function ()
@@ -92,47 +93,21 @@
 </html>
 
 <?php
-include_once 'core/class.connect.php';
+	include_once 'core/class.connect.php';	
+	include_once 'check_users/class.check_users.php';	
+	
+	$email=$_POST['email'];
+	$password=$_POST['password'];
+	
+	$obj=new connect_db();
+	$obj->connect();
 
-$obj=new connect_db();
-$obj->connect();
-
-$password=$_POST['password'];
-
-if((isset($password)==true) && (empty($password)!==true))
+if((isset($password)==true) && (empty($password)!==true) && (isset($email)==true) && (empty($email)!==true))
 {
-	$query  = "SELECT count(id) as count_id FROM password_test";
-    $result = mysql_query($query) or die ("Не верный запрос."); 
 
-    $rows   = mysql_fetch_array($result);
-    
-    $db_count_id        = $rows['count_id'];
+	$obj=new check();
+	$obj->check_password_users($email,$password);
 
+	echo $email.'  and  '.$password; 
 
-    $query  = "SELECT id,number_test,password,time_life FROM password_test";
-    $result = mysql_query($query) or die ("Не верный запрос."); 
-
-	for($i=0;$i<$db_count_id;$i++)
-	{
-		$rows   = mysql_fetch_array($result);
-		
-		$db_number_test        = $rows['number_test'];
-		$db_password           = $rows['password'];
-		
-		if((isset($db_password )==true) && (empty($db_password )!==true && $password==$db_password))
-		{
-			echo '<script type="text/javascript">'; 
-			echo 'window.location.href="http://lessons.by/know_page.php?test='.$db_number_test.'&task=1";'; 
-			echo '</script>'; 
-		}
-		else
-		{
-			echo '<script type="text/javascript">'; 
-			echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
-/* 			echo 'alert("Пароль не верный!")';   */
-			echo '</script>';
-		}
-	 
-
-	}
 }

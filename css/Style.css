@@ -2301,6 +2301,7 @@ border:1vw solid rgba(255, 255, 255, 0.25);
 .circs_test
 {
 	width:50%;
+	margin-bottom:10vw;
 }
 
 .href_test
@@ -2696,17 +2697,15 @@ label
     padding: 8px 5px;
    
     /* Стиль */
-    border: 1px solid #0273dd; /* Отступ */
     border: 1px solid rgba(0,0,0,0.4);
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.3),
         inset 0 10px 10px rgba(255,255,255,0.1);
     border-radius: 3px;
-    background: #38a6f0;
+    background: #00aeef;
     cursor:pointer;
    
     /* Стили Шрифтов */
-    font-family:'Open Sans Condensed', sans-serif !important;
     font-family:'Open Sans Condensed', sans-serif !important;
     color: white;
     font-weight: 700;
@@ -2744,6 +2743,42 @@ label
 	font-size:1vw;
 	color:#fff;
 }
+
+
+.autorize_body
+{
+position:absolute;
+width:100%;
+height:85.3%;
+background:rgba(140,140,140,0.5);
+font-family: 'Open Sans', sans-serif!important;
+z-index:20;
+}
+
+.block_autorize
+{
+position:absolute;
+top:5%;
+left:35%;
+height:30%;
+width:30%;
+z-index: 22;
+display:block;
+transition:3s;
+}
+
+.block_registation
+{
+position:absolute;
+top:5%;
+left:35%;
+height:30%;
+width:30%;
+z-index: 21;
+display:none;
+transition:3s;
+}
+
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
 
 #About_the_site

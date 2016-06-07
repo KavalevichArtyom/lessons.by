@@ -104,7 +104,7 @@ $section=$_GET['section'];
 
 <input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
 
-<input type="button" id="Control_know" onclick="Control_know_page()" value="Контроль знаний" >
+<input type="button" id="Control_know" onclick="href_query_next('window_autorize.php')" value="Контроль знаний" >
 
 </div class="button_menu"><!--Закрытие панель кнопок -->
 

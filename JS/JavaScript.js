@@ -11,6 +11,14 @@ function none(check){
     for(var i=0; i<elems.length; i++)elems[i].style.display='none'; 
 }
 
+function combo(block,none){
+ 	var elems=document.getElementsByClassName(block);
+    for(var i=0; i<elems.length; i++)elems[i].style.display='block'; 
+
+ 	var elems=document.getElementsByClassName(none);
+    for(var i=0; i<elems.length; i++)elems[i].style.display='none'; 
+}
+
 function About_the_site_page()
 {
 window.location= "index.php";
@@ -19,7 +27,6 @@ window.location= "index.php";
 function href_query_next(href)
 {
 window.location= href;
-/* alert(href); */
 }
 
 function Tema_page()

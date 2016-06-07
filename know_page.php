@@ -1,6 +1,24 @@
 ﻿<?php
 session_start();
 
+include_once 'read_task/class.read_task.php';
+include_once 'inspection/class.inspection.php';
+
+$task=$_GET['task'];
+$test=$_GET['test'];
+
+
+$_SESSION['number_test']=$test;	
+
+
+			$query = "SELECT passage_of_time_minutes,passage_of_time_hours FROM read_tests where test_number=".$test."";
+			$result = mysql_query($query) or die ("Не верный запрос."); 
+			
+			$rows   = mysql_fetch_array($result);
+			
+			$passage_of_time_minutes         = $rows['passage_of_time_minutes'];
+			$passage_of_time_hours        	 = $rows['passage_of_time_hours'];
+	
 $countdown_setting = array(
 	"type" 			=> "time", /* date или time, date - отстет до указанной даты, time - отсчет указанного времени */
 	"cookie" 		=> true, /* true или false, запоминать время, только для режима time */
@@ -16,8 +34,8 @@ $countdown_setting = array(
 	"time" 			=> array(
 		"week"	    => 0,
 		"day"		=> 0,
-		"hour"		=>0, 
-		"minute"	=> 30,
+		"hour"		=> $passage_of_time_hours, 
+		"minute"	=> $passage_of_time_minutes,
 		"second"	=> 0
 	), /* указывается время, для режима time */
 	"visible"		=> array(
@@ -175,21 +193,6 @@ window.location.href="http://lessons.by/window_load/window_load.php";
     <a href="javascript:href_next()"><p>Время истекло!</p></a>
     </div>
 </div> 
-
-
-<?php
-include_once 'read_task/class.read_task.php';
-include_once 'inspection/class.inspection.php';
-
-
-$task=$_GET['task'];
-$test=$_GET['test'];
-$fio="Ковалевич Артём Юрьевич";
-
-
-$_SESSION['number_test']=$test;	
-$_SESSION['fio']=$fio;
-?>
 
 
 

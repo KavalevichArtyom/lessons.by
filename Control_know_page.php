@@ -98,7 +98,7 @@ $(document).ready(function() {
     <div class="b-popup-content">	
 	<form method="post" class="form-4" action="check_test_password.php">
 	<label for="password">Введите пароль</label>
-	<input type="password" name="password" placeholder="Пароль">
+	<input type="password" name="password" placeholder="Пароль" autofocus required>
 	<input type="submit" name="submit_password" value="Подтвердить">
 	</form>
 	<div class="password_close">
@@ -110,6 +110,10 @@ $(document).ready(function() {
 
 <?php
 
+    $_POST['fio']="Ковалевич Артём Юрьевич";
+	$fio=$_POST['fio'];
+	$_SESSION['fio']=$fio;
+	
 	include_once 'core/class.siction.php';
 	include_once 'core/news.php';
 	include_once 'read_tests/class.read_tests.php';	
@@ -120,7 +124,7 @@ $(document).ready(function() {
 	unset($_SESSION['correct_true']);
 	unset($_SESSION['correct']);
 	unset($_SESSION['not_correct']);
-	unset($_SESSION['fio']);
+/* 	unset($_SESSION['fio']); */
 	unset($_SESSION['task']);
 	unset($_SESSION['time']);
 	unset($_SESSION['time_value']);
