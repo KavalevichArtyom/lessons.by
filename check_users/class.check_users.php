@@ -12,27 +12,76 @@ class check
 	private $result;
 	
 		public function check_password_users($email,$password)
-			{
-			$this->query = "SELECT email, password,login FROM users where (email='".$email."' or login='".$email."') and password='".$password."'";
-			$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
-			
-			$rows   = mysql_fetch_array($this->result);
-			
-			$db_password         = $rows['password'];
-			$db_email       	 = $rows['email'];
-			
-			if((isset($db_password )==true) && (empty($db_password )!==true) && (isset($db_email)==true) && (empty($db_email)!==true))
+			{			
+				/* $this->query = "SELECT surname,name,middle_name,email, password,login FROM users where (email='".$email."' or login='".$email."') and password='".$password."'";
+				$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
+				
+				$rows   = mysql_fetch_array($this->result);
+				
+				$db_password           = $rows['password'];
+				$db_email       	   = $rows['email'];
+				$db_surname            = $rows['surname'];
+				$db_name       		   = $rows['name'];
+				$db_middle_name        = $rows['middle_name']; */
+				
+				$this->query = "SELECT surname,name,middle_name,email, password,login FROM users where (email='".$email."' or login='".$email."')";
+				$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
+				
+				$rows   = mysql_fetch_array($this->result);
+				
+				$db_password           = $rows['password'];
+				$db_email       	   = $rows['email'];
+
+				if((isset($db_email)==true) && (empty($db_email)!==true))
 				{
-					echo '<script type="text/javascript">'; 
-					echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
-					echo '</script>'; 
+				    $_SESSION['email_true_autorize']=true;			
 				}		
-				else
+/* 				else
+				{ 
+					$_SESSION['login_false']=true;	
+				} */
+				
+				$this->query = "SELECT surname,name,middle_name,email, password,login FROM users where password='".$password."'";
+				$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
+				
+				$rows   = mysql_fetch_array($this->result);
+				
+				$db_password           = $rows['password'];
+				$db_email       	   = $rows['email'];
+				
+				if((isset($db_password)==true) && (empty($db_password)!==true))
+					{
+						$_SESSION['password_true_autorize']=true;
+					}
+/* 					else
+					{
+						$_SESSION['password_false']=true;
+					} */
+					
+				if(($_SESSION['email_true_autorize']==true)&&($_SESSION['password_true_autorize']==true))
 				{
-					echo '<script type="text/javascript">'; 
-					echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
-					echo 'alert("Пароль не верный!")';  
-					echo '</script>';
+						$_SESSION['fio']="".$db_surname." ".$db_name." ".$db_middle_name."";
+						$_SESSION['alert_autorize']=true;
+						$_SESSION['autorize_true']=true;
+						$_SESSION['login_autorize']=$email;
+						$_SESSION['password_autorize']=$password;
+						
+						$_SESSION['email_true_autorize']=false;
+						$_SESSION['password_true_autorize']=false;
+						
+						$_SESSION['password_false']=false;
+						$_SESSION['login_false']=false;
+						
+						echo '<script type="text/javascript">'; 
+						echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
+						echo '</script>'; 
+				}
+				else
+				{		
+						$_SESSION['autorize_false']=true;
+						echo '<script type="text/javascript">'; 
+						echo 'window.location.href="http://lessons.by/window_autorize.php";'; 							
+						echo '</script>';
 				}
 			}
 	}

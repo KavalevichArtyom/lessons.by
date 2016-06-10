@@ -2749,7 +2749,7 @@ label
 {
 position:absolute;
 width:100%;
-height:85.3%;
+height:100%;
 background:rgba(140,140,140,0.5);
 font-family: 'Open Sans', sans-serif!important;
 z-index:20;
@@ -2758,7 +2758,7 @@ z-index:20;
 .block_autorize
 {
 position:absolute;
-top:5%;
+top:15%;
 left:35%;
 height:30%;
 width:30%;
@@ -2770,9 +2770,8 @@ transition:3s;
 .block_registation
 {
 position:absolute;
-top:5%;
+padding:1vw 0vw 2vw 0vw;
 left:35%;
-height:30%;
 width:30%;
 z-index: 21;
 display:none;

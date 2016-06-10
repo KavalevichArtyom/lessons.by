@@ -31,7 +31,7 @@ else
     $not_correct=$task-$correct;
     $_SESSION['not_correct']=$not_correct;
 
- 	    $query_radio = "INSERT INTO read_result_users_test(number_test,fio_users,queryes,correct,not_correct,time,value) VALUE ('".$number_test."','".$fio."','".$task."','".$correct."','".$not_correct."','".$time_now."','".$value."')";
+ 	    $query_radio = "INSERT INTO read_result_users_test(number_test,fio_users,queryes,correct,not_correct,time,value) VALUES ('".$number_test."','".$fio."','".$task."','".$correct."','".$not_correct."','".$time_now."','".$value."')";
 	    mysql_query($query_radio) or die ("Не верный запрос."); 
 	
 	

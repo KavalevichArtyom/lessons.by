@@ -2,7 +2,7 @@
   position:absolute;
   box-shadow: 0px 1vw 2vw #000;
   width: 100%;
-  border-radius:0 0 1vw 1vw;
+  border-radius:1vw 1vw 1vw 1vw;
 }
 .main-signin .main-signin__head {
   background: #121212;
@@ -124,93 +124,93 @@
 
 
 .main-signin_registation {
-  position:absolute;
-  box-shadow: 0px 1vw 2vw #000;
-  width: 100%;
-  border-radius:0 0 1vw 1vw;
+	position:absolute;
+	box-shadow: 0px 1vw 2vw #000;
+	width: 100%;
+	border-radius:1vw 1vw 1vw 1vw;
 }
 .main-signin_registation .main-signin__head_registation {
-  background: #121212;
-  border-bottom: 0.1vw solid #2d2f32;
-  border-radius: 1vw 1vw 0 0;
-  box-shadow: 0px 0.1vw 0px #000;
-  padding: 1.2vw 0;
-  font-size:1.5vw;
+	background: #121212;
+	border-bottom: 0.1vw solid #2d2f32;
+	border-radius: 1vw 1vw 0 0;
+	box-shadow: 0px 0.1vw 0px #000;
+	padding: 1.2vw 0;
+	font-size:1.5vw;
 }
 .main-signin_registation .main-signin__head_registation p {
-  color: #586069;
-  text-align: center;
+	color: #586069;
+	text-align: center;
 }
 .main-signin_registation .main-signin__middle_registation {
-  background: #212121;
-  border-bottom: 0.1vw solid #2d2f32;
-  border-top: 0.1vw solid #2d2f32;
-  box-shadow: 0px 0.1vw 0px #000;
-  padding:1vw 0vw;
+	background: #212121;
+	border-bottom: 0.1vw solid #2d2f32;
+	border-top: 0.1vw solid #2d2f32;
+	box-shadow: 0px 0.1vw 0px #000;
+	padding:1vw 0vw;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation{
-  margin: 3vw 0 2vw 0;
+	margin: 3vw 0 2vw 0;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation ::-webkit-input-placeholder {
-  color: rgba(140,140,140,0.5);
+	color: rgba(140,140,140,0.5);
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation :-moz-placeholder {
-  color: #25262a;
+	color: #25262a;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation ::-moz-placeholder {
-  color: #25262a;
+	color: #25262a;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation :-ms-input-placeholder {
-  color: #25262a;
+	color: #25262a;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="text"], .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="password"], .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="submit"] {
-  background: #daf4fe;
-  border-radius: 0.5vw 0.5vw 0 0;
-  border: none;
-  color: #25262a;
-  display: block;
-  margin: 0 2vw;
-  outline: none;
-  padding: 1vw 0;
-  width: 90%;
-  font-size:1vw;
+	background: #daf4fe;
+	border-radius: 0.5vw 0.5vw 0 0;
+	border: none;
+	color: #25262a;
+	display: block;
+	margin: 0 2vw;
+	outline: none;
+	padding: 1vw 0;
+	width: 90%;
+	font-size:1vw;
 }
 
 .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="text"], .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="password"] {
-  padding:1.5vw 2vw;
-  width:90%;
+	padding:1.5vw 2vw;
+	width:90%;
 }
 
 .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="password"] {
-  border-top: 0.1vw solid #acabab;
-  border-radius: 0 0 0.5vw 0.5vw;
+	border-top: 0.1vw solid #acabab;
+	border-radius: 0 0 0.5vw 0.5vw;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="submit"] {
-  background: #00aeef;
-  border-radius: 0.5vw;
-  border-bottom: 0.1vw solid #000;
-  border-top: 0.1vw solid #80d6f7;
-  color: #fff;
-  font-size: 1vw;
-  margin-top: 1.5vw;
-  cursor:pointer;
-  text-transform: uppercase;
+	background: #00aeef;
+	border-radius: 0.5vw;
+	border-bottom: 0.1vw solid #000;
+	border-top: 0.1vw solid #80d6f7;
+	color: #fff;
+	font-size: 1vw;
+	margin-top: 1.5vw;
+	cursor:pointer;
+	text-transform: uppercase;
 }
 .main-signin_registation .main-signin__middle_registation .middle__form_registation input[type="submit"]:active {
-  background: #80d6f7;
+	background: #80d6f7;
 }
 .main-signin_registation .main-signin__foot_registation {
-  background: #121212;
-  border-top: 0.1vw solid #2d2f32;
-  border-radius: 0 0 1vw 1vw;
-  float: left;
-  padding: 1.2vw 0;
-  width: 100%;
+	background: #121212;
+	border-top: 0.1vw solid #2d2f32;
+	border-radius: 0 0 1vw 1vw;
+	float: left;
+	padding: 1.2vw 0;
+	width: 100%;
 }
 .main-signin_registation .main-signin__foot_registation .foot__left_registation {
-  float: left;
-  padding: 0 0 0 10%;
-  width: 52%;
+	float: left;
+	padding: 0 0 0 10%;
+	width: 52%;
 }
 .main-signin_registation .main-signin__foot_registation .foot__left_registation p {
 	font-size:1vw;
@@ -245,5 +245,40 @@
 	color: #fff;
 	font-size: 1vw;
 	text-align:center;
+}
+
+#surname
+{
+	border-radius:0.5vw 0.5vw 0 0;
+}
+
+#name
+{
+	border-radius:0 0 0 0;
+	border-top:0.1vw solid #acabab;
+}
+
+#middle_name
+{
+	border-radius:0 0 0 0;
+	border-top:0.1vw solid #acabab;
+}
+
+#login_l
+{
+	border-radius:0 0 0 0;
+	border-top:0.1vw solid #acabab;
+}
+
+#email
+{
+	border-radius:0 0 0 0;
+	border-top:0.1vw solid #acabab;
+}
+
+#password
+{
+	border-radius:0 0 0 0;
+	border-top:0.1vw solid #acabab;
 }
 
