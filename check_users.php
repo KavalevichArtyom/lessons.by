@@ -44,33 +44,78 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 	$obj->check_password_users($email_login,$password_login);
 
 }
+	$preg_match=preg_match('/.+@.+\..+/i',$email_registation);	
+		
+	if(!$preg_match===true)
+	{	
+		echo $preg_match;
+		$_SESSION['preg_match_false']=true;
+	}
+	else
+	{
+		$preg_match_true=true;
+	}
 
-	$query = "SELECT surname,name,middle_name,email,password,login FROM users where login='".$email."'";
+	$query = "SELECT surname,name,middle_name,email,password,login FROM users where login='".$login_registation."'";
 	$result = mysql_query($query) or die ("Не верный запрос."); 
 				
 	$rows   = mysql_fetch_array($result);
 				
 	$db_login= $rows['login'];
-			
-	if(empty($db_login)==true)
-	{
+	
+	if(!empty($db_login))
+	{		
 		$_SESSION['login_registation_false']=true;
-		echo $_SESSION['login_registation_false']."login_registation_false<br>";
+	}
+	else
+	{
+		$email_login_true=true;
 	}
 			
-	$query = "SELECT surname,name,middle_name,email,password,login FROM users where email='".$email."'";
+	$query = "SELECT surname,name,middle_name,email,password,login FROM users where email='".$email_registation."'";
 	$result = mysql_query($query) or die ("Не верный запрос."); 
 				
 	$rows   = mysql_fetch_array($result);
 				
 	$db_email= $rows['email'];
-	
-	if(empty($db_email)==true)
-	{
-		$_SESSION['email_registation_false']=true;
-		echo $_SESSION['email_registation_false']."email_registation_false<br>";
-	}
 
+	if(!empty($db_email))
+	{		
+		$_SESSION['email_registation_false']=true;
+	}
+	else
+	{
+		$email_registation_true=true;
+	}
+	
+	if(($_SESSION['email_registation_false']===true)||($_SESSION['login_registation_false']===true))
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
+		echo '</script>';
+	}
+	
+	if($_SESSION['preg_match_false']===true)
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
+		echo '</script>';
+	}
+	
+	if(!($password_registation===$password_reset_registation))
+	{
+		$_SESSION['password_registation_false']=true;
+					
+		echo '<script type="text/javascript">'; 
+		echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
+		echo '</script>';
+	}
+	else
+	{
+		$password_registation_true=true;
+	}
+	
+	
 if	(
 	   (isset($surname_registation)==true) 			&& (empty($surname_registation)!==true) 
 	&& (isset($name_registation)==true) 			&& (empty($name_registation)!==true)
@@ -83,20 +128,11 @@ if	(
 		{	
 			
 
-			if($password_registation===$password_reset_registation)
+			if(($password_registation_true) && ($email_registation_true) && ($email_login_true) && ($preg_match_true))
 				{	
-					/* $_SESSION['fio']="".$_SESSION['surname_registation']." ".$_SESSION['name_registation']." ".$_SESSION['middle_name_registation']."";
+					$_SESSION['fio']="".$_SESSION['surname_registation']." ".$_SESSION['name_registation']." ".$_SESSION['middle_name_registation']."";
 					$obj=new registration();
 					$obj->user_registration($surname_registation,$name_registation,$middle_name_registation,$login_registation,$email_registation,$password_registation);
-					 */
-				}
-				else
-				{			
-					
-					/* echo '<script type="text/javascript">'; 
-					echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
-					echo 'alert("Пароли не совпадает!")';  
-					echo '</script>'; */
 					
 				}
 		}

@@ -132,6 +132,13 @@
 	unset($_SESSION['email_registation']);
 	unset($_SESSION['password_registation']);
 	unset($_SESSION['password_reset_registation']);
+	unset($_SESSION['autorize_false']);
+	unset($_SESSION['login_false']);
+	unset($_SESSION['password_false']);
+	unset($_SESSION['email_registation_false']);
+	unset($_SESSION['login_registation_false']);
+	unset($_SESSION['password_registation_false']);
+	unset($_SESSION['preg_match_false']);
 
 ?>
 
@@ -295,6 +302,9 @@
 
 	</html>
 <?php
+	$password_test_false=$_SESSION['password_test_false'];
+	
+	unset($_SESSION['password_test_false']);
 
 	if($_SESSION['alert_autorize']==true)
 	{
@@ -303,5 +313,10 @@
 		echo '</script>'; 	
 		$_SESSION['alert_autorize']=false;
 	}
-
-?>
+	
+		if($password_test_false===true)		
+	{	
+		echo '<script type="text/javascript">';	
+		echo 'alert("Не верный пароль.")'; 
+		echo '</script>';
+	}	

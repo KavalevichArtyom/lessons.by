@@ -4,6 +4,8 @@ session_start();
 include_once 'read_task/class.read_task.php';
 include_once 'inspection/class.inspection.php';
 
+$_SESSION['password_test_false']=false;
+
 $task=$_GET['task'];
 $test=$_GET['test'];
 

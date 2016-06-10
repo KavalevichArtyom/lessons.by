@@ -14,6 +14,8 @@
 	
 	$login_autorize=$_SESSION['login_autorize'];
 	$password_autorize=$_SESSION['password_autorize'];
+	
+	
 ?>
 
 <html>
@@ -141,15 +143,53 @@
 	$login_false=$_SESSION['login_false'];
 	$password_false=$_SESSION['password_false'];
 	$autorize_false=$_SESSION['autorize_false'];
+	$email_registation_false=$_SESSION['email_registation_false'];
+	$login_registation_false=$_SESSION['login_registation_false'];
+	$password_registation_false=$_SESSION['password_registation_false'];
+	$preg_match_false=$_SESSION['preg_match_false'];
 	
 	unset($_SESSION['autorize_false']);
 	unset($_SESSION['login_false']);
 	unset($_SESSION['password_false']);
+	unset($_SESSION['email_registation_false']);
+	unset($_SESSION['login_registation_false']);
+	unset($_SESSION['password_registation_false']);
+	unset($_SESSION['preg_match_false']);
+		
+/* 	echo "<pre>";
+	echo print_r($_SESSION);
+	echo "</pre>"; */
+				
+	if($preg_match_false===true)		
+	{
+		echo '<script type="text/javascript">';	
+		echo 'alert("Не валидный e-mail.")'; 
+		echo '</script>';
+	}			
+				
+	if($password_registation_false===true)		
+	{
+		echo '<script type="text/javascript">';	
+		echo 'alert("Пароли не совподают.")'; 
+		echo '</script>';
+	}
+			
+	if($email_registation_false===true)
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Данный e-mail уже используется.")'; 
+		echo '</script>';
+	}
 	
+	if($login_registation_false===true)
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Данный логин уже используется.")'; 
+		echo '</script>';
+	}
 	
 	if($autorize_false===true)
-	{
-		
+	{	
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Не удается войти.Пожалуйста, проверьте правильность написания логина(e-mail) и пароля.")'; 
 		echo '</script>';

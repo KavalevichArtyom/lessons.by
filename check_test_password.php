@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+
+<!DOCTYPE html>
 <html >
   <head>
     <meta charset="UTF-8">   
@@ -126,10 +130,10 @@ if((isset($password)==true) && (empty($password)!==true))
 			echo '</script>'; 
 		}
 		else
-		{
+		{	
+			$_SESSION['password_test_false']=true;
 			echo '<script type="text/javascript">'; 
 			echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
-/* 			echo 'alert("Пароль не верный!")';   */
 			echo '</script>';
 		}
 	 
