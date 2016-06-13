@@ -195,8 +195,8 @@
 	<ul id="menu1">
 	<?php
 
-	$obj=new siction();
-	$obj->сonclusion_siction();
+		$obj=new siction();
+		$obj->сonclusion_siction();
 
 	?>
 	</ul id="menu1">

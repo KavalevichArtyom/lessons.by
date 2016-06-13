@@ -196,7 +196,7 @@
 		echo '</script>';
 	}
 	
-/* 	if($login_false===true)
+	if($login_false===true)
 	{
 		
 		echo '<script type="text/javascript">'; 
@@ -212,11 +212,11 @@
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Не верный пароль!")'; 
 		echo '</script>'; 	
-		} */
+		}
 		
-	/* if($_SESSION['autorize_true']===true)
+/* 	if($_SESSION['autorize_true']===true)
 	{
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
+		echo 'window.location.href="/Control_know_page.php";'; 
 		echo '</script>'; 
 	} */

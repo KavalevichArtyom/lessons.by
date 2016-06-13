@@ -48,7 +48,6 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 		
 	if(!$preg_match===true)
 	{	
-		echo $preg_match;
 		$_SESSION['preg_match_false']=true;
 	}
 	else
@@ -91,14 +90,14 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 	if(($_SESSION['email_registation_false']===true)||($_SESSION['login_registation_false']===true))
 	{
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
+		echo 'window.location.href="/window_autorize.php";'; 
 		echo '</script>';
 	}
 	
 	if($_SESSION['preg_match_false']===true)
 	{
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
+		echo 'window.location.href="/window_autorize.php";'; 
 		echo '</script>';
 	}
 	
@@ -107,7 +106,7 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 		$_SESSION['password_registation_false']=true;
 					
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="http://lessons.by/window_autorize.php";'; 
+		echo 'window.location.href="/window_autorize.php";'; 
 		echo '</script>';
 	}
 	else

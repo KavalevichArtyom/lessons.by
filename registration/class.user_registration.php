@@ -27,7 +27,7 @@ class registration
 				$db_middle_name        = $rows['middle_name'];
 				
 				
-				$generate_code=$_SESSION['generate_code'];
+/* 				$generate_code=$_SESSION['generate_code'];
 				$lenght_number=40;
 				
 				if(empty($generate_code)==false)
@@ -35,17 +35,17 @@ class registration
 					$obj=new generate();
 					$obj->generate_code($lenght_number);
 					
-					$url_true="http://lessons.by/verification.php&hash=".$_SESSION['generate_code'];
+					$url_true="/verification.php&hash=".$_SESSION['generate_code'];
 					
 					echo '<script type="text/javascript">'; 
-					echo 'window.location.href="http://lessons.by/verification.php";'; 
+					echo 'window.location.href="/verification.php";'; 
 					echo '</script>';
 				}
 					
 					$insert_into_true=$_SESSION['insert_into_true'];
 				
 				if((isset($insert_into_true)) && (!(empty($insert_into_true))))
-				{
+				{ */
 					$this->query = "INSERT INTO users(surname,name,middle_name,login,email,password) VALUES ('".$surname_registation."','".$name_registation."','".$middle_name_registation."','".$login_registation."','".$email_registation."','".$password_registation."')";
 					$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
 						
@@ -55,9 +55,9 @@ class registration
 						
 						
 					echo '<script type="text/javascript">'; 
-					echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
+					echo 'window.location.href="ggg/Control_know_page.php";'; 
 					echo '</script>'; 				
-			}
+			/* } */
 			}
 	}
 	
