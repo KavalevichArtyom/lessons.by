@@ -111,7 +111,7 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 		echo '</script>';
 	}
 	else
-	{
+	{	
 		$password_registation_true=true;
 	}
 	
@@ -131,6 +131,7 @@ if	(
 			if(($password_registation_true) && ($email_registation_true) && ($email_login_true) && ($preg_match_true))
 				{	
 					$_SESSION['fio']="".$_SESSION['surname_registation']." ".$_SESSION['name_registation']." ".$_SESSION['middle_name_registation']."";
+					
 					$obj=new registration();
 					$obj->user_registration($surname_registation,$name_registation,$middle_name_registation,$login_registation,$email_registation,$password_registation);
 					

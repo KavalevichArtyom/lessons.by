@@ -159,6 +159,14 @@
 /* 	echo "<pre>";
 	echo print_r($_SESSION);
 	echo "</pre>"; */
+	
+	if($autorize_false===true)
+	{	
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Не удается войти.Пожалуйста, проверьте правильность написания логина(e-mail) и пароля.")'; 
+		echo '</script>';
+		$preg_match_false=false;
+	}
 				
 	if($preg_match_false===true)		
 	{
@@ -188,13 +196,6 @@
 		echo '</script>';
 	}
 	
-	if($autorize_false===true)
-	{	
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Не удается войти.Пожалуйста, проверьте правильность написания логина(e-mail) и пароля.")'; 
-		echo '</script>';
-	}
-	
 /* 	if($login_false===true)
 	{
 		
@@ -212,6 +213,7 @@
 		echo 'alert("Не верный пароль!")'; 
 		echo '</script>'; 	
 		} */
+		
 	/* if($_SESSION['autorize_true']===true)
 	{
 		echo '<script type="text/javascript">'; 

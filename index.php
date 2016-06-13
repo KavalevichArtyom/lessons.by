@@ -55,93 +55,60 @@
 </head>
 <body class="id1">
 
-<div class="panel_button"><!--Панель управления -->
+
+<?
+	include_once 'top_panel/class.top_panel.php';	
+	
+	$position='About_the_site_active';
+	$href_to='href_query_next(\'window_autorize.php\')';
+	
+	$obj=new panel();
+	$obj->top_panel($position,$href_to);
+?>
+
+
+	<div class="image"> <!--Вывод изображения-->
+
+	<img src="Image/1(4).jpg"></img>
+
+	<div class="image_text">
+
+	<p></p>
+
+	</div class="image_text">
+
+	</div class="image">
 
 
 
-<div class="button_menu"><!--Панель кнопок -->
+	<div class="goal_index">
 
-<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">
+	<div class="goal_head">
 
-<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >
+	<p>Цель сайта/<p>
 
-<input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
+	</div class="goal_head">
 
-<input type="button" id="Control_know" onclick="href_query_next('window_autorize.php')" value="Контроль знаний" >
+	<div class="goal_text">
 
+	<p>Предостовление для обучения информации, презентации, тестов по предмету «Микропроцессорные средства и системы».<p>
 
+	</div class="goal_text">
 
-</div class="button_menu"><!--Закрытие панель кнопок -->
-
-</div class="panel_button"><!--Закрытие панель управления -->
-
-
-
-<div class="strip"><!--Полоса активной страницы -->
-
-<div class="active_button_menu">
-
-<div class="About_the_site_active">
-
-</div class="About_the_site_active">
+	</div class="goal_index">
 
 
-</div class="active_button_menu">
-
-</div class="strip"><!--Закрытие полосы активной страницы -->
+	<div class="footer_index">
 
 
+	<div class="footer_text">
+
+	<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
+
+	</div class="footer_text">
 
 
-<div class="image"> <!--Вывод изображения-->
-
-<img src="Image/1(4).jpg"></img>
-
-<div class="image_text">
-
-<p></p>
-
-</div class="image_text">
-
-</div class="image">
-
-
-
-<div class="goal_index">
-
-<div class="goal_head">
-
-<p>Цель сайта/<p>
-
-</div class="goal_head">
-
-<div class="goal_text">
-
-<p>Предостовление для обучения информации, презентации, тестов по предмету «Микропроцессорные средства и системы».<p>
-
-</div class="goal_text">
-
-</div class="goal_index">
-
-
-<div class="footer_index">
-
-
-<!--<div class="footer_link" >
-
-<p><a href="Tema_page.php">Темы</a></p>
-
-</div class="footer_link" id="it_image">
--->
-
-<div class="footer_text">
-
-<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
-
-</div class="footer_text">
-
-
-</div class="footer_index">
+	</div class="footer_index">
 
 
 

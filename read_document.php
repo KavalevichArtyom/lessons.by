@@ -95,63 +95,22 @@ $(document).ready(function() {
 <?php
 //Подключение к базе данных
 
-include_once 'class.read_doc.php';
-include_once 'core/class.siction.php';
+	include_once 'class.read_doc.php';
+	include_once 'core/class.siction.php';
 
-$page=$_GET['page'];
-$section=$_GET['section'];
-$practice=$_GET['practice'];
-$laboratory=$_GET['laboratory'];
+	$page=$_GET['page'];
+	$section=$_GET['section'];
+	$practice=$_GET['practice'];
+	$laboratory=$_GET['laboratory'];
+	
+	include_once 'top_panel/class.top_panel.php';	
+	
+	$position='Tema_active';
+	$href_to='href_query_next(\'window_autorize.php\')';
+	
+	$obj=new panel();
+	$obj->top_panel($position,$href_to);
 ?>
-
-<div class="panel_button"><!--Панель управления -->
-
-
-<div class="button_menu"><!--Панель кнопок -->
-
-<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">
-
-<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >
-
-<input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
-
-<input type="button" id="Control_know" onclick="Control_know_page()" value="Контроль знаний" >
-
-</div class="button_menu"><!--Закрытие панель кнопок -->
-
-
-</div class="panel_button"><!--Закрытие панель управления -->
-
-
-
-<div class="strip"><!--Полоса активной страницы -->
-
-<div class="active_button_menu">
-
-<div class="Tema_active">
-
-</div class="Tema_active">
-
-</div class="active_button_menu">
-
-</div class="strip"><!--Закрытие полосы активной страницы -->
-
-<!--
-
-<div class="image"><!--Вывод изображения 
-
-<img src="Image/4(2).jpg"></img>
-
-
-<div class="image_text">
-
-<p>Темы</p>
-
-</div class="image_text">
-
-
-</div class="image">
-
 
 <!--________________________________________________________________END_NEWS_TOPIC_____________________________________________________________________________-->
 

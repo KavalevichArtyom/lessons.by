@@ -140,37 +140,15 @@
 	unset($_SESSION['password_registation_false']);
 	unset($_SESSION['preg_match_false']);
 
+	
+	include_once 'top_panel/class.top_panel.php';	
+	
+	$position='Control_know_active';
+	$href_to='Control_know_page()';
+	
+	$obj=new panel();
+	$obj->top_panel($position,$href_to);
 ?>
-
-	<div class="panel_button"><!--Панель управления -->
-
-	<div class="button_menu"><!--Панель кнопок -->
-
-	<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">
-
-	<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >
-
-	<input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
-
-	<input type="button" id="Control_know" onclick="Control_know_page()" value="Контроль знаний" >
-
-
-
-	</div class="button_menu"><!--Закрытие панель кнопок -->
-
-	</div class="panel_button"><!--Закрытие панель управления -->
-
-	<div class="strip"><!--Полоса активной страницы -->
-
-	<div class="active_button_menu">
-
-	<div class="Control_know_active">
-
-	</div class="Control_know_active">
-
-	</div class="active_button_menu">
-
-	</div class="strip"><!--Закрытие полосы активной страницы -->
 
 
 	<div class="goal_presentation">
@@ -308,8 +286,8 @@
 
 	if($_SESSION['alert_autorize']==true)
 	{
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Добро пожаловать '.$_SESSION['fio'].'")';
+		echo '<script type="text/javascript">'; 	
+		echo 'setTimeout(alert("Добро пожаловать '.$_SESSION['fio'].'"), 1000);';
 		echo '</script>'; 	
 		$_SESSION['alert_autorize']=false;
 	}

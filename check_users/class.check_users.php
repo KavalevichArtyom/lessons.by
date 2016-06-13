@@ -13,16 +13,6 @@ class check
 	
 		public function check_password_users($email,$password)
 			{			
-				/* $this->query = "SELECT surname,name,middle_name,email, password,login FROM users where (email='".$email."' or login='".$email."') and password='".$password."'";
-				$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
-				
-				$rows   = mysql_fetch_array($this->result);
-				
-				$db_password           = $rows['password'];
-				$db_email       	   = $rows['email'];
-				$db_surname            = $rows['surname'];
-				$db_name       		   = $rows['name'];
-				$db_middle_name        = $rows['middle_name']; */
 				
 				$this->query = "SELECT surname,name,middle_name,email, password,login FROM users where (email='".$email."' or login='".$email."')";
 				$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
@@ -59,8 +49,18 @@ class check
 					} */
 					
 				if(($_SESSION['email_true_autorize']==true)&&($_SESSION['password_true_autorize']==true))
-				{
+				{		
+						$query = "SELECT surname,name,middle_name,email, password,login FROM users where (email='".$email."' or login='".$email."') and password='".$password."'";
+						$result = mysql_query($query) or die ("Не верный запрос."); 
+				
+						$rows   = mysql_fetch_array($result);
+				
+						$db_surname            = $rows['surname'];
+						$db_name       		   = $rows['name'];
+						$db_middle_name        = $rows['middle_name'];
+						
 						$_SESSION['fio']="".$db_surname." ".$db_name." ".$db_middle_name."";
+						
 						$_SESSION['alert_autorize']=true;
 						$_SESSION['autorize_true']=true;
 						$_SESSION['login_autorize']=$email;

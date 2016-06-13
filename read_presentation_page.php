@@ -56,57 +56,32 @@
 
 <body>
 <?php
-include_once 'read_presentations/class.read_presentations.php';
+	include_once 'read_presentations/class.read_presentations.php';
 
-$number=$_GET['presentation'];
+	$number=$_GET['presentation'];
 
+	include_once 'top_panel/class.top_panel.php';	
+	
+	$position='Presentation_active';
+	$href_to='href_query_next(\'window_autorize.php\')';
+	
+	$obj=new panel();
+	$obj->top_panel($position,$href_to);
+
+	$obj=new contents();
+	$obj->read_presentation($number);
 ?>
 
-<div class="panel_button"><!--Панель управления -->
+	<div class="footer_read_presentation">
 
-<div class="button_menu"><!--Панель кнопок -->
+	<div class="read_footer_text">
 
-<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">
+	<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
 
-<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >
-
-<input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
-
-<input type="button" id="Control_know" onclick="Control_know_page()" value="Контроль знаний" >
+	</div class="read_footer_text">
 
 
-
-</div class="button_menu"><!--Закрытие панель кнопок -->
-
-</div class="panel_button"><!--Закрытие панель управления -->
-
-<div class="strip"><!--Полоса активной страницы -->
-
-<div class="active_button_menu">
-
-<div class="Presentation_active">
-
-</div class="Presentation_active">
-
-</div class="active_button_menu">
-
-</div class="strip">
-
-<?php
-$obj=new contents();
-$obj->read_presentation($number);
-?>
-
-<div class="footer_read_presentation">
-
-<div class="read_footer_text">
-
-<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
-
-</div class="read_footer_text">
-
-
-</div class="footer_read_presentation">
+	</div class="footer_read_presentation">
 
 </body>
 

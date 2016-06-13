@@ -1,16 +1,25 @@
 ﻿<?php
 session_start();
 
-include_once 'read_task/class.read_task.php';
-include_once 'inspection/class.inspection.php';
+	include_once 'top_panel/class.top_panel.php';	
+	
+	$position='Control_know_active';
+	$href_to='href_query_next(\'Control_know_page()\')';
+	
+	$obj=new panel();
+	$obj->top_panel($position,$href_to);
 
-$_SESSION['password_test_false']=false;
 
-$task=$_GET['task'];
-$test=$_GET['test'];
+	include_once 'read_task/class.read_task.php';
+	include_once 'inspection/class.inspection.php';
+
+	$_SESSION['password_test_false']=false;
+
+	$task=$_GET['task'];
+	$test=$_GET['test'];
 
 
-$_SESSION['number_test']=$test;	
+	$_SESSION['number_test']=$test;	
 
 
 			$query = "SELECT passage_of_time_minutes,passage_of_time_hours FROM read_tests where test_number=".$test."";
@@ -21,7 +30,7 @@ $_SESSION['number_test']=$test;
 			$passage_of_time_minutes         = $rows['passage_of_time_minutes'];
 			$passage_of_time_hours        	 = $rows['passage_of_time_hours'];
 	
-$countdown_setting = array(
+	$countdown_setting = array(
 	"type" 			=> "time", /* date или time, date - отстет до указанной даты, time - отсчет указанного времени */
 	"cookie" 		=> true, /* true или false, запоминать время, только для режима time */
 	"position"	=> "horizontal", /* horizontal или vertical, положение блока */
@@ -197,104 +206,76 @@ window.location.href="http://lessons.by/window_load/window_load.php";
 </div> 
 
 
-
-<div class="panel_button"><!--Панель управления -->
-
-<div class="button_menu"><!--Панель кнопок -->
-
-<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">
-
-<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >
-
-<input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
-
-<input type="button" id="Control_know" onclick="Control_know_page()" value="Контроль знаний" >
-
-
-
-</div class="button_menu"><!--Закрытие панель кнопок -->
-
-</div class="panel_button"><!--Закрытие панель управления -->
-
-<div class="strip"><!--Полоса активной страницы -->
-
-<div class="active_button_menu">
-
-<div class="Control_know_active">
-
-</div class="Control_know_active">
-
-</div class="active_button_menu">
-
-</div class="strip"><!--Закрытие полосы активной страницы -->
-
 <div class="goal_know">
 
 <div class="goal_know_center">
 
 
  <?php 
-$obj=new contents();
-$obj->read_task_one($task,$test);
+	$obj=new contents();
+	$obj->read_task_one($task,$test);
 
 
 
-if(isset($_GET['checkbox']))
-{
-$name="checkbox_check";
-echo "checkbox_check";
+	if(isset($_GET['checkbox']))
+	{
+		$name="checkbox_check";
+		echo "checkbox_check";
+	}
 
-}
+	if(isset($_GET['radio']))
+	{
+		$name="radio_check";
+		echo "radio_check";
+	}
 
-if(isset($_GET['radio']))
-{
-$name="radio_check";
-echo "radio_check";
-}
+	if(isset($_GET['text']))
+	{
+		$name="text";
+		echo "text";
+	}
 
-if(isset($_GET['text']))
-{
-$name="text";
-echo "text";
-}
+	if(isset($_GET['conformity']))
+	{
+		$name="conformity";
+		echo "conformity";
+	}
 
-if(isset($_GET['conformity']))
-{
-$name="conformity";
-echo "conformity";
-}
+	$obj=new inspection();
+	$obj->inspection_tests($name,$task,$test);
 
-$obj=new inspection();
-$obj->inspection_tests($name,$task,$test);
-
-echo $_SESSION['correct'];
-print_r($_SESSION);
+	echo $_SESSION['correct'];
+	print_r($_SESSION);
 ?>
 
-</div class="goal_know_center">
+	</div class="goal_know_center">
 
-</div class="goal_know">
+	</div class="goal_know">
 
-<div class="timer">
+	<div class="timer">
 
-<?php echo $countdown_txt; ?>
+		<?php 
 
-	
-<div class="clear"></div>
-	
-</div class="timer"> 
+			echo $countdown_txt;
 
-<div class="footer_know">
+		 ?>
 
+		
+	<div class="clear"></div>
+		
+	</div class="timer"> 
 
-<div class="footer_text">
-
-<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
-
-</div class="footer_text">
+	<div class="footer_know">
 
 
-</div class="footer_know">
+	<div class="footer_text">
+
+	<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
+
+	</div class="footer_text">
+
+
+	</div class="footer_know">
 
 
 </body>

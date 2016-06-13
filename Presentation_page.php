@@ -93,164 +93,143 @@ $(document).ready(function() {
 
 <?php
 
-include_once 'core/class.siction.php';
-include_once 'core/news.php';
-include_once 'read_presentations/class.read_presentations.php';
+	include_once 'core/class.siction.php';
+	include_once 'core/news.php';
+	include_once 'read_presentations/class.read_presentations.php';
 
 
 
-
+	include_once 'top_panel/class.top_panel.php';	
+	
+	$position='Presentation_active';
+	$href_to='href_query_next(\'window_autorize.php\')';
+	
+	$obj=new panel();
+	$obj->top_panel($position,$href_to);
 ?>
-
-<div class="panel_button"><!--Панель управления -->
-
-<div class="button_menu"><!--Панель кнопок -->
-
-<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">
-
-<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >
-
-<input type="button" id="Presentation" onclick="Presentation_page()" value="Презентации">
-
-<input type="button" id="Control_know" onclick="href_query_next('window_autorize.php')" value="Контроль знаний" >
-
-
-
-</div class="button_menu"><!--Закрытие панель кнопок -->
-
-</div class="panel_button"><!--Закрытие панель управления -->
-
-<div class="strip"><!--Полоса активной страницы -->
-
-<div class="active_button_menu">
-
-<div class="Presentation_active">
-
-</div class="Presentation_active">
-
-</div class="active_button_menu">
-
-</div class="strip"><!--Закрытие полосы активной страницы -->
-
 
 <div class="goal_presentation">
 
 <!--________________________________________________________________goal_presentation_left_____________________________________________________________________________-->
 
-<div class="goal_presentation_left">
+	<div class="goal_presentation_left">
 
-<div class="heads_block" id="menu2">
+	<div class="heads_block" id="menu2">
 
-<div class="heads_name">
+	<div class="heads_name">
 
-<p>Занятия<p>
+	<p>Занятия<p>
 
-</div class="heads_name">
+	</div class="heads_name">
 
-<div class="heads_search">
-        <form>
-                
-				<input type="text" class="search rounded" >
-				<input type="button" value="Искать...">
-				
-        </form>
-</div class="heads_search">
-
-
-
-<div class="heads_buttom">
-
-<div class="heads_buttom_size">
-
-<img src="Image/9.png"></img>
-
-<p>Развернуть</p>
-
-</div class="heads_buttom_size">
-
-</div class="heads_buttom">
-
-<div class="heads_table_and_heads_buttom_up">
-
-<div class="heads_table">
-
-<ul id="menu1">
-<?php
-
-$obj=new siction();
-$obj->сonclusion_siction();
-
-?>
-</ul id="menu1">
-
-</div class="heads_table">
-
-<div class="heads_buttom_up">
-
-<div class="heads_buttom_size">
-
-<img src="Image/8.png"></img>
-
-<p>Свернуть</p>
-
-</div class="heads_buttom_size">
-
-</div class="heads_buttom_up">
-
-</div class="heads_table_and_heads_buttom_up">
-
-</div class="heads_block" id="menu2">
-
-</div class="goal_presentation_left">
+	<div class="heads_search">
+			<form>
+					
+					<input type="text" class="search rounded" >
+					<input type="button" value="Искать...">
+					
+			</form>
+	</div class="heads_search">
 
 
 
-<div class="goal_presentation_center">
+	<div class="heads_buttom">
 
-<ul id="menu2">
+	<div class="heads_buttom_size">
 
-<?php
+	<img src="Image/9.png"></img>
 
-$obj=new contents();
-$obj->read_presentations();
+	<p>Развернуть</p>
 
-?>
+	</div class="heads_buttom_size">
 
-</ul id="menu2">
+	</div class="heads_buttom">
 
-</div class="goal_presentation_center">
+	<div class="heads_table_and_heads_buttom_up">
+
+	<div class="heads_table">
+
+	<ul id="menu1">
+	
+	<?php
+
+		$obj=new siction();
+		$obj->сonclusion_siction();
+
+	?>
+	
+	</ul id="menu1">
+
+	</div class="heads_table">
+
+	<div class="heads_buttom_up">
+
+	<div class="heads_buttom_size">
+
+	<img src="Image/8.png"></img>
+
+	<p>Свернуть</p>
+
+	</div class="heads_buttom_size">
+
+	</div class="heads_buttom_up">
+
+	</div class="heads_table_and_heads_buttom_up">
+
+	</div class="heads_block" id="menu2">
+
+	</div class="goal_presentation_left">
 
 
-<!--________________________________________________________________NEWS_TOPIC_____________________________________________________________________________-->
 
-<div class="menu_forums_right" >
+	<div class="goal_presentation_center">
 
-<div class="menu_forums_right_head">
+	<ul id="menu2">
 
-<p>Библиотека</p>
+	<?php
 
-</div class="menu_forums_right_head">
+		$obj=new contents();
+		$obj->read_presentations();
 
-<?php
-echo сonclusion_news();//Вывод новостей
-?>
+	?>
 
-</div class="menu_forums_right" >
+	</ul id="menu2">
 
-
-
-<div class="footer_presentation">
-
-<div class="footer_text">
-
-<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
-
-</div class="footer_text">
+	</div class="goal_presentation_center">
 
 
-</div class="footer_presentation">
+	<!--________________________________________________________________NEWS_TOPIC_____________________________________________________________________________-->
 
-</div class="goal_presentation">
+	<div class="menu_forums_right" >
+
+	<div class="menu_forums_right_head">
+
+	<p>Библиотека</p>
+
+	</div class="menu_forums_right_head">
+
+	<?php
+	
+		echo сonclusion_news();//Вывод новостей
+	
+	?>
+
+	</div class="menu_forums_right" >
+
+
+
+	<div class="footer_presentation">
+
+	<div class="footer_text">
+
+	<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
+
+	</div class="footer_text">
+
+
+	</div class="footer_presentation">
+
+	</div class="goal_presentation">
 
 </body>
 
