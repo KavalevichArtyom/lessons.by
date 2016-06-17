@@ -3,6 +3,7 @@
 	include_once 'core/class.siction.php';
 	include_once 'core/news.php';
 	include_once 'read_tests/class.read_tests.php';	
+	include_once 'users_delete/class.users_delete.php';	
 	
 	$surname_registation=$_SESSION['surname_registation'];
 	$name_registation=$_SESSION['name_registation'];
@@ -14,6 +15,26 @@
 	
 	$login_autorize=$_SESSION['login_autorize'];
 	$password_autorize=$_SESSION['password_autorize'];
+	
+	/*Автоматическое удаление не ативированых пользователей по оконьчанию времени*/
+	
+	$obj=new users();
+	$obj->users_delete();
+		
+	$registrition=$_GET['registrition'];
+	
+	if($registrition==true)
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'window.onload=function()
+		{var elems=document.getElementsByClassName(\'block_registation\');
+		for(var i=0; i<elems.length; i++)elems[i].style.display=\'block\'; 
+
+		var elems=document.getElementsByClassName(\'block_autorize\');
+		for(var i=0; i<elems.length; i++)elems[i].style.display=\'none\';}';
+		echo '</script>';
+	}
+	
 ?>
 
 <html>
@@ -110,14 +131,14 @@
 				</div>
 				<div class="main-signin__middle_registation">
 					<div class="middle__form_registation">
-						<input type="text" 		name="surname_registation" 			id="surname"		value="<?echo $surname_registation?>"	placeholder="Фамилия"       			 autofocus required>
-						<input type="text" 		name="name_registation" 			id="name"			value="<?echo $name_registation?>"	placeholder="Имя" 		     			 autofocus required>
-						<input type="text" 		name="middle_name_registation"		id="middle_name"	value="<?echo $middle_name_registation?>"	placeholder="Отчество"  	 			 autofocus required>
-						<input type="text" 		name="login_registation" 			id="login_l"			value="<?echo $login_registation?>"	placeholder="Логин" 					 autofocus required>
-						<input type="text" 		name="email_registation" 			id="email"			value="<?echo $email_registation?>"	placeholder="E-mail" 					 autofocus required>
-						<input type="password"  name="password_registation"			id="password"		value="<?echo $password_registation?>"	placeholder="пароль "       			 autofocus required>
+						<input type="text" 		name="surname_registation" 			id="surname"		value="<?echo $surname_registation?>"			placeholder="Фамилия"       			 autofocus required>
+						<input type="text" 		name="name_registation" 			id="name"			value="<?echo $name_registation?>"				placeholder="Имя" 		     			 autofocus required>
+						<input type="text" 		name="middle_name_registation"		id="middle_name"	value="<?echo $middle_name_registation?>"		placeholder="Отчество"  	 			 autofocus required>
+						<input type="text" 		name="login_registation" 			id="login_l"		value="<?echo $login_registation?>"				placeholder="Логин" 					 autofocus required>
+						<input type="text" 		name="email_registation" 			id="email"			value="<?echo $email_registation?>"				placeholder="E-mail" 					 autofocus required>
+						<input type="password"  name="password_registation"			id="password"		value="<?echo $password_registation?>"			placeholder="пароль "       			 autofocus required>
 						<input type="password"  name="password_reset_registation"	id="password_reset"	value="<?echo $password_reset_registation?>"	placeholder="подтвердите пароль "        autofocus required>
-						<input type="submit" 	value="ВОЙТИ">
+						<input type="submit" 	value="Зарегистрироваться">
 					</div>
 				</div>
 				<div class="main-signin__foot_registation">
@@ -162,6 +183,7 @@
 	
 	$_SESSION['generate_code']=true;
 	$_SESSION['insert_into_true'];
+	
 /* 	echo "<pre>";
 	echo print_r($_SESSION);
 	echo "</pre>"; */

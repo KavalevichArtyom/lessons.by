@@ -19,7 +19,7 @@ class generate
 			}
 			$_SESSION['generate_code']=$string;
 			
-			$url="http://lessons.by/check_users.php";
+			$url="http://lessons.by/check_users.php";/*Изменить для хостига*/
 			$parse_url=parse_url($url, PHP_URL_HOST);
 			
 			$_SESSION['url_true']="".$parse_url."/verification.php?hash=".$_SESSION['generate_code'];

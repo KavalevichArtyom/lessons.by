@@ -119,7 +119,7 @@ top:105.25vw;
 	
 }
   
- Apple
+
  @media screen and (min-height:640px) and (min-width:384px)
 {
 	.goal_presentation{height:94.7%;}
@@ -324,7 +324,7 @@ top:105.25vw;
 	.menu_capcion{height:90%;}
 	
 	.block_autorize{top:20%}
-	.block_registation{top:2.5%}	
+	.block_registation{top:1%}	
 	
 	.goal_know_center
 		{
@@ -1954,7 +1954,7 @@ margin:0vw;
 .search
 { 
 padding:0.75vw 3vw;
-background: url('/Image/search.png') no-repeat 1vw 1vw; 
+/* background: url('/Image/search.png') no-repeat 1vw 1vw;  */
 }
 
 .heads_search input[type=text]{
@@ -1968,7 +1968,7 @@ border:0.1vw solid #2a2e31;
 background-color:#2d3035;
 }
  
-.heads_search input[type=button], .heads_search input[type=button]:hover {
+.heads_search input[type=submit], .heads_search input[type=submit]:hover {
 position:absolute; 
 font-size:1vw;
 top:10%;
@@ -3281,15 +3281,7 @@ label
 	top:1%;
 	left:1%	;
 }
-/* .write_registragion_center
-{
-position:absolute;
-top:25%;
-width:100%;
-height:50%;
-background:red;
-transform:matrix(1,0,-1,1,0,0);
-} */
+
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
 
 #About_the_site

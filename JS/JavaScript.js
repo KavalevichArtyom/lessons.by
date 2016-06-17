@@ -19,6 +19,8 @@ function combo(block,none){
     for(var i=0; i<elems.length; i++)elems[i].style.display='none'; 
 }
 
+
+
 function About_the_site_page()
 {
 window.location= "index.php";
@@ -26,7 +28,18 @@ window.location= "index.php";
 
 function href_query_next(href)
 {
-window.location= href;
+window.location= href+"?autorize=1";
+}
+
+function href_query_next_registrition(href)
+{
+	window.location= href+"?registrition=1";
+	
+/*  	var elems=document.getElementsByClassName('block_registation');
+    for(var i=0; i<elems.length; i++)elems[i].style.display='block'; 
+
+ 	var elems=document.getElementsByClassName('block_autorize');
+    for(var i=0; i<elems.length; i++)elems[i].style.display='none';  */
 }
 
 function Tema_page()

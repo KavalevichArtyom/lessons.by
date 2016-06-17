@@ -15,7 +15,7 @@ class panel
 			{
 			echo '<div class="panel_button"><!--Панель управления -->';
 			echo '<input type="button" class="autorize" onclick="href_query_next(\'window_autorize.php\')" value="Авторизация">';
-			echo '<input type="button" class="registration" onclick="href_query_next(\'window_autorize.php\')" value="Регистрация">';
+			echo '<input type="button" class="registration" onclick="href_query_next_registrition(\'window_autorize.php\')" value="Регистрация">';
 			echo '<div class="button_menu"><!--Панель кнопок -->';
 			echo '<input type="button" id="About_the_site" onclick="About_the_site_page()" value="Главная">';
 			echo '<input type="button" id="Tema" onclick="Tema_page()" value="Темы" >';

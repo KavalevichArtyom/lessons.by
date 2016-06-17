@@ -31,12 +31,7 @@ class registration
 				$db_middle_name        = $rows['middle_name'];
 				
 				
-				$generate_code=$_SESSION['generate_code'];
-				
-/* 				echo "<pre>";
-				echo print_r($_SESSION);
-				echo "</pre>"; */
-				
+				$generate_code=$_SESSION['generate_code'];							
 				
 				if(empty($generate_code)==false)
 				{	

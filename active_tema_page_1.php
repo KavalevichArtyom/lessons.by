@@ -52,31 +52,37 @@
             }
         }
     }
-    </script> 
-	
-	
-	<script type="text/javascript">
-$(document).ready(function(){
-   $('.heads_left_buttom').hide()
-    $('.heads_left_buttom').click(function(){
-        $('.heads_left_table_and_heads_left_buttom_up').slideToggle("slow");
-		$('.heads_left_buttom').hide()
-    })
-	$('.heads_left_buttom_up').click(function(){
-           $('.heads_left_table_and_heads_left_buttom_up').hide()
-		   $('.heads_left_buttom').slideToggle("slow");
-    })
-})
+	jQuery(function(f){
+			var element = f('#blfix');
+			f(window).scroll(function(){
+			   
+			element['fade'+ (f(this).scrollTop() > 400 ? 'In': 'Out')](1); 
+				
+			});
+		}); 
+			
+			
+		$(document).ready(function(){
+		   $('.heads_buttom').hide()
+			$('.heads_buttom').click(function(){
+				$('.heads_table_and_heads_buttom_up').slideToggle("slow");
+				$('.heads_buttom').hide()
+			})
+			$('.heads_buttom_up').click(function(){
+				   $('.heads_table_and_heads_buttom_up').hide()
+				   $('.heads_buttom').slideToggle("slow");
+			})
+		})
 
-$(document).ready(function() {
- $("#menu1 ul").hide();
- $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
-});
+		$(document).ready(function() {
+		 $("#menu1 ul").hide();
+		 $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
+		});
 
-$(document).ready(function(){
-/* 					$('#menu2').stickyfloat({ duration: 400 });	 */
-                    $('#menu_left').stickyfloat({ duration: 400 });				
-				});		
+			$(document).ready(function(){
+							$('#menu2').stickyfloat({ duration: 400 });	
+							$('#menu').stickyfloat({ duration: 400 });				
+						});	
 </script>  
 	
 </head>
@@ -87,6 +93,8 @@ $(document).ready(function(){
 	include_once 'core/news.php';
 	include_once 'core/class.siction.php';
 	include_once 'class.read_db_theme.php';
+	include_once 'left_panel_section/class.left_panel_section.php';
+	include_once 'search/class.search.php';
 
 	$section=$_GET['section'];
 
@@ -107,67 +115,10 @@ $(document).ready(function(){
 
 <div class="heads_left">
 
-<div class="heads_left_block" id="menu_left">
-
-<div class="heads_left_name">
-
-<p>Занятия<p>
-
-</div class="heads_left_name">
-
-<div class="heads_left_search">
-        <form>
-                
-				<input type="text" class="search rounded" >
-				<input type="button" value="Искать...">
-				
-        </form>
-</div class="heads_left_search">
-
-
-
-<div class="heads_left_buttom">
-
-<div class="heads_left_buttom_size">
-
-<img src="Image/9.png"></img>
-
-<p>Развернуть</p>
-
-</div class="heads_left_buttom_size">
-
-</div class="heads_left_buttom">
-
-<div class="heads_left_table_and_heads_left_buttom_up">
-
-<div class="heads_left_table">
-
-<ul id="menu1">
-<?php
-
-$obj=new siction();
-$obj->сonclusion_siction();
-
-?>
-</ul id="menu1">
-
-</div class="heads_left_table">
-
-<div class="heads_left_buttom_up">
-
-<div class="heads_left_buttom_size">
-
-<img src="Image/8.png"></img>
-
-<p>Свернуть</p>
-
-</div class="heads_left_buttom_size">
-
-</div class="heads_left_buttom_up">
-
-</div class="heads_left_table_and_heads_left_buttom_up">
-
-</div class="heads_left_block" id="menu_left">
+	<?php
+		$obj=new left_panel();
+		$obj->left_panel_section();
+	?>
 
 </div class="headsleft_left">
 
@@ -195,18 +146,27 @@ echo сonclusion_news();//Вывод новостей
 
 <div class="menu_capcion_head_active_page">
 
-<p>Тема №1</p>
 
 </div class="menu_capcion_head_active_page">
 
 <div class="active_tema_page_1">
 
 <ul class="theme">
+
 <?php
 
-$obj=new theme();
-$obj->read_db_theme($section);
+$search=$_GET['search'];
 
+if(isset($search)==false)
+	{
+		$obj=new theme();
+		$obj->read_db_theme($section);
+	}
+else
+	{
+		$obj=new search();
+		$obj->check_search($search);
+	}
 ?> 	
 
 

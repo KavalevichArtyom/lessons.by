@@ -14,39 +14,36 @@
 		
 		<script>
 	jQuery(function(f){
-		var element = f('#blfix');
-		f(window).scroll(function(){
-		   
-		element['fade'+ (f(this).scrollTop() > 400 ? 'In': 'Out')](1); 
+			var element = f('#blfix');
+			f(window).scroll(function(){
+			   
+			element['fade'+ (f(this).scrollTop() > 400 ? 'In': 'Out')](1); 
+				
+			});
+		}); 
 			
-		});
-	}); 
-	</script>
-
-	<script type="text/javascript">
-	$(document).ready(function(){
-	   $('.heads_buttom').hide()
-		$('.heads_buttom').click(function(){
-			$('.heads_table_and_heads_buttom_up').slideToggle("slow");
-			$('.heads_buttom').hide()
-		})
-		$('.heads_buttom_up').click(function(){
-			   $('.heads_table_and_heads_buttom_up').hide()
-			   $('.heads_buttom').slideToggle("slow");
-		})
-	})
-
-	$(document).ready(function() {
-	 $("#menu1 ul").hide();
-	 $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
-	});
-	</script>   
-
-		<script>
-
+			
 		$(document).ready(function(){
-						$('#menu2').stickyfloat({ duration: 400 });	                 			
-					});		
+		   $('.heads_buttom').hide()
+			$('.heads_buttom').click(function(){
+				$('.heads_table_and_heads_buttom_up').slideToggle("slow");
+				$('.heads_buttom').hide()
+			})
+			$('.heads_buttom_up').click(function(){
+				   $('.heads_table_and_heads_buttom_up').hide()
+				   $('.heads_buttom').slideToggle("slow");
+			})
+		})
+
+		$(document).ready(function() {
+		 $("#menu1 ul").hide();
+		 $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
+		});
+
+			$(document).ready(function(){
+							$('#menu2').stickyfloat({ duration: 400 });	
+							$('#menu').stickyfloat({ duration: 400 });				
+						});		
 		
 		function showContent(link) {
 
@@ -113,6 +110,7 @@
 	include_once 'core/class.siction.php';
 	include_once 'core/news.php';
 	include_once 'read_tests/class.read_tests.php';	
+	include_once 'left_panel_section/class.left_panel_section.php';
 
 	setcookie("time",null,time()-18000);
 	setcookie("correct",null,time()-18000);
@@ -157,67 +155,10 @@
 
 	<div class="goal_presentation_left">
 
-	<div class="heads_block" id="menu2">
-
-	<div class="heads_name">
-
-	<p>Занятия<p>
-
-	</div class="heads_name">
-
-	<div class="heads_search">
-			<form>
-					
-					<input type="text" class="search rounded" >
-					<input type="button" value="Искать...">
-					
-			</form>
-	</div class="heads_search">
-
-
-
-	<div class="heads_buttom">
-
-	<div class="heads_buttom_size">
-
-	<img src="Image/9.png"></img>
-
-	<p>Развернуть</p>
-
-	</div class="heads_buttom_size">
-
-	</div class="heads_buttom">
-
-	<div class="heads_table_and_heads_buttom_up">
-
-	<div class="heads_table">
-
-	<ul id="menu1">
 	<?php
-
-		$obj=new siction();
-		$obj->сonclusion_siction();
-
+		$obj=new left_panel();
+		$obj->left_panel_section();
 	?>
-	</ul id="menu1">
-
-	</div class="heads_table">
-
-	<div class="heads_buttom_up">
-
-	<div class="heads_buttom_size">
-
-	<img src="Image/8.png"></img>
-
-	<p>Свернуть</p>
-
-	</div class="heads_buttom_size">
-
-	</div class="heads_buttom_up">
-
-	</div class="heads_table_and_heads_buttom_up">
-
-	</div class="heads_block" id="menu2">
 
 	</div class="goal_presentation_left">
 

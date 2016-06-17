@@ -103,7 +103,7 @@
 
 	<div class="footer_text">
 
-	<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
+	<p>© <?echo date('Y')?> lesson.by. Все права защищены. Перепечатка запрещена.</p>
 
 	</div class="footer_text">
 

@@ -96,7 +96,7 @@ $(document).ready(function() {
 //Подключение к базе данных
 
 	include_once 'class.read_doc.php';
-	include_once 'core/class.siction.php';
+	include_once 'left_panel_section/class.left_panel_section.php';
 
 	$page=$_GET['page'];
 	$section=$_GET['section'];
@@ -131,68 +131,10 @@ $(document).ready(function() {
 
 
 <div class="heads">
-
-<div class="heads_block" id="menu2">
-
-<div class="heads_name">
-
-<p>Занятия<p>
-
-</div class="heads_name">
-
-<div class="heads_search">
-        <form>
-                
-				<input type="text" class="search rounded" >
-				<input type="button" value="Искать...">
-				
-        </form>
-</div class="heads_search">
-
-
-
-<div class="heads_buttom">
-
-<div class="heads_buttom_size">
-
-<img src="Image/9.png"></img>
-
-<p>Развернуть</p>
-
-</div class="heads_buttom_size">
-
-</div class="heads_buttom">
-
-<div class="heads_table_and_heads_buttom_up">
-
-<div class="heads_table">
-
-<ul id="menu1">
-<?php
-
-$obj=new siction();
-$obj->сonclusion_siction();
-
-?>
-</ul id="menu1">
-
-</div class="heads_table">
-
-<div class="heads_buttom_up">
-
-<div class="heads_buttom_size">
-
-<img src="Image/8.png"></img>
-
-<p>Свернуть</p>
-
-</div class="heads_buttom_size">
-
-</div class="heads_buttom_up">
-
-</div class="heads_table_and_heads_buttom_up">
-
-</div class="heads_block" id="menu2">
+	<?php
+		$obj=new left_panel();
+		$obj->left_panel_section();
+	?>
 
 </div class="heads">
 
