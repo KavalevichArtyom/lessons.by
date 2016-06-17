@@ -126,14 +126,14 @@ if((isset($password)==true) && (empty($password)!==true))
 		if((isset($db_password )==true) && (empty($db_password )!==true && $password==$db_password))
 		{
 			echo '<script type="text/javascript">'; 
-			echo 'window.location.href="http://lessons.by/know_page.php?test='.$db_number_test.'&task=1";'; 
+			echo 'window.location.href="know_page.php?test='.$db_number_test.'&task=1";'; 
 			echo '</script>'; 
 		}
 		else
 		{	
 			$_SESSION['password_test_false']=true;
 			echo '<script type="text/javascript">'; 
-			echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
+			echo 'window.location.href="Control_know_page.php";'; 
 			echo '</script>';
 		}
 	 

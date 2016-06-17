@@ -24,29 +24,55 @@
 	$_SESSION['login_registation']=$login_registation;
 	$_SESSION['email_registation']=$email_registation;
 	$_SESSION['password_registation']=$password_registation;
-	$_SESSION['password_reset_registation']=$password_reset_registation;	
-/* 		
-	echo "surname_registation  -",$surname_registation;
-	echo "<br>name_registation  -",$name_registation;
-	echo "<br>middle_name_registation  -",$middle_name_registation;
-	echo "<br>login_registation  -",$login_registation;
-	echo "<br>email_registation  -",$email_registation;
-	echo "<br>password_registation  -",$password_registation;
-	echo "<br>password_reset_registation  -",$password_reset_registation; */
+	$_SESSION['password_reset_registation']=$password_reset_registation;			
+	
+	
 	
 	$obj=new connect_db();
 	$obj->connect();
 
-if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($email_login)==true) && (empty($email_login)!==true))
+	/*Проверка на активации*/
+	
+	$query = "SELECT login,active,password FROM users where login='".$email_login."' and active='0' and password='".$password_login."'";
+	$result = mysql_query($query) or die ("Не верный запрос."); 
+				
+	$rows   = mysql_fetch_array($result);
+				
+	$db_active= $rows['active'];
+	$db_login= $rows['login'];
+	$db_password= $rows['password'];
+	
+	if($db_active==false)
+	{		
+		$_SESSION['active_true']=true;
+	}
+	else
+	{	
+		$active_false=true;
+	}
+	
+		if($_SESSION['active_true']===true)
+	{	
+		echo $db_active."db_active<br>";
+		echo $db_login."db_login<br>";
+		echo $db_password."db_password<br>";
+		
+/* 		echo '<script type="text/javascript">'; 
+		echo 'window.location.href="window_autorize.php";'; 
+		echo '</script>'; */
+	}
+	
+if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($email_login)==true) && (empty($email_login)!==true) && ($active_false==true))
 {
-
+	
 	$obj=new check();
 	$obj->check_password_users($email_login,$password_login);
 
 }
+
 	$preg_match=preg_match('/.+@.+\..+/i',$email_registation);	
 		
-	if(!$preg_match===true)
+	if($preg_match===false)
 	{	
 		$_SESSION['preg_match_false']=true;
 	}
@@ -70,6 +96,8 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 	{
 		$email_login_true=true;
 	}
+	
+
 			
 	$query = "SELECT surname,name,middle_name,email,password,login FROM users where email='".$email_registation."'";
 	$result = mysql_query($query) or die ("Не верный запрос."); 
@@ -90,14 +118,14 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 	if(($_SESSION['email_registation_false']===true)||($_SESSION['login_registation_false']===true))
 	{
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="/window_autorize.php";'; 
+		echo 'window.location.href="window_autorize.php";'; 
 		echo '</script>';
 	}
 	
 	if($_SESSION['preg_match_false']===true)
 	{
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="/window_autorize.php";'; 
+		echo 'window.location.href="window_autorize.php";'; 
 		echo '</script>';
 	}
 	
@@ -106,7 +134,7 @@ if((isset($password_login)==true) && (empty($password_login)!==true) && (isset($
 		$_SESSION['password_registation_false']=true;
 					
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="/window_autorize.php";'; 
+		echo 'window.location.href="window_autorize.php";'; 
 		echo '</script>';
 	}
 	else

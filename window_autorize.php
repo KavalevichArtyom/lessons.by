@@ -14,8 +14,7 @@
 	
 	$login_autorize=$_SESSION['login_autorize'];
 	$password_autorize=$_SESSION['password_autorize'];
-	
-	
+	print_r($_SESSION);
 ?>
 
 <html>
@@ -147,6 +146,8 @@
 	$login_registation_false=$_SESSION['login_registation_false'];
 	$password_registation_false=$_SESSION['password_registation_false'];
 	$preg_match_false=$_SESSION['preg_match_false'];
+	$active_true=$_SESSION['active_true'];
+
 	
 	unset($_SESSION['autorize_false']);
 	unset($_SESSION['login_false']);
@@ -155,7 +156,10 @@
 	unset($_SESSION['login_registation_false']);
 	unset($_SESSION['password_registation_false']);
 	unset($_SESSION['preg_match_false']);
-		
+	unset($_SESSION['active_true']);
+	
+	$_SESSION['generate_code']=true;
+	$_SESSION['insert_into_true'];
 /* 	echo "<pre>";
 	echo print_r($_SESSION);
 	echo "</pre>"; */
@@ -213,10 +217,17 @@
 		echo 'alert("Не верный пароль!")'; 
 		echo '</script>'; 	
 		}
+	
+	if($active_true===true)
+	{
 		
+		echo '<script type="text/javascript">'; 
+		echo 'alert("Ваш аккаунт не был активирован.")'; 
+		echo '</script>'; 	
+	}
 /* 	if($_SESSION['autorize_true']===true)
 	{
 		echo '<script type="text/javascript">'; 
-		echo 'window.location.href="/Control_know_page.php";'; 
+		echo 'window.location.href="Control_know_page.php";'; 
 		echo '</script>'; 
 	} */

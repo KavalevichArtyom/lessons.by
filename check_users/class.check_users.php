@@ -73,14 +73,14 @@ class check
 						$_SESSION['login_false']=false;
 						
 						echo '<script type="text/javascript">'; 
-						echo 'window.location.href="http://lessons.by/Control_know_page.php";'; 
+						echo 'window.location.href="Control_know_page.php";'; 
 						echo '</script>'; 
 				}
 				else
 				{		
 						$_SESSION['autorize_false']=true;
 						echo '<script type="text/javascript">'; 
-						echo 'window.location.href="http://lessons.by/window_autorize.php";'; 							
+						echo 'window.location.href="window_autorize.php";'; 							
 						echo '</script>';
 				}
 			}
