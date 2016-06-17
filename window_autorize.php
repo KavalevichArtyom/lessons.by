@@ -14,7 +14,6 @@
 	
 	$login_autorize=$_SESSION['login_autorize'];
 	$password_autorize=$_SESSION['password_autorize'];
-	print_r($_SESSION);
 ?>
 
 <html>
@@ -75,9 +74,12 @@
 	
 </head>
 <body>
-
 	<div class="autorize_body">
-
+	
+		<div class="back">
+			<a href="http://lessons.by/"><p>Перейти на Главную страницу.</p></a><!--Изменить для хостинга-->	
+		</div class="back">
+	
 		<form method="post" class="block_autorize" action="check_users.php" id="login">
 			<div class="main-signin">
 				<div class="main-signin__head">
@@ -220,7 +222,7 @@
 	
 	if($active_true===true)
 	{
-		
+		$_SESSION['active_true']=false;
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Ваш аккаунт не был активирован.")'; 
 		echo '</script>'; 	

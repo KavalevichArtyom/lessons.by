@@ -1053,6 +1053,11 @@ margin:1vw 0vw 1vw 0vw;
 	margin:1vw 0vw 1vw 0vw;
 }
 
+.text_email a p:hover
+{
+	color:#b81515;;
+}
+
 .error_mail p
 {
 	font-size:2vw;
@@ -1062,6 +1067,25 @@ margin:1vw 0vw 1vw 0vw;
 	margin:1vw 0vw 1vw 0vw;
 }
 
+.error_mail a p:hover
+{
+	color:#b81515;
+}
+
+.back a p
+{
+	font-size:1vw;
+	font-family:'Open Sans Condensed', sans-serif !important;
+	color:#fff;
+	text-align: center;
+	margin:1vw 0vw 1vw 0vw;
+}
+
+
+.back:hover
+{
+	background	:#b81515;
+}
 
 /*___________________________________________________________________panel_button__________________________________________________________________________*/
 
@@ -3174,77 +3198,88 @@ label
 
 .autorize_body
 {
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(140,140,140,0.5);
-font-family: 'Open Sans', sans-serif!important;
-z-index:20;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:rgba(140,140,140,0.5);
+	font-family: 'Open Sans', sans-serif!important;
+	z-index:20;
 }
 
 .block_autorize
 {
-position:absolute;
-left:35%;
-height:30%;
-width:30%;
-z-index: 22;
-display:block;
+	position:absolute;
+	left:35%;
+	height:30%;
+	width:30%;
+	z-index: 22;
+	display:block;
 }
 
 .block_registation
 {
-position:absolute;
-left:35%;
-width:30%;
-z-index: 21;
-display:none;
+	position:absolute;
+	left:35%;
+	width:30%;
+	z-index: 21;
+	display:none;
 }
 
 
 .write_registragion
 {
-position:absolute;
-top:0;
-width:100%;
-height:85.3%;
+	position:absolute;
+	top:0;
+	width:100%;
+	height:85.3%;
 }
 
 .write_registragion_top
 {
-position:absolute;
-width:100%;	
-height:70%;
-background:#121212;
+	position:absolute;
+	width:100%;	
+	height:70%;
+	background:#121212;
 }
 
 .write_registragion_bottom
 {
-border-top:0.1vw solid #414243;
-position:absolute;
-top:70%;
-width:100%;
-height:30%;
-background:#212121;
+	border-top:0.1vw solid #414243;
+	position:absolute;
+	top:70%;
+	width:100%;
+	height:30%;
+	background:#212121;
 }
 
 .text_registragion
 {
-position:absolute;
-width:100%;
+	position:absolute;
+	width:100%;
 }
 
 .text_top
 {
-position:relative;
-width:100%;
+	position:relative;
+	width:100%;
 }
 
 
 .text_email
 {
-position:absolute;
-width:100%;
+	position:absolute;
+	width:100%;
+}
+
+.back
+{
+	position:absolute;
+	background:#212121;
+	border:0.1vw solid #2d2f32;
+	border-radius:1vw 1vw;
+	padding:1vw;
+	top:1%;
+	left:1%	;
 }
 /* .write_registragion_center
 {

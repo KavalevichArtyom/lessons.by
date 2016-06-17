@@ -19,6 +19,9 @@
 		include_once 'core/news.php';
 		include_once 'read_tests/class.read_tests.php';	
 		include_once 'registration/class.user_registration.php';	
+		include_once 'chech_mail/class.chech_mail.php';
+		
+		
 		/* unset($_SESSION['insert_into_true']); */
 		$hash=$_GET['hash'];
 		unset($_SESSION['generate_code']);
@@ -31,14 +34,14 @@
 		$password_registation=$_SESSION['password_registation'];
 		$password_reset_registation	=$_SESSION['password_reset_registation'];
 		
-			
+		
+		
+		
 /* 	    echo "<pre>";
 		print_r($_SESSION);
 		echo "</pre>"; */
 		if($_SESSION['push_true']===true)
 		{
-
-		
 		
 		$email=$_SESSION['email_registation'];
 		$fio=$_SESSION['fio'];
@@ -67,18 +70,24 @@
 		$head_7="Спасибо за внимание.\n\n";
 		$message.=$head_7;
 		
-		/* $mail=mail($email, $subject, $message, $headers); */
+		$mail=mail($email, $subject, $message, $headers);
 		
 		$_SESSION['push_true']=false;
 		$_SESSION['insert_into_true']=true;
+		$registration_urers_true=true;
 		
 		$obj=new registration();
 		$obj->user_registration($surname_registation,$name_registation,$middle_name_registation,$login_registation,$email_registation,$password_registation);
 		}
 		
-		if(!(empty($hash)))
+		if((!(empty($hash))) && (isset($hash)==true))
 		{
+			$hash="hash=".$_GET['hash'];
+			$query = "UPDATE users SET active='1' where  hash='".$hash."'";
+			$result = mysql_query($query) or die ("Не верный запрос."); 
 			
+			$registration_urers_true=false;
+
 		}
 	?>
 	
@@ -88,16 +97,25 @@
 		<div class="write_registragion_top">
 			<div class="text_registragion">
 				<div class="text_top">
-				
-					<p>Мы отправили вам письмо.<p>
+<?php			
+				if($registration_urers_true==true)
+				{
+					echo '<p>Мы отправили вам письмо.<p>';	
+					echo '<p>Пожалуйста, проверьте вашу почту.<p>';	
+					echo '<div class="error_mail">';		
+					echo '<p>Если письма нет в входящих сообщениях, проверьте раздел спама.<br>Данная ссылка активна одни сутки.</p>';			
+					echo '<a href="window_autorize.php"><p>Перейти на форму авторизации.</p></a>';
+					echo '</div>';
+				}
+				else
+				{	
+					echo '<p>Активация прошла успешно.<p>';	
+					echo '<div class="error_mail">';
+					echo '<a href="window_autorize.php"><p>Перейти на форму авторизации.</p></a>';
+					echo '</div>';
+				}		
+?>						
 					
-					<p>Пожалуйста, проверьте вашу почту.<p>
-					
-					<div class="error_mail">
-					
-						<p>Если письма нет в входящих, проверьте раздел спама.</p>
-						
-					</div>
 					
 				</div class="text_top">
 			</div class="text_registragion">
@@ -105,11 +123,22 @@
 	
 		<div class="write_registragion_bottom">
 		
-		<div class="text_email">
-		
-			<a href="https://mail.google.com/"><p>Почтовый сервис: Gmail.com<p></a>
-			
-		</div class="text_email">
+			<?php
+			if($registration_urers_true==true)
+			{
+				$mail=$email_registation;
+				$strrpos=strrpos($mail,'@');
+				$strrpos++;
+				$mail=substr($mail,$strrpos);
+				
+				$obj=new check();
+				$obj->check_mail($mail);
+			}
+			else
+			{
+				$registration_urers_true=true;
+			}
+			?>
 		
 		</div class="write_registragion_bottom">
 	

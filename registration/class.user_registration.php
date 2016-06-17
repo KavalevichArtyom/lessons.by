@@ -60,7 +60,8 @@ class registration
 					$time_live=86400;
 					$time_delete=$time_run+$time_live;
 					$active=0;
-					$hash=$_SESSION['url_true'];
+					$url_true=$_SESSION['url_true'];
+					$hash=parse_url($url_true, PHP_URL_QUERY);
 					
 					$this->query = "INSERT INTO users(surname,name,middle_name,login,email,password,time_run,time_live,time_delete,active,hash) VALUES ('".$surname_registation."','".$name_registation."','".$middle_name_registation."','".$login_registation."','".$email_registation."','".$password_registation."','".$time_run."','".$time_live."','".$time_delete."','".$active."','".$hash."')";
 					$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
