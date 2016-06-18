@@ -79,7 +79,7 @@ class theme
 				$db_text            = $this->rows['text'];
 				$db_href_theme      = $this->rows['href_theme'];
 				$db_name            = $this->rows['name'];
-
+				
 				echo '<li>';		
 				echo '<div class="active_tema_page_1_section" >';		
 				echo '<div class="active_tema_page_1_section_theme">';

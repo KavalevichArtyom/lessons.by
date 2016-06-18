@@ -1087,6 +1087,15 @@ margin:1vw 0vw 1vw 0vw;
 	background	:#b81515;
 }
 
+.error_search p
+{
+	font-size:2vw;
+	font-family:'Open Sans Condensed', sans-serif !important;
+	color:#fff;
+	text-align: center;
+	margin:10vw 0vw 10	vw 0vw;
+}
+
 /*___________________________________________________________________panel_button__________________________________________________________________________*/
 
 
@@ -3281,6 +3290,22 @@ label
 	top:1%;
 	left:1%	;
 }
+
+.error_search
+{
+	position:absolute;
+	width:100%;
+	border-bottom:0.1vw solid #2d2f32;
+}		
+
+.error_search img
+{	
+	padding:10% 25% 0% 25%;
+	height:25%;
+	width:50%;
+}
+
+
 
 /*_________________________________________________________________Панель кнопок____________________________________________________________________________*/
 
