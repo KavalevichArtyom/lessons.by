@@ -220,32 +220,32 @@ window.location.href="window_load/window_load.php";
 	if(isset($_GET['checkbox']))
 	{
 		$name="checkbox_check";
-		echo "checkbox_check";
+/* 		echo "checkbox_check"; */
 	}
 
 	if(isset($_GET['radio']))
 	{
 		$name="radio_check";
-		echo "radio_check";
+	/* 	echo "radio_check"; */
 	}
 
 	if(isset($_GET['text']))
 	{
 		$name="text";
-		echo "text";
+/* 		echo "text"; */
 	}
 
 	if(isset($_GET['conformity']))
 	{
 		$name="conformity";
-		echo "conformity";
+/* 		echo "conformity"; */
 	}
 
 	$obj=new inspection();
 	$obj->inspection_tests($name,$task,$test);
 
-	echo $_SESSION['correct'];
-	print_r($_SESSION);
+/* 	echo $_SESSION['correct'];
+	print_r($_SESSION); */
 ?>
 
 	</div class="goal_know_center">

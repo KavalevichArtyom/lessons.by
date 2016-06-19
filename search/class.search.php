@@ -42,8 +42,8 @@ class search
 						
 						
 						
-						$array_word=explode(" ",$db_word);
-						$array_search=explode(" ",$search);
+						$array_word=explode(", ",$db_word);
+						$array_search=explode(", ",$search);
 						
 						$array_result=array("");
 						$array_result_true=array("");
@@ -68,7 +68,7 @@ class search
 									}
 								}
 						}				
-						
+
 						if($array_result[0]=="")
 						{
 							$break=true;
@@ -88,8 +88,8 @@ class search
 						}
 						
 						if($break==false)
-						{
-								for($g=0;$g<count($array_result);++$g)
+						{	
+								for($g=0;$g<	count($array_result);++$g)
 								{
 									for($j=0;$j<count($array_result_true);++$j)
 									{	
@@ -100,16 +100,17 @@ class search
 									}	
 								}
 								
+								
 								for($g=0;$g<count($array_result_true);++$g)
 								{	
 									$result=explode(" ",$array_result_true[$g]);
 									
-										$sections=$result[0];
-										$subsections=$result[1];
-										$subsections.=" ".$result[2];
-										$subsections.=" ".$result[3];
-										$subsections.=" ".$result[4];					
-									
+									$sections=$result[0];
+									$subsections=$result[1];
+									$subsections.=" ".$result[2];
+									$subsections.=" ".$result[3];
+									$subsections.=" ".$result[4];
+
 									$obj=new theme();
 									$obj->read_theme_search($sections,$subsections);
 								}	

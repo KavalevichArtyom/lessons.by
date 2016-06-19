@@ -42,7 +42,7 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo $db_test_return."<br>";
+	 echo "Верный ответ ".$db_test_return."<br>";
 	 
 	 
      if( isset( $_POST['radio_check'] ) )
@@ -54,7 +54,7 @@ if(isset($name,$task,$test)==true)
 		
 		$obj=new check();
         $obj->check_cookie();
-		echo $_SESSION['correct'];
+		echo "Верных ответов -".$_SESSION['correct'];
         }
        	
      	}
@@ -81,7 +81,7 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo $db_test_return."<br>";
+	 echo "Верный ответ ".$db_test_return."<br>";
 	 
 	 $text_options;
 	 
@@ -90,14 +90,14 @@ if(isset($name,$task,$test)==true)
 	 {
 	 if (isset($_POST['checkbox_'.$i.'']))
      {  
-     echo " gut <br>";  
+/*      echo " gut <br>";   */
 	 
 	 $text_options=$text_options."$i";
      }
-	 else
+/* 	 else
 	 {
 	 echo " gg <br>";
-	 }
+	 } */
 	 
      }
 	if ($db_test_return==$text_options)
@@ -106,7 +106,7 @@ if(isset($name,$task,$test)==true)
 	 	$obj=new check();
         $obj->check_cookie();
 		
-		echo $_SESSION['correct'];
+		echo "Верных ответов -".$_SESSION['correct'];
 		
 	
 	}
@@ -124,7 +124,7 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo $db_test_return."<br>";
+	 echo "Верный ответ ".$db_test_return."<br>";
 	 
      if( isset( $_POST['text'] ) )
      {
@@ -135,7 +135,7 @@ if(isset($name,$task,$test)==true)
 		
 		$obj=new check();
         $obj->check_cookie();
-		echo $_SESSION['correct'];
+		echo "Верных ответов -".$_SESSION['correct'];
         }
        	
      	}
@@ -162,7 +162,7 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo $db_test_return."<br>";
+	 echo "Верный ответ ".$db_test_return."<br>";
 	 
 	 $text_options;
 	 
@@ -171,24 +171,24 @@ if(isset($name,$task,$test)==true)
 	 {
 	 if (isset($_POST['text_'.$i.'']))
      {  
-     echo " gut <br>";  
+/*      echo " gut <br>";   */
 	 
 	 $text_options=$text_options.''.+$_POST['text_'.$i.''].'';
 	 echo $text_options;
      }
-	 else
+/* 	 else
 	 {
 	 echo " gg <br>";
-	 }
+	 } */
 	 
      }
 	if ($db_test_return==$text_options)
 	{
-	 echo "ot";
+/* 	 echo "ot"; */
 	 	$obj=new check();
         $obj->check_cookie();
 		
-		echo $_SESSION['correct'];
+		echo "Верных ответов -".$_SESSION['correct'];
 		
 /* 		$query_radio = "INSERT INTO read_result_users_test(number_test) VALUE ('".$test."')";
 	    mysql_query($query_radio) or die ("Не верный запрос."); */
