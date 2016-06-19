@@ -1,7 +1,17 @@
 ﻿/* window.onload=function(){
 alert("Размер элемента:" + this.offsetWidth +"x"+ this.offsetHeight)
 }  */
+
+function block_and_href(check,href,number_test){
+
+	window.location= href+"?test="+number_test;
+	
+ 	var elems=document.getElementsByClassName(check);
+    for(var i=0; i<elems.length; i++)elems[i].style.display='block'; 
+}
+
 function block(check){
+
  	var elems=document.getElementsByClassName(check);
     for(var i=0; i<elems.length; i++)elems[i].style.display='block'; 
 }

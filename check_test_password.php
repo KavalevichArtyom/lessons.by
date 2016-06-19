@@ -102,35 +102,31 @@ $obj=new connect_db();
 $obj->connect();
 
 $password=$_POST['password'];
+$test=$_GET['test'];
 
-if((isset($password)==true) && (empty($password)!==true))
+
+if((isset($password)==true) && (empty($password)!==true) && (isset($test)==true) && (empty($test)!==true))
 {
-	$query  = "SELECT count(id) as count_id FROM password_test";
+
+    $query  = "SELECT id,number_test,password,time_life FROM password_test where password=".$password." and number_test=".$test."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
-
-    $rows   = mysql_fetch_array($result);
-    
-    $db_count_id        = $rows['count_id'];
-
-
-    $query  = "SELECT id,number_test,password,time_life FROM password_test";
-    $result = mysql_query($query) or die ("Не верный запрос."); 
-
-	for($i=0;$i<$db_count_id;$i++)
-	{
+	
 		$rows   = mysql_fetch_array($result);
 		
 		$db_number_test        = $rows['number_test'];
 		$db_password           = $rows['password'];
+			
 		
-		if((isset($db_password )==true) && (empty($db_password )!==true && $password==$db_password))
+		if((isset($db_password )==true) && (empty($db_password )!==true) && ($password==$db_password))
 		{
+	
 			echo '<script type="text/javascript">'; 
 			echo 'window.location.href="know_page.php?test='.$db_number_test.'&task=1";'; 
 			echo '</script>'; 
 		}
 		else
 		{	
+	
 			$_SESSION['password_test_false']=true;
 			echo '<script type="text/javascript">'; 
 			echo 'window.location.href="Control_know_page.php";'; 
@@ -138,5 +134,4 @@ if((isset($password)==true) && (empty($password)!==true))
 		}
 	 
 
-	}
 }

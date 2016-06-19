@@ -1,5 +1,7 @@
 ﻿<?php 
 	session_start();
+	
+	$test=$_GET['test'];
 ?>
 	<html>
 	<head>
@@ -13,6 +15,7 @@
 		<script src="JS/sticky.js"></script>
 		
 		<script>
+		
 	jQuery(function(f){
 			var element = f('#blfix');
 			f(window).scroll(function(){
@@ -93,13 +96,13 @@
 
 	 <div class="write_password" id="popup1">
 		<div class="b-popup-content">	
-		<form method="post" class="form-4" action="check_test_password.php">
+		<form method="post" class="form-4" action="check_test_password.php?test=<?php echo $test?>">
 		<label for="password">Введите пароль</label>
 		<input type="password" name="password" placeholder="Пароль" autofocus required>
 		<input type="submit" name="submit_password" value="Подтвердить">
 		</form>
 		<div class="password_close">
-		<a  accesskey="x" onclick="none('write_password')"><p>Назад[x]</p></a>
+		<a  accesskey="x" href="Control_know_page.php" ><p>Назад[x]</p></a>
 		</div>
 		</div>
 	</div> 
@@ -146,6 +149,21 @@
 	
 	$obj=new panel();
 	$obj->top_panel($position,$href_to);
+	
+	
+	
+	if((isset($test)) && (!empty($test)))
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'block(\'write_password\');'; 
+		echo '</script>'; 
+	}
+	else
+	{
+		echo '<script type="text/javascript">'; 
+		echo 'none(\'write_password\');'; 
+		echo '</script>'; 
+	}
 ?>
 
 
@@ -222,16 +240,16 @@
 	</html>
 <?php
 	$password_test_false=$_SESSION['password_test_false'];
-	
+		
 	unset($_SESSION['password_test_false']);
 
-	if($_SESSION['alert_autorize']==true)
+/* 	if($_SESSION['alert_autorize']==true)
 	{
 		echo '<script type="text/javascript">'; 	
 		echo 'setTimeout(alert("Добро пожаловать '.$_SESSION['fio'].'"), 1000);';
 		echo '</script>'; 	
 		$_SESSION['alert_autorize']=false;
-	}
+	} */
 	
 		if($password_test_false===true)		
 	{	

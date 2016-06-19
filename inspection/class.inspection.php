@@ -150,7 +150,7 @@ if(isset($name,$task,$test)==true)
       {
 
 
-	$query  = "SELECT count(number_options) as numbers_options  FROM test_options where number_test=".$test." and number_task=".$task." and number_options>0";
+	$query  = "SELECT count(number_options) as numbers_options  FROM test_options where number_test=".$test." and number_task=".$task." and number_options=0";
     $result = mysql_query($query) or die ("Не верный запрос."); 
 
     $rows   = mysql_fetch_array($result);
@@ -169,29 +169,21 @@ if(isset($name,$task,$test)==true)
 	 for($i=1,$j=0;$i<=$db_numbers_options;$i++,$j++)
 	 
 	 {
-	 if (isset($_POST['text_'.$i.'']))
-     {  
-/*      echo " gut <br>";   */
+		 if (isset($_POST['text_'.$i.'']))
+			 {  	
+			 $text_options=$text_options.''.$_POST['text_'.$i.''].'';
+			 }
 	 
-	 $text_options=$text_options.''.+$_POST['text_'.$i.''].'';
+     }
+	 
 	 echo $text_options;
-     }
-/* 	 else
-	 {
-	 echo " gg <br>";
-	 } */
-	 
-     }
-	if ($db_test_return==$text_options)
+	if ($db_test_return=$text_options)
 	{
-/* 	 echo "ot"; */
+
 	 	$obj=new check();
         $obj->check_cookie();
 		
-		echo "Верных ответов -".$_SESSION['correct'];
-		
-/* 		$query_radio = "INSERT INTO read_result_users_test(number_test) VALUE ('".$test."')";
-	    mysql_query($query_radio) or die ("Не верный запрос."); */
+		echo "Верных ответов -".$_SESSION['correct'];	
 	
 	}
 }

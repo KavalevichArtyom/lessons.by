@@ -157,6 +157,8 @@ echo сonclusion_news();//Вывод новостей
 
 $search=$_GET['search'];
 
+$_SESSION['search']=$search;
+
 if(isset($search)==false)
 	{
 		$obj=new theme();

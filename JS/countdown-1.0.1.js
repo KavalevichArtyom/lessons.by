@@ -1,5 +1,5 @@
 function sleep() {
-window.location.href="http://lessons.by/window_load/window_load.php";
+window.location.href="window_load/window_load.php";
 }
 
 function countdown_go() {

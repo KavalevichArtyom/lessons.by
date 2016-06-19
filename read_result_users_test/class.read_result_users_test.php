@@ -35,13 +35,6 @@ public function read_result_users_test($time)
 	 $db_value              = $rows['value'];
 	  
 	 
-/* echo $db_number_test.'<br>';
-echo $db_fio_users.'<br>';
-echo $db_queryes.'<br>';
-echo $db_correct.'<br>';
-echo $db_not_correct.'<br>';
-echo $db_time.'<br>'; */
-	 
 echo '<div class="goal_result_head">';
 echo '<p>Результаты прохожденрия Теста №'.$db_number_test.'</p>';
 echo '</div class="goal_result_head">';

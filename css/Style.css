@@ -336,7 +336,7 @@ top:105.25vw;
 			bottom:15%;
 			right:5%;
 		}
-	.goal_result{top:15%}
+	.goal_result{top:10%}
 }
 
 @media screen and (max-width: 385px)
@@ -2998,18 +2998,18 @@ label
 .options_left_value
 {
 	float:left;
-	width:20%;
+	width:40%;
 }
 
 .options_right_value
-{
+{	
 	float:right;
-	width:80%;
+	width:60%;
 }
 
 .options_right_value input[type=text]
 {
-	width:5%;
+	width:10%;
 	border:0;
 	border-bottom:0.1vw solid #000;
 	font-size:1.25vw;
@@ -3017,6 +3017,7 @@ label
 	color:#000;
 	text-align: center;
 	font-weight: bold;
+	margin:0.1vw 0vw;
 
 }
 
@@ -3053,7 +3054,7 @@ label
     position:fixed;
     top:0px;
 	z-index:10;
-	display:none;
+	display:block;
 
 }
 .write_password .b-popup-content{

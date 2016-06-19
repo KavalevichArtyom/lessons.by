@@ -33,12 +33,6 @@ else
 
  	    $query_radio = "INSERT INTO read_result_users_test(number_test,fio_users,queryes,correct,not_correct,time,value) VALUES ('".$number_test."','".$fio."','".$task."','".$correct."','".$not_correct."','".$time_now."','".$value."')";
 	    mysql_query($query_radio) or die ("Не верный запрос."); 
-	
-	
-
-print_r($_SESSION);
-print_r($_COOKIE);
-
 
 	include_once 'top_panel/class.top_panel.php';	
 	

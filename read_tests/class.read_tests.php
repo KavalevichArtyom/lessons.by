@@ -39,15 +39,7 @@ public function read_tests()
 	 $db_test_text      	 = $rows['test_text'];
 	 $db_circs_test    		 = $rows['circs_test'];
 	 $db_href_test     		 = $rows['href_test'];
-
-	 
-/* 	 echo $db_test_number."<br>";
-	 echo $db_test_image."<br>";
-	 echo $db_test_text."<br>";
-	 echo $db_circs_test."<br>";
-	 echo $db_href_test."<br>"; */
-
-	 
+ 
 	echo "<li>";
 		echo '<div class="test">';
 		echo '<div class="test_number">';
@@ -70,7 +62,7 @@ public function read_tests()
 		echo '</p>';
 		echo '</div class="circs_test">';
 		echo '<div class="href_test">';
-		echo '<a  onclick="block(\'write_password\')"><p>Пройти тест</p></a>';
+		echo '<a onclick="block_and_href(\'write_password\',\'Control_know_page.php\' ,'.$db_test_number.')"><p>Пройти тест</p></a>';
 		echo '</div class="href_test">';
 		echo '</div class="test">';
 	echo "</li>";
