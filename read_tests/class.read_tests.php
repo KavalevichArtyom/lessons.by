@@ -27,7 +27,7 @@ public function read_tests()
 	$this->db_count_id         = $rows['count_id'];
 
 
-	$this->query  = "SELECT id,test_number,test_image,test_text,circs_test,href_test FROM read_tests";
+	$this->query  = "SELECT id,test_number,test_image,test_text,circs_test,href_test,passage_of_time_minutes FROM read_tests";
     $this->result = mysql_query($this->query) or die ("Не верный запрос."); 
 	
 	for($i=0;$i<$this->db_count_id;$i++){	
@@ -39,6 +39,7 @@ public function read_tests()
 	 $db_test_text      	 = $rows['test_text'];
 	 $db_circs_test    		 = $rows['circs_test'];
 	 $db_href_test     		 = $rows['href_test'];
+	 $db_passage_of_time_minutes= $rows['passage_of_time_minutes'];
  
 	echo "<li>";
 		echo '<div class="test">';
@@ -58,7 +59,7 @@ public function read_tests()
 		echo '</div class="test_text">';
 		echo '<div class="circs_test">';
 		echo '<p>';
-		echo 'Время прохождения теста ограничена 30 минутами.<br /> Количество вопросов в тесте -'.$db_circs_test.'.';
+		echo 'Время прохождения теста ограничена '.$db_passage_of_time_minutes.' минутами.<br /> Количество вопросов в тесте - '.$db_circs_test.'.';
 		echo '</p>';
 		echo '</div class="circs_test">';
 		echo '<div class="href_test">';

@@ -17,7 +17,8 @@ class left_panel
 				echo '</div class="heads_name">';
 				echo '<div class="heads_search">';
 						echo '<form method="get" action="active_tema_page_1.php">';								
-								echo '<input type="text" name="search" value="'.$_SESSION['search'].'" class="search rounded" >';
+/* 								echo '<input type="text" name="search" value="'.$_SESSION['search'].'" class="search rounded" >'; */
+								echo '<input type="text" name="search" class="search rounded" >';
 								echo '<input type="submit" value="Искать...">';						
 						echo '</form>';
 				echo '</div class="heads_search">';
