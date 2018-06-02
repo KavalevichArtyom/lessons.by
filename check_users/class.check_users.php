@@ -13,7 +13,14 @@ class check
 	
 		public function check_password_users($email,$password)
 			{			
-				
+/* 				if($_SESSION['autorize_true']==true)
+				{
+					echo '<script type="text/javascript">'; 
+					echo 'window.location.href="Control_know_page.php";'; 
+					echo '</script>';
+				}
+				 */			 
+				 
 				$this->query = "SELECT surname,name,middle_name,email, password,login FROM users where (email='".$email."' or login='".$email."')";
 				$this->result = mysql_query($this->query) or die ("Не верный запрос."); 
 				
@@ -23,7 +30,9 @@ class check
 				$db_email       	   = $rows['email'];
 
 				if((isset($db_email)==true) && (empty($db_email)!==true))
-				{
+				{	
+					
+					
 				    $_SESSION['email_true_autorize']=true;			
 				}		
 /* 				else
@@ -80,7 +89,7 @@ class check
 				{		
 						$_SESSION['autorize_false']=true;
 						echo '<script type="text/javascript">'; 
-						echo 'window.location.href="window_autorize.php";'; 							
+						echo 'window.location.href="window_autorize.php?autorize=1";'; 							
 						echo '</script>';
 				}
 			}

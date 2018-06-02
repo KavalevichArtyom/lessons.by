@@ -98,7 +98,7 @@
 	<div class="autorize_body">
 	
 		<div class="back">
-			<a href="http://lessons.by/"><p>Перейти на Главную страницу.</p></a><!--Изменить для хостинга-->	
+			<a href="index.php"><p>Перейти на Главную страницу.</p></a><!--Изменить для хостинга-->	
 		</div class="back">
 	
 		<form method="post" class="block_autorize" action="check_users.php" id="login">
@@ -160,7 +160,7 @@
 
 </html>
 <?
-	unset($_SESSION['autorize_true']);
+/* 	unset($_SESSION['autorize_true']); */
 	
 	$login_false=$_SESSION['login_false'];
 	$password_false=$_SESSION['password_false'];

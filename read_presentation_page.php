@@ -70,6 +70,7 @@
 
 	$obj=new contents();
 	$obj->read_presentation($number);
+
 ?>
 
 	<div class="footer_read_presentation">

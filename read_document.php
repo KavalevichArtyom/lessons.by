@@ -19,9 +19,7 @@ jQuery(function(f){
 		
     });
 }); 
-</script>
 
-<script type="text/javascript">
 $(document).ready(function(){
    $('.heads_buttom').hide()
     $('.heads_buttom').click(function(){
@@ -38,9 +36,7 @@ $(document).ready(function() {
  $("#menu1 ul").hide();
  $("#menu1 li span").click(function() { $(this).next().slideToggle("normal"); });
 });
-</script>     
-	
-	<script>
+
 
 	$(document).ready(function(){
 					$('#menu2').stickyfloat({ duration: 400 });	
@@ -157,42 +153,29 @@ $obj->read_doc($page,$section,$practice,$laboratory);
 
 
 
-<div class="download_file">
 
-<div class="active_download_file">
 
 <?php
 $obj=new doc();
 $obj->download_doc($page,$section,$practice,$laboratory); 
 ?>	
 
-</div class="active_download_file">
 
-</div class="download_file">
-
-
-
-<div class="href_presentation">
-
-<div class="active_presentation">
-
-<a href="#"><p>Просмотр презентации</p></a>
-
-</div class="active_presentation">
-
-</div class="href_presentation">
+<?php
+$obj=new doc();
+$obj->href_presentation($page,$section,$practice,$laboratory); 
+?>	
 
 
+<?php
+$obj=new doc();
+$obj->href_know_control($page,$section,$practice,$laboratory); 
+?>	
 
-<div class="href_knowledge">
-
-<div class="active_knowledge">
-
-<a href="#"><p>Перейти к Контролю знаний</p></a>
-
-</div class="active_knowledge">
-
-</div class="href_knowledge">
+<?php
+$obj=new doc();
+$obj->autorize_false(); 
+?>	
 
 
 

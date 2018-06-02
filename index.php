@@ -85,13 +85,12 @@
 
 	<div class="goal_head">
 
-	<p>Цель сайта/<p>
 
 	</div class="goal_head">
 
 	<div class="goal_text">
 
-	<p>Предостовление для обучения информации, презентации, тестов по предмету «Микропроцессорные средства и системы».<p>
+	<p>Сайт предоставляет инфомацию для изучения дисциплины «Микропроцессорные средства и системы».<p>
 
 	</div class="goal_text">
 
@@ -102,7 +101,7 @@
 
 
 	<div class="footer_text">
-
+	
 	<p>© <?echo date('Y')?> lesson.by. Все права защищены. Перепечатка запрещена.</p>
 
 	</div class="footer_text">
@@ -113,5 +112,10 @@
 
 
 </body>
-
+<?php
+if (($_SESSION['autorize_true']!==true)||(isset($_SESSION['autorize_true'])==false))
+{
+	$_SESSION['autorize_true']=0;
+}
+?>	
 </html>

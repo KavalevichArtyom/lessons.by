@@ -42,8 +42,11 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo "Верный ответ ".$db_test_return."<br>";
 	 
+	 if($_SESSION['admin']==true)
+	 {
+		echo "Верный ответ ".$db_test_return."<br>";
+	 }
 	 
      if( isset( $_POST['radio_check'] ) )
      {
@@ -81,7 +84,10 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo "Верный ответ ".$db_test_return."<br>";
+	if($_SESSION['admin']==true)
+	 {
+		echo "Верный ответ ".$db_test_return."<br>";
+	 }
 	 
 	 $text_options;
 	 
@@ -124,7 +130,10 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo "Верный ответ ".$db_test_return."<br>";
+	 if($_SESSION['admin']==true)
+	 {
+		echo "Верный ответ ".$db_test_return."<br>";
+	 }
 	 
      if( isset( $_POST['text'] ) )
      {
@@ -162,7 +171,10 @@ if(isset($name,$task,$test)==true)
     $rows   = mysql_fetch_array($this->result_radio);
     
      $db_test_return        = $rows['test_return'];
-	 echo "Верный ответ ".$db_test_return."<br>";
+	 if($_SESSION['admin']==true)
+	 {
+		echo "Верный ответ ".$db_test_return."<br>";
+	 }
 	 
 	 $text_options;
 	 

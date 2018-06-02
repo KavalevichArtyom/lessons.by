@@ -1,5 +1,6 @@
 <?php
 session_start();
+// 02.06.2018 16:39 session_start();
 
 include_once 'core/class.connect.php';
 

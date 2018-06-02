@@ -1,6 +1,8 @@
 ﻿<?php 
 	session_start();
 	
+	$_SESSION['autorize_true']=true;
+	
 	$test=$_GET['test'];
 ?>
 	<html>
@@ -104,6 +106,9 @@
 		<div class="password_close">
 		<a  accesskey="x" href="Control_know_page.php" ><p>Назад[x]</p></a>
 		</div>
+		<div class="number_test_get">
+		<p>Тест №<?php echo $_GET['test']?></p>
+		</div>
 		</div>
 	</div> 
 
@@ -111,7 +116,8 @@
 <?php
 	
 	include_once 'core/class.siction.php';
-	include_once 'core/news.php';
+	include_once 'core/news.php';	
+	include_once 'read_library/class.read_library.php';
 	include_once 'read_tests/class.read_tests.php';	
 	include_once 'left_panel_section/class.left_panel_section.php';
 
@@ -140,6 +146,7 @@
 	unset($_SESSION['login_registation_false']);
 	unset($_SESSION['password_registation_false']);
 	unset($_SESSION['preg_match_false']);
+	unset($_SESSION['active_true']);
 
 	
 	include_once 'top_panel/class.top_panel.php';	
@@ -215,7 +222,8 @@
 	</div class="menu_forums_right_head">
 
 	<?php
-	echo сonclusion_news();//Вывод новостей
+		$obj=new libary();
+		$obj->read_libary();
 	?>
 
 	</div class="menu_forums_right" >

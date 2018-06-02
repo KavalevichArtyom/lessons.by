@@ -22,17 +22,66 @@ else
 	$time_now=$time_now/100;
 	$time_now = number_format($time_now, 2, ':', '');
 	}
-
-	$value=6;
+	if($correct==0)
+	{
+		$value=0;
+	}
+	if ($correct<($task*0.1))
+	{
+		$value=0;
+	}	
+	if ($correct>($task*0.1))
+	{
+		$value=1;
+	}
 	
+	
+	if ($correct>($task*0.2))
+	{
+		$value=2;
+	}
+		
+	if ($correct>($task*0.3))
+	{
+		$value=3;
+	}
+	if ($correct>($task*0.4))
+	{
+		$value=4;
+	}
+	if ($correct>($task*0.5))
+	{
+		$value=5;
+	}
+	
+	if ($correct>($task*0.6))
+	{
+		$value=6;
+	}
+	if ($correct>($task*0.7))
+	{
+		$value=7;
+	}
+	if ($correct>($task*0.8))
+	{
+		$value=8;
+	}
+	if ($correct>($task*0.9))
+	{
+		$value=9;
+	}
+	if ($correct>($task*1))
+	{
+		$value=10;
+	}
 	
 	$_SESSION['time_now']=$time_now;
  
     $not_correct=$task-$correct;
     $_SESSION['not_correct']=$not_correct;
 
- 	    $query_radio = "INSERT INTO read_result_users_test(number_test,fio_users,queryes,correct,not_correct,time,value) VALUES ('".$number_test."','".$fio."','".$task."','".$correct."','".$not_correct."','".$time_now."','".$value."')";
-	    mysql_query($query_radio) or die ("Не верный запрос."); 
+ 	$query_radio = "INSERT INTO read_result_users_test(number_test,fio_users,queryes,correct,not_correct,time,value) VALUES ('".$number_test."','".$fio."','".$task."','".$correct."','".$not_correct."','".$time_now."','".$value."')";
+	mysql_query($query_radio) or die ("Не верный запрос."); 
 
 	include_once 'top_panel/class.top_panel.php';	
 	

@@ -43,38 +43,43 @@ public function read_presentations()
 	 $db_href_ondrive_presentation    = $rows['href_ondrive_presentation'];
 	 $db_number    = $rows['number'];
 	 
-	/*  echo $db_href_image."<br>";
-	 echo $db_href_downloand."<br>";
-	 echo $db_href_document."<br>";
-	 echo $db_href_knowlenge."<br>";
-	 echo $db_href_presentation."<br>";
-	 echo $db_href_ondrive_presentation."<br>";
-	 echo $db_number."<br>"; */
+
 	 
-echo '<li>';
-echo '<div class="goal_presentation_sections">';
-echo '<div class="goal_presentation_center_img">';
-echo '<img src='.$db_href_image.'></img>';
-echo '</div class="goal_presentation_center_img">';
-echo '<div class="goal_presentation_center_panel">';
-echo '<div class="goal_download_file">';
-echo '<div class="goal_active_download_file">';
-echo '<a href='.$db_href_downloand.'><p>Скачать<p></a>';
-echo '</div class="goal_active_download_file">';
-echo '</div class="goal_download_file">';
-echo '<div class="goal_href_presentation">';
-echo '<div class="goal_active_presentation">';
-echo '<a href='.$db_href_presentation.''.$db_number.'><p>Просмотр</p></a>';
-echo '</div class="goal_active_presentation">';
-echo '</div class="goal_href_presentation">';
-echo '<div class="goal_href_knowledge">';
-echo '<div class="goal_active_knowledge">';
-echo '<a href='.$db_href_knowlenge.'><p>Контроль знаний</p></a>';
-echo '</div class="goal_active_knowledge">';
-echo '</div class="goal_href_knowledge">';
-echo '</div class="goal_presentation_center_panel">';
-echo '</div class="goal_presentation_sections">';
-echo '</li>';
+		echo '<li>';
+		echo '<div class="goal_presentation_sections">';
+		echo '<div class="goal_presentation_center_img">';
+		echo '<img src='.$db_href_image.'></img>';
+		echo '</div class="goal_presentation_center_img">';
+		echo '<div class="goal_presentation_center_panel">';
+		
+			if(($db_href_downloand!="")&&($_SESSION['autorize_true']==true))
+		{
+			echo '<div class="goal_download_file">';
+			echo '<div class="goal_active_download_file">';
+			echo '<a href='.$db_href_downloand.'><p>Скачать<p></a>';
+			echo '</div class="goal_active_download_file">';
+			echo '</div class="goal_download_file">';
+		}
+		
+		echo '<div class="goal_href_presentation">';
+		echo '<div class="goal_active_presentation">';
+		echo '<a href='.$db_href_presentation.''.$db_number.'><p>Просмотр</p></a>';
+		echo '</div class="goal_active_presentation">';
+		echo '</div class="goal_href_presentation">';
+		
+			if(($db_href_knowlenge!="")&&($_SESSION['autorize_true']==true))
+		{
+		
+			echo '<div class="goal_href_knowledge">';
+			echo '<div class="goal_active_knowledge">';
+			echo '<a href='.$db_href_knowlenge.'><p>Контроль знаний</p></a>';
+			echo '</div class="goal_active_knowledge">';
+			echo '</div class="goal_href_knowledge">';
+		}
+
+		echo '</div class="goal_presentation_center_panel">';
+		echo '</div class="goal_presentation_sections">';
+		echo '</li>';
     }	
 }
 
@@ -94,29 +99,60 @@ public function read_presentation($number)
 	 $db_href_ondrive_presentation    = $rows['href_ondrive_presentation'];
 	 $db_number    = $rows['number'];
 	 
-echo '<div class="goal_read_presentation">';
-echo '<div class="presentation">';
-echo '<iframe src="'.$db_href_ondrive_presentation.'" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>';
-echo '</div class="presentation">';
-echo '</div class="goal_read_presentation">';
-echo '<div class="goal_read_presentation_panel">';
-echo '<div class="goal_read_download_file">';
-echo '<div class="goal_read_active_download_file">';
-echo '<a href="'.$db_href_downloand.'"><p>Скачать документ<p></a>';
-echo '</div class="goal_read_active_download_file">';
-echo '</div class="goal_read_download_file">';
-echo '<div class="goal_read_href_presentation">';
-echo '<div class="goal_read_active_presentation">';
-echo '<a href="'.$db_href_document.'"><p>Документы по теме</p></a>';
-echo '</div class="goal_read_active_presentation">';
-echo '</div class="goal_read_href_presentation">';
-echo '<div class="goal_read_href_knowledge">';
-echo '<div class="goal_read_active_knowledge">';
-echo '<a href="'.$db_href_knowlenge.'"><p>Перейти к контролю знаний</p></a>';
-echo '</div class="goal_read_active_knowledge">';
-echo '</div class="goal_read_href_knowledge">';
-echo '</div class="goal_read_presentation_panel">';    
-	
+		echo '<div class="goal_read_presentation">';
+		echo '<div class="presentation">';
+		echo '<iframe src="'.$db_href_ondrive_presentation.'" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>';
+		echo '</div class="presentation">';
+		echo '</div class="goal_read_presentation">';
+		echo '<div class="goal_read_presentation_panel">';
+		
+		if(($db_href_downloand!="")&&($_SESSION['autorize_true']==true))
+		{
+			echo '<div class="goal_read_download_file">';
+			echo '<div class="goal_read_active_download_file">';
+			echo '<a href="'.$db_href_downloand.'"><p>Скачать документ<p></a>';
+			echo '</div class="goal_read_active_download_file">';
+			echo '</div class="goal_read_download_file">';
+			$_SESSION['db_href_downloand']=false;
+		}
+		else
+		{
+			$_SESSION['db_href_downloand']=true;
+		}
+		
+		if(($db_href_document!="")&&($_SESSION['autorize_true']==true))
+		{
+			echo '<div class="goal_read_href_presentation">';
+			echo '<div class="goal_read_active_presentation">';
+			echo '<a href="'.$db_href_document.'"><p>Документ по теме</p></a>';
+			echo '</div class="goal_read_active_presentation">';
+			echo '</div class="goal_read_href_presentation">';
+			$_SESSION['db_href_document']=false;
+		}
+		else
+		{
+			$_SESSION['db_href_document']=true;
+		}
+		
+		if(($db_href_knowlenge!="")&&($_SESSION['autorize_true']==true))
+		{
+			echo '<div class="goal_read_href_knowledge">';
+			echo '<div class="goal_read_active_knowledge">';
+			echo '<a href="'.$db_href_knowlenge.'"><p>Перейти к контролю знаний</p></a>';
+			echo '</div class="goal_read_active_knowledge">';
+			echo '</div class="goal_read_href_knowledge">';	   
+			$_SESSION['db_href_knowlenge']=false;
+		}
+		else
+		{
+			$_SESSION['db_href_knowlenge']=true;
+		}
+		
+				if(($_SESSION['db_href_downloand']==true)&&($_SESSION['db_href_document']==true)&&($_SESSION['db_href_knowlenge']==true))
+		{
+			echo '<div class="autorize_false_presentations"><p>У вас недостаточно прав.Необходима регистрация.</p></div>';
+		}
+		echo '</div class="goal_read_presentation_panel">'; 
 }
 
 }

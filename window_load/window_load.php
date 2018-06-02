@@ -47,7 +47,7 @@
 <script>
 
 function sleep() {
-window.location.href="http://lessons.by/know_page_result.php";
+window.location.href="/know_page_result.php";
 }
  window.onload=function(){
  setInterval(sleep,5000); 

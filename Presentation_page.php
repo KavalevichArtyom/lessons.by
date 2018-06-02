@@ -98,6 +98,7 @@
 	include_once 'core/news.php';
 	include_once 'read_presentations/class.read_presentations.php';
 	include_once 'left_panel_section/class.left_panel_section.php';
+	include_once 'read_library/class.read_library.php';
 
 
 
@@ -152,9 +153,8 @@
 	</div class="menu_forums_right_head">
 
 	<?php
-	
-		echo сonclusion_news();//Вывод новостей
-	
+		$obj=new libary();
+		$obj->read_libary();
 	?>
 
 	</div class="menu_forums_right" >

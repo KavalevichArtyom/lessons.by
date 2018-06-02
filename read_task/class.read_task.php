@@ -23,6 +23,8 @@ public function __construct()
 
 public function read_task_one($task,$test)
 {
+	$check=$_GET['check'];
+	
     $query  = "SELECT id, number_test,query,href_image,response_options,href_query,number_task,know_response FROM test_query where number_test=".$test." and number_task=".$task."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
 
@@ -69,7 +71,7 @@ public function read_task_one($task,$test)
 	
 	if(empty($db_href_query_next)==true)
 	{
-	$db_href_query_next="http://lessons.by/window_load/window_load.php";
+	$db_href_query_next="window_load/window_load.php";
 	}	
 	
 	/* action="'.$db_href_query_next.'" */
@@ -111,10 +113,8 @@ if ($db_block_read=="1")
 	
 	$db_number_options         = $rows['number_options'];
 	$db_response_options       = $rows['response_options'];
-	
-
-	echo '<label><input type="radio" name="radio_check" onclick="block(\'text_add\')" value="'.$db_number_options.'" 	/>'.$db_response_options.'<br></label>';
-	
+		
+		echo '<label><input type="radio" name="radio_check" onclick="block(\'text_add\')" value="'.$db_number_options.'" 	/>'.$db_response_options.'<br></label>';	
 	}	
 
 }
@@ -193,8 +193,9 @@ echo '<div class="options_right_value">';
 
     $query  = "SELECT number_options, response_options  FROM test_options where number_test=".$test." and number_task=".$task."";
     $result = mysql_query($query) or die ("Не верный запрос."); 
-
-    for($j=0,$i=0;$j<$db_numbers_options;$j++){
+	
+    for($j=0,$i=0;$j<$db_numbers_options;$j++)
+	{
 	
     $rows   = mysql_fetch_array($result);
 	
@@ -206,6 +207,7 @@ echo '<div class="options_right_value">';
 	if($db_number_options==0)
 	{	
 	$i++;
+	
 	echo '<label ><input type="text" onclick="block(\'text_add\')" name="text_'.$i.'"  />'.$db_response_options."<br></label>";
 	}
 	}
@@ -217,11 +219,13 @@ echo '<div class="options_right_value">';
 }
 
 	echo '</div class="query_know_options">';	
-	/* onclick="block(\'text_add_next')" */
-	/* onclick="href_query_next(\''.$db_href_query_next.'\')" */
-	echo '<div class="text">';
+	echo '<div class="text">';	
+	
 	echo '<a href='.$db_href_query_next.' class="text_add_next">Далее</a>';
-	echo '<input type="submit" class="text_add"   value="Проверить" ></input>';
+	echo '<input type="submit" name="submit_true" class="text_add"   value="Проверить" ></input>';
+	
+	
+	
 	echo '</div class="text">';
 
 	echo '</form>';

@@ -181,9 +181,7 @@ session_start();
             }
         }
     }
-    </script> 
-	
-	<script>
+
 $(document).ready(function() {
 	setInterval(countdown_go,1000);
 	return false;
@@ -220,32 +218,26 @@ window.location.href="window_load/window_load.php";
 	if(isset($_GET['checkbox']))
 	{
 		$name="checkbox_check";
-/* 		echo "checkbox_check"; */
 	}
 
 	if(isset($_GET['radio']))
 	{
 		$name="radio_check";
-	/* 	echo "radio_check"; */
 	}
 
 	if(isset($_GET['text']))
 	{
 		$name="text";
-/* 		echo "text"; */
 	}
 
 	if(isset($_GET['conformity']))
 	{
 		$name="conformity";
-/* 		echo "conformity"; */
 	}
 
 	$obj=new inspection();
 	$obj->inspection_tests($name,$task,$test);
 
-/* 	echo $_SESSION['correct'];
-	print_r($_SESSION); */
 ?>
 
 	</div class="goal_know_center">
@@ -270,7 +262,7 @@ window.location.href="window_load/window_load.php";
 
 	<div class="footer_text">
 
-	<p>© 2016 lesson.by. Все права защищены. Перепечатка запрещена.</p>
+	<p>© <? echo date('Y')?> lesson.by. Все права защищены. Перепечатка запрещена.</p>
 
 	</div class="footer_text">
 

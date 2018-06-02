@@ -104,14 +104,14 @@
 					echo '<p>Пожалуйста, проверьте вашу почту.<p>';	
 					echo '<div class="error_mail">';		
 					echo '<p>Если письма нет в входящих сообщениях, проверьте раздел спама.<br>Данная ссылка активна одни сутки.</p>';			
-					echo '<a href="window_autorize.php"><p>Перейти на форму авторизации.</p></a>';
+					echo '<a href="window_autorize.php?autorize=1"><p>Перейти на форму авторизации.</p></a>';
 					echo '</div>';
 				}
 				else
 				{	
 					echo '<p>Активация прошла успешно.<p>';	
 					echo '<div class="error_mail">';
-					echo '<a href="window_autorize.php"><p>Перейти на форму авторизации.</p></a>';
+					echo '<a href="window_autorize.php?autorize=1"><p>Перейти на форму авторизации.</p></a>';
 					echo '</div>';
 				}		
 ?>						
